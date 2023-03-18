@@ -1,0 +1,21 @@
+configuration {
+    modi: "drun,emoji:rofimoji --action copy --max-recent 0";
+    show-icons: true;
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "🪶 Run";    
+    scroll-method: 1;
+    display-power: "Power menu";
+    display-emoji: "💀 Emoji";
+    sidebar-mode: true;
+    font: "Inter 14";
+}
+
+@theme "./catppuccin/mocha.rasi"
+/* @theme "nord.rasi" */
+/* @theme "rosepine.rasi" */
+/* @theme "rosepine-dawn.rasi" */
+/* @theme "nord-light" */

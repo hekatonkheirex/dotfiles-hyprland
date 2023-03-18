@@ -1,0 +1,121 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                         # The name of the module we are configuring is "character"
+#success_symbol = "[➜](bold green)"  # The "success_symbol" is set to "➜" with color "bold green"
+#success_symbol = "[](bold green)[](yellow)[](red)[](purple)"
+success_symbol = "[❯](cyan)[❯](blue)[❯](green)"
+error_symbol = "[✗](bold red) "
+
+# Use custom format
+#format = """
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) """
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (= 10 sec)
+format = 'took [$duration]($style)'
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+# Clear visibility for exit codes
+[status]
+style = "bg:red"
+symbol = "💣 "
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+#[hostname]
+#ssh_only = false
+#format =  "on [$hostname](bold red) "
+#trim_at = ".companyname.com"
+#disabled = false
+
+#[memory_usage]
+#disabled = false
+#threshold = -1
+#symbol = " "
+#style = "bold dimmed green"
+
+#[time]
+#disabled = false
+#format = ' 🕙 [\[ $time \]]($style) '
+#time_format = "%T"
+
+#[username]
+#style_user = "white bold"
+#style_root = "red bold"
+#format = "[$user]($style) "
+#disabled = false
+#show_always = true
+
+[nodejs]
+format = "via [$symbol$version]($style) "
+symbol = "⬢ "
+style = "bold green"
+disabled = false
+not_capable_style = "bold red"
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[env_var]
+format = "with [$env_value]($style) "
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+style = "bold #f57800"
+read_only = "🔒"
+read_only_style= "bold white"
+
