@@ -4,7 +4,7 @@ ___
 > ### <div align="center">*-- Huge Disclaimer Notice --*   </div>
 > *I am not an actual developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
-<img src="https://imgur.com/a/GXspoB6">
+<img src="https://i.imgur.com/1zx5ZAY.jpg">
 
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
 * **Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
