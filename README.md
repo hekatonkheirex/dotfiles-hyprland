@@ -22,36 +22,37 @@ ___
 * **Notication Daemon** • [Dunst](https://github.com/dunst-project/dunst) 🔔
 * **Launcher** • [Rofi](https://github.com/davatorium/rofi) ⚓ with [rofimoji](https://github.com/fdw/rofimoji) 😐
 * **File Manager** • [Thunar](https://archlinux.org/packages/extra/x86_64/thunar/) 🗄️
+* **Music player** • [Spotify](https://open.spotify.com/) 🪕 with [spicetify-cli](https://spicetify.app/) and [Catppuccin spicetify theme](https://github.com/catppuccin/spicetify)
 * **Editor** • [Neovim](https://neovim.io/) 📝  
   <details>
   <summary>Installed plugins</summary>
 
-    * [Packer]()
-    * [lualine]()
-    * [nvim-treesitter]()
-    * [bufferline]()
-    * [nvim-tree]()
-    * [nvim-ts-autotag]()
-    * [nvim-ts-rainbow]()
-    * [nvim-autopairs]()
-    * [which-key]()
-    * [telescope]()
-    * [nvim-lspconfig]()
-    * [cmp-nvim-lsp]()
-    * [cmp-buffer]()
-    * [cmp-path]()
-    * [cmp-cmdline]()
-    * [nvim-cmp]()
-    * [cmp-vsnip]()
-    * [vim-vsnip]()
-    * [lspkind-nvim]()
-    * [nvim-lsp-installer]()
-    * [nvim-colorizer.lua]()
-    * [twilight.nvim]()
-    * [indent-blankline.nvim]()
-    * [nvim-comment]()
-    * [alpha-nvim]()
-    * [gitsigns.nvim]()
+    * [Packer](https://github.com/wbthomason/packer.nvim)
+    * [lualine](https://github.com/nvim-lualine/lualine.nvim)
+    * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+    * [bufferline](https://github.com/akinsho/bufferline.nvim)
+    * [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+    * [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+    * [nvim-ts-rainbow](https://github.com/HiPhish/nvim-ts-rainbow2)
+    * [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+    * [which-key](https://github.com/folke/which-key.nvim)
+    * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+    * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+    * [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+    * [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+    * [cmp-path](https://github.com/hrsh7th/cmp-path)
+    * [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+    * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+    * [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)
+    * [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
+    * [lspkind-nvim](https://github.com/onsails/lspkind.nvim)
+    * [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) (This is no longer maintained, will replace/delete it later)
+    * [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+    * [twilight.nvim](https://github.com/folke/twilight.nvim)
+    * [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+    * [nvim-comment](https://github.com/terrortylor/nvim-comment)
+    * [alpha-nvim](https://github.com/goolord/alpha-nvim)
+    * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
     * There's some other colorschemes inside `lua/plugins.lua` that I used in the past, but I will leave it there just in case.
   </details>  
 
@@ -74,7 +75,7 @@ ___
 
 ## Installation
 1. Do a fresh Arch Linux installation. *Remember to install `git` package during installation*. *You can also install on your existing installation, just skip to section 5*.
-2. Install `paru`. *You can install whatever version you like, I prefer de binary version*. *You can also use whatever AUR helper you want, but remeber to uninstall `paru` at the end of the installation or remove the `paru-bin` line inside the `pkglist.txt` file*  
+2. Install `paru`. *You can install whatever version you like, I prefer the binary version*. *You can also use whatever AUR helper you want, but remeber to uninstall `paru` at the end of the installation or remove the `paru-bin` line inside the `pkglist.txt` file*  
 ```
 git clone https://aur.archlinux.org/paru-bin.git
 cd paru-bin
@@ -86,8 +87,7 @@ makepkg -si
   yadm clone https://github.com/youruser/yourforkedrepo.git
   ```  
 5. If you downloaded it or cloned it, copy everything to your home directory (all the .config and .local directory, and all the *" . "* files as well).
-6. Use `paru` (or the AUR helper of choice) to install everything in the `pkglist.txt` file.  
-   ```
-   paru -S --needed - < pkglist.txt
-   ```  
-   *You can use `pacman` too, but it won't install the AUR packages*.
+6. Use `paru` (or the AUR helper of choice) to install everything in the `pkglist.txt` file. *You can use `pacman` too, but it won't install the AUR packages*.
+```
+paru -S --needed - < pkglist.txt
+```  

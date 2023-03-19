@@ -36,7 +36,7 @@ return require('packer').startup({
     end
   }
   use { 'windwp/nvim-ts-autotag' }
-  use { 'p00f/nvim-ts-rainbow' }
+  use { 'HiPhish/nvim-ts-rainbow2' }
   use { 'windwp/nvim-autopairs' }
   use { 'folke/which-key.nvim', config = function()
     require("which-key").setup {
