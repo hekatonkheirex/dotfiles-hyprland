@@ -1,6 +1,20 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
+/*  */
+/*  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ */
+/* ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ */
+/* ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗ */
+/* ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║ */
+/* ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝ */
+/*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
+
 {
   "layer": "top", 				// Waybar at top layer
-  "mode": "dock", 				// Display mode (dock|hide|invisible|overlay)
+  /* "mode": "dock", 				// Display mode (dock|hide|invisible|overlay) */
   "exclusive": true, 				// Request an exclusive zone from the compositor
   "passthrough": false, 			// Pass any pointer events to the window under the bar
   "position": "left", 			// Waybar position (top|bottom|left|right)
@@ -13,18 +27,21 @@
   "margin-left": 15, 				// Space to the left of the bar
   "margin-right": 0, 				// Space to the right of the bar
   "fixed-center": false, 			// Center modules position
-  "ipc": true, 					// Control waybar with `swaymsg bar` commands
-  "bar_id": "bar-0",
+  "gtk-layer-shell": true,
+  /* "ipc": true, 					// Control waybar with `swaymsg bar` commands */
+  /* "bar_id": "bar-0", */
   
   // Choose the order of the modules
   "modules-left": ["wlr/workspaces", "custom/wttr#1", "custom/wttr#2"],
   "modules-center": ["cpu#1", "cpu#2", "memory#1", "memory#2", "temperature#1", "temperature#2"],
-  "modules-right": ["idle_inhibitor", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "tray", "clock", "clock#2", "custom/language"],
+  "modules-right": ["idle_inhibitor", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "tray", "clock", "clock#2", "hyprland/language"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
     "on-click": "activate",
     "all-outputs": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "persistent_workspaces": {
       "1": [],
       "2": [],
@@ -170,10 +187,10 @@
     "spacing": 8,
   },
 
-  "custom/language": {
-    "exec": "cat /tmp/kb_layout",
-    "interval": 3,
+  "hyprland/language": {
     "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
     "tooltip": "false",
   },
   

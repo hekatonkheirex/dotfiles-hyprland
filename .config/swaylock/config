@@ -1,5 +1,13 @@
+# ███████╗██╗    ██╗ █████╗ ██╗   ██╗██╗      ██████╗  ██████╗██╗  ██╗
+# ██╔════╝██║    ██║██╔══██╗╚██╗ ██╔╝██║     ██╔═══██╗██╔════╝██║ ██╔╝
+# ███████╗██║ █╗ ██║███████║ ╚████╔╝ ██║     ██║   ██║██║     █████╔╝
+# ╚════██║██║███╗██║██╔══██║  ╚██╔╝  ██║     ██║   ██║██║     ██╔═██╗
+# ███████║╚███╔███╔╝██║  ██║   ██║   ███████╗╚██████╔╝╚██████╗██║  ██╗
+# ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝
+
 ignore-empty-password
 disable-caps-lock-text
+hide-keyboard-layout
 image=/home/mura/Pictures/Walls/AUDA1X8.png
 font=Bungee
 
@@ -30,7 +38,7 @@ clock
 timestr=%I:%M %p
 datestr=%A, %d %B
 indicator-x-position=550
-indicator-y-position=875
+indicator-y-position=1200
 indicator-radius=450
-font-size=180
+font-size=200
 text-color=b4befe
