@@ -4,6 +4,8 @@ ___
 > ### <div align="center">*-- Huge Disclaimer Notice --*   </div>
 > *I am not an actual developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
+<img src="https://imgur.com/a/GXspoB6">
+
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
 * **Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
   * **Backup Colorscheme** • [Rosé Pine](https://rosepinetheme.com/) 🌹
@@ -67,18 +69,25 @@ ___
      * [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
   </summary>
 
-## Installation
-### Before installation note
+## Before installation note
 *You can review the `pkglist.txt` file to remove the packages you don't want and replace the ones you like, but I cannot guarantee if don't work as expected. Please, read the disclaimer*
-1. Do a fresh Arch Linux installation. *Remember to install `git` package during installation*. *You can also install on your existing installation, just skip to section 3 - 3.2*.
-2. Install `paru`. *You can install whatever version you like, I prefer de binary version*. *You can also use whatever AUR helper you want, but remeber to uninstall `paru` at the end of the installation or remove the `yay-bin` line inside the `pkglist.txt` file*  
-```git clone https://aur.archlinux.org/paru-bin.git```  
-```cd paru-bin```  
-```makepkg -si```  
+
+## Installation
+1. Do a fresh Arch Linux installation. *Remember to install `git` package during installation*. *You can also install on your existing installation, just skip to section 5*.
+2. Install `paru`. *You can install whatever version you like, I prefer de binary version*. *You can also use whatever AUR helper you want, but remeber to uninstall `paru` at the end of the installation or remove the `paru-bin` line inside the `pkglist.txt` file*  
+```
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -si
+```  
 3. Fork this repository or download it.  
-  3.1. If you forked it, use [yadm](https://yadm.io/) to download your forked repo.  
-  ```yadm clone https://github.com/youruser/yourforkedrepo.git```   
-  3.2 If you downloaded it or cloned it, copy everything to your home directory (all the .config and .local directory, and all the *" . "* files as well).
-4. Use `paru` to install everything in the `pkglist.txt` file.  
-   ```paru -S --needed - < pkglist.txt```  
+4. If you forked it, use [yadm](https://yadm.io/) to download your forked repo.
+  ```
+  yadm clone https://github.com/youruser/yourforkedrepo.git
+  ```  
+5. If you downloaded it or cloned it, copy everything to your home directory (all the .config and .local directory, and all the *" . "* files as well).
+6. Use `paru` (or the AUR helper of choice) to install everything in the `pkglist.txt` file.  
+   ```
+   paru -S --needed - < pkglist.txt
+   ```  
    *You can use `pacman` too, but it won't install the AUR packages*.

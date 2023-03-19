@@ -36,8 +36,8 @@ export MOZ_ENABLE_WAYLAND=1
 
 ## GTK environment
 export TDESKTOP_DISABLE_GTK_INTEGRATION=1
-export CLUTTER_BACKEND="wayland"
-export BEMENU_BACKEND="wayland"
+# export CLUTTER_BACKEND="wayland"
+# export BEMENU_BACKEND="wayland"
 
 ## QT environment
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -55,7 +55,7 @@ export ELM_ENGINE="wayland-egl"
 export ELM_ACCEL="opengl"
 
 ## General
-export GDK_BACKEND="wayland,x11"
+export GDK_BACKEND="wayland"
 export NO_AT_BRIDGE=1
 export WINIT_UNIX_BACKEND="wayland"
 export DBUS_SESSION_BUS_ADDRESS
@@ -64,7 +64,6 @@ export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export WLR_NO_HARDWARE_CURSORS=1
-export WLR_NO_HARDWARE_CURSORS=0
 export WLR_RENDERER_ALLOW_SOFTWARE=1
 export VDPAU_DRIVER=radeonsi
 export LIBVA_DRIVER_NAME=radeonsi
