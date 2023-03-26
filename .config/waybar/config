@@ -34,7 +34,7 @@
   // Choose the order of the modules
   "modules-left": ["wlr/workspaces", "custom/wttr#1", "custom/wttr#2"],
   "modules-center": ["cpu#1", "cpu#2", "memory#1", "memory#2", "temperature#1", "temperature#2"],
-  "modules-right": ["idle_inhibitor", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "tray", "clock", "clock#2", "hyprland/language"],
+  "modules-right": ["idle_inhibitor", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "tray", "clock", "clock#2", "hyprland/language", "custom/wall"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -53,8 +53,8 @@
     "format-icons": {
       "1": "",
       "2": "",
-      "3": "",
-      "4": "",
+      "3": "",
+      "4": "",
       "5": "",
     },
   },
@@ -232,5 +232,12 @@
     "interval": 300,
     "exec": "~/.config/waybar/scripts/wttr2.py",
     "return-type": "json",
+  },
+  
+  "custom/wall":{
+    "format":"",
+    // "interval": 1,
+    "on-click": "~/.config/hypr/wall",
+    "tooltip": false,
   },
 }

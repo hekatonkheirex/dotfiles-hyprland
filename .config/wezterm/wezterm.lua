@@ -24,7 +24,7 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Cartograph CF"
+local font_name = "Share Tech Mono"
 
 local colors = {
 	-- special
@@ -92,7 +92,7 @@ return {
 			font = font_with_fallback(font_name, { weight = "Light" }),
 		},
 	},
-	font_size = 11,
+	font_size = 14,
 	line_height = 1.0,
 
 	-- Cursor style
@@ -198,6 +198,21 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CopyTo = "ClipboardAndPrimarySelection" }),
 		},
+    {
+      key = "-",
+      mods = "CTRL",
+      action = wezterm.action.DecreaseFontSize
+    },
+    {
+      key = "=",
+      mods = "CTRL",
+      action = wezterm.action.IncreaseFontSize
+    },
+    {
+      key = "0",
+      mods = "CTRL",
+      action = wezterm.action.ResetFontSize
+    },
 	},
 
 	bold_brightens_ansi_colors = false,

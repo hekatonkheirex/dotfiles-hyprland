@@ -58,7 +58,6 @@ iw
 kitty
 kvantum
 kvantum-theme-catppuccin-git
-laptop-mode-tools
 libgnome-keyring
 libopenraw
 light
@@ -67,6 +66,7 @@ linux-firmware
 linux-headers
 man-db
 man-pages
+microsoft-edge-stable-bin
 mlocate
 most
 mpv
@@ -111,6 +111,7 @@ reflector
 rofi
 rofimoji
 rsync
+rustup
 rxfetch
 sdparm
 seahorse
@@ -124,13 +125,16 @@ sshfs
 swaybg
 swayidle
 swaylock-effects-git
+swww-git
 tamsyn-font
+terminus-font
 tex-gyre-fonts
 thunar
 thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
 tldr
+tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -148,6 +152,7 @@ ttf-junicode
 ttf-liberation
 ttf-linux-libertine
 ttf-monofur
+ttf-ms-fonts
 ttf-opensans
 ttf-roboto
 tumbler
@@ -159,6 +164,7 @@ unzip
 upower
 usb_modeswitch
 usbutils
+vdhcoapp
 viewnior
 visual-studio-code-bin
 w3m
