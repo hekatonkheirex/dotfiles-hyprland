@@ -3,7 +3,7 @@ configuration {
     "drun,power:rofi-power-menu --no-symbols,emoji:rofimoji --action copy --max-recent 0";
     lines: 10;
     columns: 2;
-    font: "JetBrains Mono 14";
+    font: "Space Grotesk 14";
     bw: 0;
     location: 0;
     padding: 0;

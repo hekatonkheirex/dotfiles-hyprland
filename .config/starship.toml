@@ -24,8 +24,8 @@ format = 'took [$duration]($style)'
 
 [battery]
 full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+charging_symbol = " "
+discharging_symbol = " "
 
 # Clear visibility for exit codes
 [status]

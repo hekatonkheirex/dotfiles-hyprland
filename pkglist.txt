@@ -19,6 +19,7 @@ brave-bin
 brightnessctl
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
+cava
 clipman
 cups
 dhclient
@@ -28,6 +29,7 @@ discord
 dnsmasq
 dosfstools
 dunst
+dupeguru
 efibootmgr
 efitools
 ethtool
@@ -55,11 +57,13 @@ hyprland-git
 inetutils
 inter-font
 iw
+jq
 kitty
 kvantum
 kvantum-theme-catppuccin-git
 libgnome-keyring
 libopenraw
+libsixel
 light
 linux
 linux-firmware
@@ -93,7 +97,7 @@ pamixer
 papirus-folders-catppuccin-git
 paru-bin
 pavucontrol
-pfetch
+pfetch-rs-bin
 pipewire-alsa
 pipewire-pulse
 playerctl
