@@ -14,14 +14,11 @@
 
 button {
   min-height: 18px;
-  min-width: 24px;
+  min-width: 28px;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.0);
-	transition-property: background-color;
-  transition-duration: .5s;
-  border-radius: 12px 12px 12px 12px;
+  background-color: transparent;
 }
 
 window#waybar.hidden {
@@ -37,20 +34,54 @@ tooltip label {
   color: #f2cdcd;
 }
 
+/* Animations */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 30%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+
+@keyframes gradient_f_nh {
+	0% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
+}
+
 /* Workspaces */
 #workspaces {
   background-color: #1e1e2e;
-  border-radius: 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
+  border-radius: 8px;
   margin-bottom: 5px;
 }
 
 #workspaces button {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   min-width: 10px;
-  color: #f9e2af;
-  border-radius: 12px;
+  color: #6c7086;
+  border-radius: 8px;
   padding: 10px;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
 #workspaces button:hover {
@@ -58,7 +89,12 @@ tooltip label {
 }
 
 #workspaces button.active {
-  color: #a6e3a1;
+  color: #1e1e2e;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.urgent {
@@ -66,68 +102,104 @@ tooltip label {
 }
 
 #workspaces button.persistent {
-	color: #313244;
+	color: #6c7086;
 }
 
 window#waybar.empty #window {
 	background-color: transparent;
 }
 
-/** ********** Backlight ********** **/
-#backlight {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #89b4fa;
+/** ********** Pulseaudio ********** **/
+#pulseaudio.1 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px 8px 0 0;
+  color: #1e1e2e;
   padding: 5px 0 5px 0;
 }
-#backlight.2 {
+
+#pulseaudio.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #b4befe;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
+  margin-bottom: 5px;
+  font-size: 10px;
+  padding: 5px 0 5px 0;
+}
+
+/** ********** Backlight ********** **/
+#backlight.1 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px 8px 0 0;
+  color: #1e1e2e;
+  padding: 5px 0 5px 0;
+}
+
+#backlight.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background-color: #1e1e2e;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 0 5px 0;
 }
 
 /** ********** Battery ********** **/
-#battery {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #f5e0dc;
+#battery.1 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px 8px 0 0;
+  color: #1e1e2e;
   padding: 5px 0 5px 0;
 }
-#battery.charging {
-  color: #a6e3a1;
+
+#battery.1.charging {
+  color: #1e1e2e;
 }
-#battery.plugged {
-  color: #f9e2af;
+
+#battery.1.plugged {
+  color: #1e1e2e;
 }
 
 #battery.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #f2cdcd;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 0 5px 0;
 }
+
 #battery.2.charging {
-  color: #a6e3a1;
+  color: #cdd6f4;
 }
+
 #battery.2.plugged {
-  color: #f9e2af;
+  color: #cdd6f4;
 }
+
 @keyframes blink {
   to {
-    background-color: #f9e2af;
+    background-color: #f5c2e7;
   }
 }
+
 #battery.2.critical:not(.charging) {
   color: #f5c2e7;
   animation-name: blink;
@@ -139,144 +211,132 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #cba6f7;
-  font-size: 22px;
-  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(205,214,244);
+  background: linear-gradient(118deg, rgba(205,214,244,1) 5%, rgba(243,139,168,1) 5%, rgba(243,139,168,1) 20%, rgba(205,214,244,1) 20%, rgba(205,214,244,1) 40%, rgba(243,139,168,1) 40%, rgba(243,139,168,1) 60%, rgba(205,214,244,1) 60%, rgba(205,214,244,1) 80%, rgba(243,139,168,1) 80%, rgba(243,139,168,1) 95%, rgba(205,214,244,1) 95%);
+  background-size: 200% 300%;
+  animation: gradient_f_nh 4s linear infinite;
+  color: #1e1e2e;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  border-radius: 8px 8px 0 0;
+  font-size: 26px;
+  font-weight: bolder;
   padding: 5px 0 0 0;
 }
 #clock.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #f38ba8;
-  margin-bottom: 5px;
-  padding: 0 0 5px 0;
-}
-#clock.3 {
-  color: #fab387;
-  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(205,214,244);
+  background: linear-gradient(118deg, rgba(205,214,244,1) 0%, rgba(243,139,168,1) 0%, rgba(243,139,168,1) 15%, rgba(205,214,244,1) 15%, rgba(205,214,244,1) 35%, rgba(243,139,168,1) 35%, rgba(243,139,168,1) 55%, rgba(205,214,244,1) 55%, rgba(205,214,244,1) 75%, rgba(243,139,168,1) 75%, rgba(243,139,168,1) 90%, rgba(205,214,244,1) 90%);
+  background-size: 200% 300%;
+  animation: gradient_f_nh 4s linear infinite;
+  color: #1e1e2e;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  border-radius: 0 0 8px 8px;
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 5px 0 0 0;
   margin-bottom: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #313244;
-  border-radius: 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
+  border-radius: 8px;
   margin-bottom: 5px;
   padding: 7px 5px 7px 5px;
 }
 
-/** ********** Pulseaudio ********** **/
-#pulseaudio {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #a6e3a1;
-  padding: 5px 0 5px 0;
-}
-#pulseaudio.bluetooth {
-  color: #94e2d5;
-}
-#pulseaudio.muted {
-  color: #313244;
-}
-
-#pulseaudio.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #89dceb;
-  margin-bottom: 5px;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
-}
-#pulseaudio.2.bluetooth {
-  color: #74c7ec;
-}
-#pulseaudio.2.muted {
-  color: #313244;
-}
-
 #language {
-  background-color: #1e1e2e;
-  border-radius: 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #f5e0dc;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px;
+  color: #1e1e2e;
   font-size: 16px;
+  font-weight: bolder;
   padding: 5px 0 5px 0;
   margin-bottom: 5px
 }
 
 #idle_inhibitor {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #313244;
+  border-radius: 8px;
+  color: #6c7086;
   padding: 8px;
   margin-bottom: 5px;
 }
 #idle_inhibitor.activated {
-  color: #f9e2af;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  color: #1e1e2e;
 }
 
 #cpu.1 {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #f2cdcd;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  border-radius: 8px 8px 0 0;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  color: #1e1e2e;
   padding: 5px 0 5px 0;
 }
 #cpu.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #f5c2e7;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 0 5px 0;
 }
 
 #memory.1 {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #cba6f7;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px 8px 0 0;
+  color: #1e1e2e;
   padding: 5px 0 5px 0;
 }
 #memory.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #f38ba8;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   padding: 5px 0 5px 0;
   margin-bottom: 5px;
 }
 
 #temperature.1 {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
-  color: #eba0ac;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 8px 8px 0 0;
+  color: #1e1e2e;
   padding: 5px 0 5px 0;
 }
 #temperature.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #fab387;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   padding: 5px 0 5px 0;
   margin-bottom: 5px;
@@ -288,27 +348,33 @@ window#waybar.empty #window {
 /** ********** Custom ********** **/
 
 #custom-wttr.1 {
-  background-color: #1e1e2e;
-  border-radius: 12px 12px 0 0;
-  border-left: 2px solid #f2cdcd;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  color: #1e1e2e;
+  border-radius: 8px 8px 0 0;
   font-size: 10px;
   padding: 5px 0 5px 0;
 }
 #custom-wttr.2 {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   background-color: #1e1e2e;
-  border-radius: 0 0 12px 12px;
-  border-left: 2px solid #f2cdcd;
-  border-bottom: 2px solid #f2cdcd;
-  color: #74c7ec;
+  border-radius: 0 0 8px 8px;
+  color: #cdd6f4;
   font-size: 10px;
   padding: 5px 0 5px 0;
 }
 
 #custom-wall {
-  background-color: #1e1e2e;
-  border-radius: 12px;
-  border-bottom: 2px solid #f2cdcd;
-  border-left: 2px solid #f2cdcd;
-  color: #74c7ec;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  background: rgb(245,194,231);
+  background: linear-gradient(45deg, rgba(245,194,231,1) 0%, rgba(203,166,247,1) 0%, rgba(243,139,168,1) 13%, rgba(235,160,172,1) 26%, rgba(250,179,135,1) 34%, rgba(249,226,175,1) 49%, rgba(166,227,161,1) 65%, rgba(148,226,213,1) 77%, rgba(137,220,235,1) 82%, rgba(116,199,236,1) 88%, rgba(137,180,250,1) 95%); 
+  background-size: 500% 500%;
+  animation: gradient 7s linear infinite;
+  border-radius: 8px;
+  color: #1e1e2e;
   padding: 8px;
 }

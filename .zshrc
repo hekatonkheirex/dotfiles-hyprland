@@ -92,7 +92,7 @@ plugins=(
 	systemd
 	themes
 	zsh-interactive-cd
-    z
+  z
 	)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -145,6 +145,10 @@ neofetch
 
 export TERM=xterm-256color
 export PAGER="most"
+
+if [ -f ~/.zshInsulter/zsh.command-not-found ]; then
+    . ~/.zshInsulter/zsh.command-not-found
+fi
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5c2e7,hl:#f38ba8 \

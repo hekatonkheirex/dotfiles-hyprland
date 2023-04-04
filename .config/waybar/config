@@ -34,7 +34,7 @@
   // Choose the order of the modules
   "modules-left": ["wlr/workspaces", "custom/wttr#1", "custom/wttr#2"],
   "modules-center": ["cpu#1", "cpu#2", "memory#1", "memory#2", "temperature#1", "temperature#2"],
-  "modules-right": ["idle_inhibitor", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "tray", "clock", "clock#2", "hyprland/language", "custom/wall"],
+  "modules-right": ["idle_inhibitor", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "clock", "clock#2", "hyprland/language", "custom/wall"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -59,7 +59,7 @@
     },
   },
 
-  "backlight": {
+  "backlight#1": {
     "interval": 2,
     //"device": "amdgpu_bl0",
     "format": "{icon}",
@@ -77,7 +77,7 @@
     "smooth-scrolling-threshold": 1,
   },
 
-  "battery": {
+  "battery#1": {
 		"interval": 60,
 		//"bat": "BAT1",
 		//"adapter": "ACAD",
@@ -126,10 +126,6 @@
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%M}",
   },
-  "clock#3": {
-		"interval": 60,
-    "format": "{:%p}",
-  },
 
   "idle_inhibitor": {
     "format": "{icon}",
@@ -151,7 +147,7 @@
     "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
   },
 
-  "pulseaudio": {
+  "pulseaudio#1": {
     "format": "{icon}",
     "format-muted": "",
     "format-bluetooth": "",

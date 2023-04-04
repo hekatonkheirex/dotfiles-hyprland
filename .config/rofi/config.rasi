@@ -18,7 +18,7 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "Space Grostesk 14";
+    font: "Space Grotesk 14";
 }
 
 @theme "./catppuccin/mocha.rasi"

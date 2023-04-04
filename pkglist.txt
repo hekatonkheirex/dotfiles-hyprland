@@ -7,10 +7,10 @@ alsa-utils
 amd-ucode
 apparmor
 avahi
-azote
 base
 base-devel
 bdf-unifont
+betterdiscord-installer-bin
 bind
 blueman
 bluez
@@ -61,6 +61,7 @@ jq
 kitty
 kvantum
 kvantum-theme-catppuccin-git
+libappindicator-gtk2
 libgnome-keyring
 libopenraw
 libsixel
@@ -105,6 +106,7 @@ polkit-gnome
 poppler-glib
 powertop
 python-pyqt5
+python-pyquery
 python-requests
 qbittorrent
 qt5-wayland
@@ -126,6 +128,7 @@ sof-firmware
 spicetify-cli
 spotify
 sshfs
+sway-audio-idle-inhibit-git
 swaybg
 swayidle
 swaylock-effects-git
@@ -148,6 +151,7 @@ ttf-droid
 ttf-fantasque-sans-mono
 ttf-fira-code
 ttf-fira-mono
+ttf-fira-sans
 ttf-hack
 ttf-ibm-plex
 ttf-inconsolata
@@ -170,6 +174,7 @@ usb_modeswitch
 usbutils
 vdhcoapp
 viewnior
+vifm
 visual-studio-code-bin
 w3m
 waybar-hyprland-git

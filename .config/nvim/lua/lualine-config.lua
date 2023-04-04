@@ -1,10 +1,10 @@
 require('lualine').setup({
   options = { 
-    theme = 'rose-pine',
+    -- theme = 'rose-pine',
     -- theme = 'gruvbox-material',
     -- theme = 'tokyonight',
     -- theme = 'onedark',
-    -- theme = 'catppuccin',
+    theme = 'catppuccin',
     -- theme = 'nord',
     -- theme = 'horizon',
     -- theme = 'everforest',

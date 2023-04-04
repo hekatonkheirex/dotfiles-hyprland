@@ -1,5 +1,6 @@
 -- Themes options
-vim.g.gruvbox_contrast_dark = 'medium'
+vim.g.gruvbox_material_background = 'hard'
+vim.g.gruvbox_material_better_performance = 1
 vim.g.gruvbox_italic = true
 vim.g.gruvbox_termcolors = '256'
 vim.g.everforest_background = 'hard'
