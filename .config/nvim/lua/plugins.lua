@@ -7,15 +7,61 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.api.nvim_command('packadd packer.nvim')
 end
 
+-- Packer
 return require('packer').startup({
   function(use)
   use 'wbthomason/packer.nvim' -- Packer self-manager
 
-  -- Common
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+-- Themes
+  use 'shaunsingh/nord.nvim'
+  use 'navarasu/onedark.nvim'
+  use 'sainnhe/everforest'
+  use 'sainnhe/gruvbox-material'
+  use 'LunarVim/horizon.nvim'
+  use({ 'catppuccin/nvim', as = 'catppuccin' })
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    tag = 'v1.*',
+  })
+  use 'folke/tokyonight.nvim'
+  use 'audibleblink/hackthebox.vim'
+  use {'decaycs/decay.nvim', as = 'decay'}
+  use 'Shatur/neovim-ayu'
+
+  -- Autopairs
+  use { 'windwp/nvim-autopairs' }
+
+  -- Autocomplete
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use { 'onsails/lspkind-nvim' } 
+
+  --Snippets
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+  -- LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
+  -- Comments
+  use 'terrortylor/nvim-comment' 
+
+  -- Color highlighter
+  use { 'norcalli/nvim-colorizer.lua' }
+
+  -- Syntax highlight
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
+
+  -- Explorer
+use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
     require'nvim-tree'.setup{
       renderer = {
         indent_markers = {
@@ -35,9 +81,44 @@ return require('packer').startup({
     }
     end
   }
+
+  -- Fzf Finder
+  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+
+  -- Lualine
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }} 
+
+  -- Startup screen
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+
+  -- Git
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup{
+        yadm = {
+          enable = true
+        },
+      }
+    end
+  }
+
+  -- Autoindent
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- Bufferline
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  
+  -- Autotags
   use { 'windwp/nvim-ts-autotag' }
   use { 'HiPhish/nvim-ts-rainbow2' }
-  use { 'windwp/nvim-autopairs' }
+
+  -- Lazy nvim
   use { 'folke/which-key.nvim', config = function()
     require("which-key").setup {
       -- your configuration comes here
@@ -46,18 +127,8 @@ return require('packer').startup({
     }
   end
   }
-  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-  use { 'onsails/lspkind-nvim' } 
-  use { 'williamboman/nvim-lsp-installer' }
-  use { 'norcalli/nvim-colorizer.lua' }
+
+  -- Zen mode
   use { 'folke/twilight.nvim', config = function()
 	  require("twilight").setup {
 		  -- your configuration comes here
@@ -67,43 +138,6 @@ return require('packer').startup({
 		end
 	}
   
-  -- use 'glepnir/dashboard-nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'terrortylor/nvim-comment'
-  use {
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-}
-
-  use {
-  'lewis6991/gitsigns.nvim',
-  config = function()
-    require('gitsigns').setup{
-      yadm = {
-        enable = true
-      },
-    }
-  end
-}
-   
-  -- Themes
-  use 'shaunsingh/nord.nvim'
-  use 'navarasu/onedark.nvim'
-  use 'sainnhe/everforest'
-  use 'sainnhe/gruvbox-material'
-  use 'LunarVim/horizon.nvim'
-  use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v1.*',
-  })
-  use 'folke/tokyonight.nvim'
-  use 'audibleblink/hackthebox.vim'
-  use {'decaycs/decay.nvim', as = 'decay'}
-  use 'Shatur/neovim-ayu'
 end,
 config = {
   display = {

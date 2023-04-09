@@ -6,8 +6,8 @@ cd ~
 export HYPRLAND_LOG_WLR=1
 
 # Tell XWayland to use a cursor theme
-export XCURSOR_THEME=Catppuccin-Mocha-Lavender
-export GTK_THEME=Catppuccin-Mocha-Standard-Lavender-Dark
+# export XCURSOR_THEME=Catppuccin-Mocha-Lavender
+# export GTK_THEME=Catppuccin-Mocha-Standard-Lavender-Dark
 
 # Set a cursor size
 export XCURSOR_SIZE=24

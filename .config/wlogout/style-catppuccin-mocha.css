@@ -1,28 +1,42 @@
+/* ██╗    ██╗██╗      ██████╗  ██████╗  ██████╗ ██╗   ██╗████████╗ */
+/* ██║    ██║██║     ██╔═══██╗██╔════╝ ██╔═══██╗██║   ██║╚══██╔══╝ */
+/* ██║ █╗ ██║██║     ██║   ██║██║  ███╗██║   ██║██║   ██║   ██║ */
+/* ██║███╗██║██║     ██║   ██║██║   ██║██║   ██║██║   ██║   ██║ */
+/* ╚███╔███╔╝███████╗╚██████╔╝╚██████╔╝╚██████╔╝╚██████╔╝   ██║ */
+/*  ╚══╝╚══╝ ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝  ╚═════╝    ╚═╝ */
+/*  */
+/*  ██████╗███████╗███████╗ */
+/* ██╔════╝██╔════╝██╔════╝ */
+/* ██║     ███████╗███████╗ */
+/* ██║     ╚════██║╚════██║ */
+/* ╚██████╗███████║███████║ */
+/*  ╚═════╝╚══════╝╚══════╝ */
+
 /** ********** Fonts ********** **/
 * {
-    font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+  font-family: "Space Grotesk", "Iosevka Nerd Font", archcraft, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /** ********** Main Window ********** **/
 window {
-    background-color: rgba(30, 30, 46, 1.0);
+  background-color: rgba(30, 30, 46, 1.0);
 }
 
 /** ********** Buttons ********** **/
 button {
-    background-color: rgba(205, 214, 244, 0.020);
-    color: #cdd6f4;
+  background-color: rgba(205, 214, 244, 0.020);
+  color: #cdd6f4;
 	border: 0px solid rgba(49, 50, 68, 1.0);
-	border-radius: 50px;
+	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 30%;
 }
 
 button:focus, button:active, button:hover {
-    background-color: rgba(203, 166, 247, 1.0);
+  background-color: rgba(203, 166, 247, 1.0);
 	box-shadow: 0px 0px 25px 0px rgba(203, 166, 247, 0.85);
 	color: #313244;
 	outline-style: none;

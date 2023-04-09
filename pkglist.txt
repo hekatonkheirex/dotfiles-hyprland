@@ -40,12 +40,16 @@ file-roller
 firefox
 firewalld
 fzf
+gdm
 gentium-plus-font
 git
+gnome-control-center
 gnome-keyring
 gnu-netcat
 grim
 grub
+gruvbox-material-gtk-theme-git
+gruvbox-material-icon-theme-git
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -53,7 +57,7 @@ hdparm
 htop
 hwdetect
 hwinfo
-hyprland-git
+hyprland
 inetutils
 inter-font
 iw
@@ -88,11 +92,13 @@ nmap
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 nss-mdns
 ntfs-3g
 ntp
 nwg-look-bin
 openssh
+openssl-1.1
 pacman-contrib
 pamixer
 papirus-folders-catppuccin-git
@@ -127,6 +133,7 @@ smartmontools
 sof-firmware
 spicetify-cli
 spotify
+spotify-tui-bin
 sshfs
 sway-audio-idle-inhibit-git
 swaybg
