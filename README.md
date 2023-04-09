@@ -1,15 +1,16 @@
 # Hyprland Rice
 ## My personal Hyprland config
 ___
-> ### <div align="center">*-- Huge Disclaimer Notice --*   </div>
-> *I am not an actual developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
+> ### <div align="center">*-- Disclaimer --*   </div>
+> *I am not a developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
-<img src="https://i.imgur.com/1zx5ZAY.jpg">
+<img src="https://i.imgur.com/aNzYtcH.jpg">
 
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
-* **Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
-  * **Backup Colorscheme** • [Rosé Pine](https://rosepinetheme.com/) 🌹
 * **Window Manager** • [Hyprland](https://hyprland.org/) 💧
+* **Colorscheme** • [Gruvbox](https://github.com/sainnhe/gruvbox-material) 🟫
+  * **Backup Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
+  * **Backup Colorscheme** • [Rosé Pine](https://rosepinetheme.com/) 🌹
 * **Shell** • [Zsh](https://www.zsh.org) 🐚 with
   * [OhMyZsh](https://ohmyz.sh/) 🧑‍🤝‍🧑 with
     * [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
@@ -46,7 +47,8 @@ ___
     * [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)
     * [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
     * [lspkind-nvim](https://github.com/onsails/lspkind.nvim)
-    * [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) (This is no longer maintained, will replace/delete it later)
+    * [mason.nvim](https://github.com/williamboman/mason.nvim)
+    * [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
     * [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
     * [twilight.nvim](https://github.com/folke/twilight.nvim)
     * [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
@@ -61,6 +63,7 @@ ___
   <summary>Installed plugins</summary>
 
      * [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+     * [Gruvbox Material](https://marketplace.visualstudio.com/items?itemName=sainnhe.gruvbox-material)
      * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
      * [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
      * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)

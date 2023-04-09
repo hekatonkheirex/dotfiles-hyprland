@@ -6,6 +6,8 @@ adobe-source-han-serif-otc-fonts
 alsa-utils
 amd-ucode
 apparmor
+asusctl
+asusctltray-git
 avahi
 base
 base-devel
@@ -122,6 +124,7 @@ raw-thumbnailer
 reflector
 rofi
 rofimoji
+rog-control-center
 rsync
 rustup
 rxfetch
@@ -148,7 +151,6 @@ thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
 tldr
-tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -194,7 +196,7 @@ wlogout
 wlr-randr
 wtype
 xdg-desktop-portal
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
 xf86-video-amdgpu
