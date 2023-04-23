@@ -8,17 +8,17 @@
   "width": "",
   "spacing": 0,
   "margin": 0,
-  "margin-top": 5,
+  "margin-top": 0,
   "margin-bottom": 0,
-  "margin-left": 5,
-  "margin-right": 5,
+  "margin-left": 0,
+  "margin-right": 0,
   "fixed-center": true,
-  "ipc": true,
+  /* "ipc": true, */
   "bar_id": "bar-0",
 
   "modules-left": ["custom/logo", "wlr/workspaces"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["sway/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "custom/weather", "clock", "custom/power"],
+  "modules-right": ["hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "custom/wttr", "clock", "custom/power"],
   
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -45,11 +45,11 @@
     "max-length": 50,
     },
 
-  "sway/language": {
+  "hyprland/language": {
       "format": "{}",
-      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
-      "tooltip": "true",
-      "tooltip-format": "{long}"
+      "format-en": "US",
+      "format-es": "ES",
+      "tooltip": "false",
     },
 
   "idle_inhibitor": {
@@ -172,12 +172,12 @@
     "return-type": "json"
     },
 
-    "custom/logo": {
-      "format": "",
-      },
+  "custom/logo": {
+     "format": "",
+     },
 
-    "custom/power": {
-        "format": "",
-        "on-click": "/home/mura/.config/sway/scripts/wlogout",
-      },
+  "custom/power": {
+      "format": "",
+      "on-click": "/home/mura/.config/sway/scripts/wlogout",
+    },
   }

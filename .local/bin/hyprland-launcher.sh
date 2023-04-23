@@ -13,10 +13,10 @@ export HYPRLAND_LOG_WLR=1
 export XCURSOR_SIZE=24
 
 # Example IME Support: fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export SDL_IM_MODULE=fcitx
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+# export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 
 ## PATHS
@@ -67,5 +67,7 @@ export WLR_NO_HARDWARE_CURSORS=1
 export WLR_RENDERER_ALLOW_SOFTWARE=1
 export VDPAU_DRIVER=radeonsi
 export LIBVA_DRIVER_NAME=radeonsi
+eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
 exec Hyprland

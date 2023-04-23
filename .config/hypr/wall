@@ -5,4 +5,4 @@ IMG_NAME=$(ls /home/mura/Pictures/Walls | shuf -n 1)
 # full path to that random image file
 IMG_PATH=/home/mura/Pictures/Walls/$IMG_NAME
 # Command to change wallpaper
-swww img $IMG_PATH --transition-type grow --transition-pos 30,20 --transition-fps 60 --transition-step 60
+swww img $IMG_PATH --transition-type grow --transition-pos 0,1080 --transition-fps 60 --transition-step 60

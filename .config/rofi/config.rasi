@@ -26,4 +26,5 @@ configuration {
 /* @theme "rosepine.rasi" */
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */
-@theme "gruvbox-dark.rasi"
+/* @theme "gruvbox-dark.rasi" */
+@theme "tokyonight.rasi"

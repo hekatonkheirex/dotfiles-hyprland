@@ -24,16 +24,16 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(26, 27, 38, 0.7);
-  border: 1px solid rgba(26, 27, 38, 0.7);
+  background: rgba(29, 32, 33, 0.7);
+  border: 1px solid rgba(29, 32, 33, 0.7);
 }
 tooltip label {
-  color: #a9b1d6;
+  color: #fbf1c7;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1a1b26;
+  background: #1d2021;
   border-radius: 10px 10px 0 0;
   font-size: 30px;
   padding-top: 10px;
@@ -41,37 +41,22 @@ tooltip label {
 }
 
 #workspaces button {
-  color: #414868;
+  /* min-width: 10px; */
+  color: #504945;
   padding: 5px;
 }
 
 #workspaces button:hover {
   background-color: rgba(255, 255, 255, 0.0);
-  border-radius: 10px;
 }
 
 #workspaces button.active {
   border-radius: 10px;
-  color: #7aa2f7;
-}
-
-#workspaces button.focused {
-  border-radius: 10px;
-  color: #7aa2f7;
-}
-
-#workspaces button.visible {
-  border-radius: 10px;
-  color: #7aa2f7;
+  color: #98971a;
 }
 
 #workspaces button.urgent {
-  color: #f7768e;
-}
-
-#workspaces button.hidden {
-  border-radius: 10px;
-  color: #7aa2f7;
+  color: #cc241d;
 }
 
 window#waybar.empty #window {
@@ -80,74 +65,68 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #24283b;
-  color: #ff9e64;
+  background: #282828;
+  color: #458588;
   font-size: 26px;
   padding: 5px;
 }
-#pulseaudio.1.muted {
-  color: #414868;
-}
 #pulseaudio.2 {
-  background: #24283b;
-  color: #ff9e64;
+  background: #282828;
+  color: #458588;
   padding: 5px;
-}
-#pulseaudio.2.muted {
-  color: #414868;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #24283b;
-  color: #e0af68;
+  background: #282828;
+  color: #b16286;
   font-size: 26px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #24283b;
+  background: #282828;
   padding: 5px;
-  color: #e0af68;
+  color: #b16286;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #24283b;
-  color: #9ece6a;
+  background: #282828;
+  color: #98971a;
   font-size: 25px;
   padding: 5px;
 }
 
 #battery.1.charging {
-  color: #f7768e;
+  color: #cc241d;
 }
 
 #battery.1.plugged {
-  color: #ff9e64;
+  color: #d79921;
 }
 
 #battery.2 {
-  background: #24283b;
-  color: #9ece6a;
+  background: #282828;
+  color: #98971a;
   padding: 5px;
 }
 
 #battery.2.charging {
-  color: #f7768e;
+  color: #cc241d;
 }
 
 #battery.2.plugged {
-  color: #ff9e64;
+  color: #d79921;
 }
 
 @keyframes blink {
   to {
-    background-color: #f7768e;
+    background-color: #fb4934;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #e0af68;
+  color: #fe8019;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -157,22 +136,22 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #24283b;
-  color: #73daca;
+  background: #282828;
+  color: #98971a;
   font-size: 22px;
   font-weight: bolder;
   padding: 5px;
 }
 #clock.date {
-  background: #24283b;
-  color: #73daca;
+  background: #282828;
+  color: #98971a;
   font-size: 22px;
   font-weight: bolder;
   padding: 5px;
 }
 #clock.time {
-  background: #24283b;
-  color: #b4f9f8;
+  background: #282828;
+  color: #d79921;
   font-size: 22px;
   font-weight: bolder;
   padding: 5px;
@@ -180,13 +159,13 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #414868;
+  background-color: #3c3836;
   padding: 5px;
 }
 
 #language {
-  background: #24283b;
-  color: #2ac3de;
+  background: #282828;
+  color: #b8bb26;
   font-size: 20px;
   font-weight: bold;
   border-radius: 0 0 10px 10px;
@@ -194,26 +173,26 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-  background: #24283b;
-  color: #565f89;
+  background: #282828;
+  color: #7c6f64;
   font-size: 26px;
   padding: 5px;
 }
 #idle_inhibitor.activated {
-  color: #9ece6a;
+  color: #689d6a;
 }
 
 /** ********** Custom ********** **/
 #custom-calendar-icon {
-  background: #24283b;
-  color: #73daca;
+  background: #282828;
+  color: #98971a;
   font-size: 26px;
   padding: 5px;
 }
 
 #custom-time-icon {
-  background: #24283b;
-  color: #b4f9f8;
+  background: #282828;
+  color: #d79921;
   font-size: 26px;
   padding: 5px;
 }
@@ -232,15 +211,15 @@ window#waybar.empty #window {
 }
 
 #custom-wall {
-  background: #24283b;
-  color: #7dcfff;
+  background: #282828;
+  color: #83a598;
   font-size: 26px;
   padding-bottom: 5px;
 }
 
 #custom-spotify {
-  background: #24283b;
-  color: #9ece6a;
+  background: #282828;
+  color: #8ec07c;
   font-size: 26px;
   padding: 5px;
 }

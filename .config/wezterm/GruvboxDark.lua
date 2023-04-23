@@ -17,47 +17,47 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Cartograph CF"
+local font_name = "Share Tech Mono"
 
 local colors = {
 	-- special
-	foreground = "#e0def4",
-	darker_background = "#161420",
-	background = "#191724",
-	lighter_background = "#1f1d2e",
-	one_background = "#26233a",
+	foreground = "#fbf1c7",
+	darker_background = "#17191a",
+	background = "#1d2021",
+	lighter_background = "#282828",
+	one_background = "#3c3836",
 
 	-- black
-	color0 = "#1f1d2e",
-	color8 = "#26233a",
+	color0 = "#3c3836",
+	color8 = "#504945",
 
 	-- red
-	color1 = "#eb6f92",
-	color9 = "#eb6f92",
+	color1 = "#cc241d",
+	color9 = "#fb4934",
 
 	-- green
-	color2 = "#31748f",
-	color10 = "#31748f",
+	color2 = "#98971a",
+	color10 = "#b8bb26",
 
 	-- yellow
-	color3 = "#f6c177",
-	color11 = "#f6c177",
+	color3 = "#d79921",
+	color11 = "#fabd2f",
 
 	-- blue
-	color4 = "#c4a7e7",
-	color12 = "#c4a7e7",
+	color4 = "#458588",
+	color12 = "#83a598",
 
 	-- magenta
-	color5 = "#ebbcba",
-	color13 = "#ebbcba",
+	color5 = "#b16286",
+	color13 = "#d3869b",
 
 	-- cyan
-	color6 = "#9ccfd8",
-	color14 = "#9ccfd8",
+	color6 = "#689d6a",
+	color14 = "#8ec07c",
 
 	-- white
-	color7 = "#c0caf5",
-	color15 = "#c6cff6",
+	color7 = "#a89984",
+	color15 = "#ebdbb2",
 }
 
 return {
@@ -85,14 +85,14 @@ return {
 			font = font_with_fallback(font_name, { weight = "Light" }),
 		},
 	},
-	font_size = 11,
+	font_size = 14,
 	line_height = 1.0,
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",
 
 	-- X11
-	enable_wayland = false,
+	enable_wayland = true,
 
 	-- Keybinds
 	disable_default_key_bindings = true,

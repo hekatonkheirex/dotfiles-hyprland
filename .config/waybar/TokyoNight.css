@@ -244,3 +244,10 @@ window#waybar.empty #window {
   font-size: 26px;
   padding: 5px;
 }
+
+#custom-mode {
+  background: #24283b;
+  color: #bb9af7;
+  font-size: 26px;
+  padding-bottom: 5px;
+}

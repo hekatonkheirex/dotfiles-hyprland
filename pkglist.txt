@@ -6,8 +6,10 @@ adobe-source-han-serif-otc-fonts
 alsa-utils
 amd-ucode
 apparmor
+aria2
 asusctl
 asusctltray-git
+atomicparsley
 avahi
 base
 base-devel
@@ -21,7 +23,6 @@ brave-bin
 brightnessctl
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
-cava
 clipman
 cups
 dhclient
@@ -113,9 +114,11 @@ playerctl
 polkit-gnome
 poppler-glib
 powertop
+python-pycryptodomex
 python-pyqt5
 python-pyquery
 python-requests
+python-websockets
 qbittorrent
 qt5-wayland
 qt5ct
@@ -126,6 +129,7 @@ rofi
 rofimoji
 rog-control-center
 rsync
+rtmpdump
 rustup
 rxfetch
 sdparm
@@ -136,7 +140,6 @@ smartmontools
 sof-firmware
 spicetify-cli
 spotify
-spotify-tui-bin
 sshfs
 sway-audio-idle-inhibit-git
 swaybg
@@ -181,12 +184,11 @@ unzip
 upower
 usb_modeswitch
 usbutils
-vdhcoapp
 viewnior
 vifm
 visual-studio-code-bin
 w3m
-waybar-hyprland-git
+waybar-hyprland
 wev
 wezterm
 wf-recorder
@@ -202,5 +204,6 @@ xdg-utils
 xf86-video-amdgpu
 yad
 yadm
+yt-dlp
 zramd
 zsh
