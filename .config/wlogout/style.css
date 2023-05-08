@@ -1,20 +1,20 @@
 /** ********** Fonts ********** **/
 * {
-  font-family: "Space Grotesk", "Iosevka Nerd Font", archcraft, sans-serif;
+  font-family: "Fira Sans Book", "Iosevka Nerd Font", archcraft, sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
 
 /** ********** Main Window ********** **/
 window {
-  background-color: rgba(26, 27, 38, 1.0);
+  background-color: rgba(40, 40, 40, 1.0);
 }
 
 /** ********** Buttons ********** **/
 button {
-  background-color: rgba(122, 162, 247, 0.020);
-  color: #7aa2f7;
-	border: 0px solid rgba(36, 40, 59, 1.0);
+  background-color: rgba(251, 241, 199, 0.020);
+  color: #fbf1c7;
+	border: 0px solid rgba(60, 56, 54, 1.0);
 	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -23,9 +23,9 @@ button {
 }
 
 button:focus, button:active, button:hover {
-  background-color: rgba(122, 162, 247, 1.0);
-	box-shadow: 0px 0px 25px 0px rgba(122, 162, 247, 0.85);
-	color: #24283b;
+  background-color: rgba(251, 241, 199, 1.0);
+	box-shadow: 0px 0px 25px 0px rgba(251, 2141, 199, 0.85);
+	color: #3c3836;
   margin: 10px;
 	outline-style: none;
 }

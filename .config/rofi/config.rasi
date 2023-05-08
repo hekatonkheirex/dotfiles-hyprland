@@ -18,7 +18,7 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "Space Grotesk 14";
+    font: "Fira Sans Book 16";
 }
 
 /* @theme "./catppuccin/mocha.rasi" */
@@ -26,5 +26,5 @@ configuration {
 /* @theme "rosepine.rasi" */
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */
-/* @theme "gruvbox-dark.rasi" */
-@theme "tokyonight.rasi"
+@theme "gruvbox-dark.rasi"
+/* @theme "tokyonight.rasi" */

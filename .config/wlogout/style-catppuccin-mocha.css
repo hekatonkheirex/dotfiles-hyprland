@@ -14,7 +14,7 @@
 
 /** ********** Fonts ********** **/
 * {
-  font-family: "Space Grotesk", "Iosevka Nerd Font", archcraft, sans-serif;
+  font-family: "Unica One", "Iosevka Nerd Font", archcraft, sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -32,13 +32,15 @@ button {
 	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 30%;
+	background-size: 40%;
+  margin: 10px;
 }
 
 button:focus, button:active, button:hover {
   background-color: rgba(203, 166, 247, 1.0);
 	box-shadow: 0px 0px 25px 0px rgba(203, 166, 247, 0.85);
 	color: #313244;
+  margin: 10px;
 	outline-style: none;
 }
 

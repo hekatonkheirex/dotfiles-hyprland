@@ -35,6 +35,9 @@ dunst
 dupeguru
 efibootmgr
 efitools
+eog
+eog-docs
+eog-plugins
 ethtool
 exa
 ffmpegthumbnailer
@@ -46,8 +49,13 @@ fzf
 gdm
 gentium-plus-font
 git
+gnome-browser-connector
 gnome-control-center
 gnome-keyring
+gnome-menus
+gnome-shell-extension-pop-shell-git
+gnome-shell-extensions
+gnome-tweaks
 gnu-netcat
 grim
 grub
@@ -83,6 +91,9 @@ mlocate
 most
 mpv
 mtools
+nautilus
+nautilus-image-converter
+nautilus-share
 neofetch
 neovim
 net-tools
@@ -104,6 +115,7 @@ openssh
 openssl-1.1
 pacman-contrib
 pamixer
+paper-icon-theme-git
 papirus-folders-catppuccin-git
 paru-bin
 pavucontrol
@@ -112,6 +124,8 @@ pipewire-alsa
 pipewire-pulse
 playerctl
 polkit-gnome
+pop-gtk-theme
+pop-icon-theme
 poppler-glib
 powertop
 python-pycryptodomex
@@ -134,6 +148,7 @@ rustup
 rxfetch
 sdparm
 seahorse
+seahorse-nautilus
 sg3_utils
 slurp
 smartmontools
@@ -141,6 +156,7 @@ sof-firmware
 spicetify-cli
 spotify
 sshfs
+sushi
 sway-audio-idle-inhibit-git
 swaybg
 swayidle
@@ -149,10 +165,6 @@ swww-git
 tamsyn-font
 terminus-font
 tex-gyre-fonts
-thunar
-thunar-archive-plugin
-thunar-shares-plugin
-thunar-volman
 tldr
 ttf-anonymous-pro
 ttf-bitstream-vera
@@ -175,6 +187,7 @@ ttf-monofur
 ttf-ms-fonts
 ttf-opensans
 ttf-roboto
+ttf-roboto-slab
 tumbler
 tumbler-extra-thumbnailers
 udiskie
@@ -184,7 +197,7 @@ unzip
 upower
 usb_modeswitch
 usbutils
-viewnior
+vdhcoapp-bin
 vifm
 visual-studio-code-bin
 w3m

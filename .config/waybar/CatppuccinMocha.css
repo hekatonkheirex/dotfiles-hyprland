@@ -8,13 +8,10 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Space Grotesk", "Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "Unica One", "tabler-icons";
   font-weight: normal;
-}
-
-button {
-  min-height: 18px;
-  min-width: 48px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 window#waybar {
@@ -34,74 +31,47 @@ tooltip label {
   color: #cdd6f4;
 }
 
-/* Animations */
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 30%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@keyframes gradient_f {
-	0% {
-		background-position: 0% 200%;
-	}
-    50% {
-        background-position: 200% 0%;
-    }
-	100% {
-		background-position: 400% 200%;
-	}
-}
-
-@keyframes gradient_f_nh {
-	0% {
-		background-position: 0% 200%;
-	}
-	100% {
-		background-position: 200% 200%;
-	}
-}
-
 /* Workspaces */
 #workspaces {
-  background-color: #1e1e2e;
-  border-radius: 8px;
-  margin-bottom: 5px;
+  background: #1e1e2e;
+  border-radius: 10px 10px 0 0;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #workspaces button {
-  min-width: 10px;
-  color: #6c7086;
-  border-radius: 8px;
-  padding: 10px;
-  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
+  color: #45475a;
+  padding: 5px;
 }
 
 #workspaces button:hover {
   background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 10px;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
-  background-size: 400% 400%;
-  /* animation: gradient_f 20s ease-in-out infinite; */
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-radius: 10px;
+  color: #f5e0dc;
+}
+
+#workspaces button.focused {
+  border-radius: 10px;
+  color: #f5e0dc;
+}
+
+#workspaces button.visible {
+  border-radius: 10px;
+  color: #f5e0dc;
 }
 
 #workspaces button.urgent {
   color: #f38ba8;
 }
 
-#workspaces button.persistent {
-	color: #6c7086;
+#workspaces button.hidden {
+  border-radius: 10px;
+  color: #45475a;
 }
 
 window#waybar.empty #window {
@@ -110,88 +80,80 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px 8px 0 0;
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  color: #f2cdcd;
+  font-size: 26px;
+  padding: 5px;
 }
-
+#pulseaudio.1.muted {
+  color: #45475a;
+}
 #pulseaudio.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  margin-bottom: 5px;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f2cdcd;
+  padding: 5px;
+}
+#pulseaudio.2.muted {
+  color: #45475a;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px 8px 0 0;
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  color: #f5c2e7;
+  font-size: 26px;
+  padding: 5px;
 }
-
 #backlight.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  margin-bottom: 5px;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+  color: #f5c2e7;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px 8px 0 0;
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  color: #cba6f7;
+  font-size: 26px;
+  padding: 5px;
 }
 
 #battery.1.charging {
-  color: #1e1e2e;
+  color: #f38ba8;
 }
 
 #battery.1.plugged {
-  color: #1e1e2e;
+  color: #fab387;
 }
 
 #battery.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  margin-bottom: 5px;
-  padding: 5px 0 5px 0;
+  background: #313244;
+  font-size: 20px;
+  font-weight: bold;
+  color: #cba6f7;
+  padding: 5px;
 }
 
 #battery.2.charging {
-  color: #cdd6f4;
+  color: #f38ba8;
 }
 
 #battery.2.plugged {
-  color: #cdd6f4;
+  color: #fab387;
 }
 
 @keyframes blink {
   to {
-    background-color: #f5c2e7;
+    background-color: #f38ba8;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #f5c2e7;
+  color: #fab387;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -201,141 +163,78 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background-color: #1e1e2e;
-  color: #a6e3a1;
-  border-radius: 8px 8px 0 0;
-  font-size: 22px;
+  background: #313244;
+  color: #94e2d5;
+  font-size: 26px;
   font-weight: bolder;
-  padding: 5px 0 0 0;
+  padding-top: 5px;
 }
-#clock.2 {
-  background-color: #1e1e2e;
-  color: #f9e2af;
-  border-radius: 0 0 8px 8px;
-  font-size: 22px;
+#clock.date {
+  background: #313244;
+  color: #94e2d5;
+  font-size: 26px;
   font-weight: bolder;
-  padding: 0 0 5px 0;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+#clock.time {
+  background: #313244;
+  color: #89dceb;
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #313244;
-  border-radius: 8px;
-  margin-bottom: 5px;
-  padding: 7px 5px 7px 5px;
+  background-color: #45475a;
+  padding: 5px;
 }
 
 #language {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px;
-  color: #1e1e2e;
-  font-size: 16px;
+  background: #313244;
+  color: #74c7ec;
+  font-size: 26px;
   font-weight: bold;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px
+  border-radius: 0 0 10px 10px;
+  padding-top: 5px;
+  padding-bottom: 13px;
 }
 
 #idle_inhibitor {
-  background-color: #1e1e2e;
-  border-radius: 8px;
-  color: #6c7086;
+  background: #313244;
+  color: #45475a;
+  font-size: 26px;
   padding: 8px;
-  margin-bottom: 5px;
 }
 #idle_inhibitor.activated {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  color: #1e1e2e;
-}
-
-#cpu.1 {
-  border-radius: 8px 8px 0 0;
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
-}
-#cpu.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  margin-bottom: 5px;
-  padding: 5px 0 5px 0;
-}
-
-#memory.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px 8px 0 0;
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
-}
-#memory.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px;
-}
-
-#temperature.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 8px 8px 0 0;
-  color: #1e1e2e;
-  padding: 5px 0 5px 0;
-}
-#temperature.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px;
-}
-#temperature.2.critical {
-  color: #f38ba8;
+  color: #eba0ac;
 }
 
 /** ********** Custom ********** **/
-
-#custom-wttr.1 {
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
-  background-size: 400% 400%;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  color: #1e1e2e;
-  border-radius: 8px 8px 0 0;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
+#custom-calendar-icon {
+  background: #313244;
+  color: #94e2d5;
+  font-size: 26px;
+  padding: 5px;
 }
-#custom-wttr.2 {
-  background-color: #1e1e2e;
-  border-radius: 0 0 8px 8px;
-  color: #cdd6f4;
-  font-size: 10px;
-  padding: 5px 0 5px 0;
+
+#custom-time-icon {
+  background: #313244;
+  color: #89dceb;
+  font-size: 26px;
+  padding: 5px;
 }
 
 #custom-wall {
-  background: rgb(245,194,231);
-  background: linear-gradient(45deg, rgba(245,194,231,1) 0%, rgba(203,166,247,1) 0%, rgba(243,139,168,1) 13%, rgba(235,160,172,1) 26%, rgba(250,179,135,1) 34%, rgba(249,226,175,1) 49%, rgba(166,227,161,1) 65%, rgba(148,226,213,1) 77%, rgba(137,220,235,1) 82%, rgba(116,199,236,1) 88%, rgba(137,180,250,1) 95%); 
-  background-size: 500% 500%;
-  border-radius: 8px;
-  color: #1e1e2e;
-  padding: 8px;
+  background: #313244;
+  color: #f9e2af;
+  font-size: 26px;
+  padding-bottom: 5px;
+}
+
+#custom-spotify {
+  background: #313244;
+  color: #a6e3a1;
+  font-size: 26px;
+  padding: 5px;
 }
