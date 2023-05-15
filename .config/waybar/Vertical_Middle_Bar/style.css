@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Space Grotesk", "tabler-icons";
+  font-family: "Fira Sans Book", "tabler-icons";
   font-weight: normal;
   padding-left: 3px;
   padding-right: 3px;
@@ -24,16 +24,16 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(26, 27, 38, 0.7);
-  border: 1px solid rgba(26, 27, 38, 0.7);
+  background: rgba(29, 32, 33, 0.7);
+  border: 1px solid rgba(29, 32, 33, 0.7);
 }
 tooltip label {
-  color: #a9b1d6;
+  color: #fbf1c7;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1a1b26;
+  background: #1d2021;
   border-radius: 10px 10px 0 0;
   font-size: 30px;
   padding-top: 10px;
@@ -41,37 +41,22 @@ tooltip label {
 }
 
 #workspaces button {
-  color: #414868;
+  /* min-width: 10px; */
+  color: #504945;
   padding: 5px;
 }
 
 #workspaces button:hover {
   background-color: rgba(255, 255, 255, 0.0);
-  border-radius: 10px;
 }
 
 #workspaces button.active {
   border-radius: 10px;
-  color: #7aa2f7;
-}
-
-#workspaces button.focused {
-  border-radius: 10px;
-  color: #7aa2f7;
-}
-
-#workspaces button.visible {
-  border-radius: 10px;
-  color: #7aa2f7;
+  color: #a89984;
 }
 
 #workspaces button.urgent {
-  color: #f7768e;
-}
-
-#workspaces button.hidden {
-  border-radius: 10px;
-  color: #7aa2f7;
+  color: #cc241d;
 }
 
 window#waybar.empty #window {
@@ -80,74 +65,75 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #24283b;
-  color: #ff9e64;
+  background: #282828;
+  color: #b16286;
   font-size: 26px;
   padding: 5px;
 }
-#pulseaudio.1.muted {
-  color: #414868;
-}
 #pulseaudio.2 {
-  background: #24283b;
-  color: #ff9e64;
+  background: #282828;
+  color: #b16286;
+  font-size: 20px;
+  font-weight: bold;
   padding: 5px;
 }
+#pulseaudio.1.muted {
+  color: #504945;
+}
 #pulseaudio.2.muted {
-  color: #414868;
+  color: #504945;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #24283b;
-  color: #e0af68;
+  background: #282828;
+  color: #458588;
   font-size: 26px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #24283b;
+  background: #282828;
+  font-size: 20px;
+  font-weight: bold;
   padding: 5px;
-  color: #e0af68;
+  color: #458588;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #24283b;
-  color: #9ece6a;
-  font-size: 25px;
+  background: #282828;
+  color: #d79921;
+  font-size: 26px;
   padding: 5px;
 }
-
 #battery.1.charging {
-  color: #f7768e;
+  color: #98971a;
 }
-
 #battery.1.plugged {
-  color: #ff9e64;
+  color: #cc241d;
 }
-
 #battery.2 {
-  background: #24283b;
-  color: #9ece6a;
+  background: #282828;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d79921;
   padding: 5px;
 }
-
 #battery.2.charging {
-  color: #f7768e;
+  color: #98971a;
 }
-
 #battery.2.plugged {
-  color: #ff9e64;
+  color: #cc241d;
 }
 
 @keyframes blink {
   to {
-    background-color: #f7768e;
+    background-color: #fb4934;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #e0af68;
+  color: #b8bb26;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -157,90 +143,78 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #24283b;
-  color: #73daca;
-  font-size: 22px;
+  background: #282828;
+  color: #d3869b;
+  font-size: 26px;
   font-weight: bolder;
   padding: 5px;
 }
 #clock.date {
-  background: #24283b;
-  color: #73daca;
-  font-size: 22px;
+  background: #282828;
+  color: #d3869b;
+  font-size: 26px;
   font-weight: bolder;
   padding: 5px;
 }
 #clock.time {
-  background: #24283b;
-  color: #b4f9f8;
-  font-size: 22px;
+  background: #282828;
+  color: #8ec07c;
+  font-size: 26px;
   font-weight: bolder;
   padding: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #414868;
+  background-color: #3c3836;
   padding: 5px;
 }
 
 #language {
-  background: #24283b;
-  color: #2ac3de;
-  font-size: 20px;
+  background: #282828;
+  color: #d65d0e;
+  font-size: 26px;
   font-weight: bold;
   border-radius: 0 0 10px 10px;
+  padding-top: 5px;
   padding-bottom: 13px;
 }
 
 #idle_inhibitor {
-  background: #24283b;
-  color: #565f89;
+  background: #282828;
+  color: #7c6f64;
   font-size: 26px;
-  padding: 5px;
+  padding: 8px;
 }
 #idle_inhibitor.activated {
-  color: #9ece6a;
+  color: #fabd2f;
 }
 
 /** ********** Custom ********** **/
 #custom-calendar-icon {
-  background: #24283b;
-  color: #73daca;
+  background: #282828;
+  color: #d3869b;
   font-size: 26px;
   padding: 5px;
 }
 
 #custom-time-icon {
-  background: #24283b;
-  color: #b4f9f8;
+  background: #282828;
+  color: #8ec07c;
   font-size: 26px;
   padding: 5px;
 }
 
-#custom-wttr.1 {
-  background: #282828;
-  color: #8ec07c;
-  font-size: 10px;
-  padding: 5px;
-}
-#custom-wttr.2 {
-  background: #282828;
-  color: #fbf1c7;
-  font-size: 10px;
-  padding: 5px;
-}
-
 #custom-wall {
-  background: #24283b;
-  color: #7dcfff;
+  background: #282828;
+  color: #83a598;
   font-size: 26px;
   padding-bottom: 5px;
 }
 
 #custom-spotify {
-  background: #24283b;
-  color: #9ece6a;
+  background: #282828;
+  color: #689d6a;
   font-size: 26px;
   padding: 5px;
 }

@@ -21,10 +21,10 @@ configuration {
     font: "Fira Sans Book 16";
 }
 
-/* @theme "./catppuccin/mocha.rasi" */
+@theme "./catppuccin/mocha.rasi"
 /* @theme "nord.rasi" */
 /* @theme "rosepine.rasi" */
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */
-@theme "gruvbox-dark.rasi"
+/* @theme "gruvbox-dark.rasi" */
 /* @theme "tokyonight.rasi" */

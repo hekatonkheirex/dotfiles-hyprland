@@ -8,14 +8,16 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Space Grotesk", "tabler-icons";
+  font-family: "Fira Sans Book", "tabler-icons";
   font-weight: normal;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: #3c3836;
+  border-radius: 0 15px 15px 0;
+  border-right: 7px solid rgba (29,32,33,1.0);
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
@@ -28,31 +30,46 @@ tooltip {
   border: 1px solid rgba(29, 32, 33, 0.7);
 }
 tooltip label {
-  color: #fbf1c7;
+  color: #ebdbb2;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1d2021;
-  border-radius: 10px 10px 0 0;
+  background: #ebdbb2;
+  border-bottom: 7px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  border-radius: 12px;
   font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
 }
 
 #workspaces button {
   /* min-width: 10px; */
-  color: #504945;
+  color: #282828;
   padding: 5px;
 }
 
 #workspaces button:hover {
-  background-color: rgba(255, 255, 255, 0.0);
+  background: #83a598;
+  border-bottom: 7px solid rgba(69,133,136,1.0);
+  border-right: 7px solid rgba(69,133,136,1.0);
+  border-radius: 12px;
+  margin-bottom: -7px;
+  margin-right: -7px;
+  padding: 5px;
 }
 
 #workspaces button.active {
-  border-radius: 10px;
-  color: #98971a;
+  background: #83a598;
+  border-bottom: 7px solid rgba(69,133,136,1.0);
+  border-right: 7px solid rgba(69,133,136,1.0);
+  border-radius: 12px;
+  color: #ebdbb2;
+  margin-bottom: -7px;
+  margin-right: -7px;
+  padding: 5px;
 }
 
 #workspaces button.urgent {
@@ -65,58 +82,95 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #282828;
-  color: #458588;
+  background: #ebdbb2;
+  border-top: 3px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  border-radius: 12px 12px 0 0;
+  color: #282828;
   font-size: 26px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }
 #pulseaudio.2 {
-  background: #282828;
-  color: #458588;
-  padding: 5px;
+  background: #ebdbb2;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  border-radius: 0 0 12px 12px;
+  color: #282828;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 7px;
+  margin-right: 14px;
+  padding: 2px;
+}
+#pulseaudio.1.muted {
+  color: #a89984;
+}
+#pulseaudio.2.muted {
+  color: #a89984;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #282828;
-  color: #b16286;
+  background: #ebdbb2;
+  border-radius: 12px 12px 0 0;
+  border-top: 3px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  color: #282828;
   font-size: 26px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #282828;
-  padding: 5px;
-  color: #b16286;
+  background: #ebdbb2;
+  border-radius: 0 0 12px 12px;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 7px;
+  margin-right: 14px;
+  padding: 2px;
+  color: #282828;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #282828;
-  color: #98971a;
-  font-size: 25px;
+  background: #ebdbb2;
+  border-radius: 12px 12px 0 0;
+  border-top: 5px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  color: #282828;
+  font-size: 26px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }
-
 #battery.1.charging {
+  color: #98971a;
+}
+#battery.1.plugged {
   color: #cc241d;
 }
-
-#battery.1.plugged {
-  color: #d79921;
-}
-
 #battery.2 {
-  background: #282828;
-  color: #98971a;
+  background: #ebdbb2;
+  border-radius: 0 0 12px 12px;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  font-size: 14px;
+  font-weight: bold;
+  color: #282828;
+  margin-left: 7px;
+  margin-right: 14px;
   padding: 5px;
 }
-
 #battery.2.charging {
-  color: #cc241d;
+  color: #98971a;
 }
-
 #battery.2.plugged {
-  color: #d79921;
+  color: #cc241d;
 }
 
 @keyframes blink {
@@ -126,7 +180,7 @@ window#waybar.empty #window {
 }
 
 #battery.2.critical:not(.charging) {
-  color: #fe8019;
+  color: #b8bb26;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -135,91 +189,130 @@ window#waybar.empty #window {
 }
 
 /** ********** Clock ********** **/
-#clock {
-  background: #282828;
-  color: #98971a;
-  font-size: 22px;
-  font-weight: bolder;
+#custom-calendar-icon {
+  background: #ebdbb2;
+  border-radius: 12px 12px 0 0;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
+  color: #282828;
+  font-size: 26px;
   padding: 5px;
 }
-#clock.date {
-  background: #282828;
-  color: #98971a;
-  font-size: 22px;
+#clock {
+  background: #ebdbb2;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  margin-left: 7px;
+  margin-right: 14px;
+  color: #282828;
+  font-size: 26px;
   font-weight: bolder;
+}
+#clock.date {
+  background: #ebdbb2;
+  border-radius: 0 0 12px 12px;
+  border-bottom: 3px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  color: #282828;
+  margin-left: 7px;
+  margin-right: 14px;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+#custom-time-icon {
+  background: #ebdbb2;
+  border-radius: 12px 12px 0 0;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
+  color: #282828;
+  font-size: 26px;
   padding: 5px;
 }
 #clock.time {
-  background: #282828;
-  color: #d79921;
-  font-size: 22px;
+  background: #ebdbb2;
+  border-radius: 0 0 12px 12px;
+  border-right: 7px solid rgba(168,153,132,1.0);
+  margin-left: 7px;
+  margin-right: 14px;
+  color: #282828;
+  font-size: 26px;
   font-weight: bolder;
-  padding: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #3c3836;
+  background: #282828;
+  border-radius: 12px;
+  border-top: 5px solid rgba(29,32,33,1.0);
+  border-right: 7px solid rgba(29,32,33,1.0);
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }
 
 #language {
-  background: #282828;
-  color: #b8bb26;
-  font-size: 20px;
+  background: #fe8019;
+  border-top: 7px solid rgba(214,93,14,1.0);
+  border-right: 7px solid rgba(214,93,14,1.0);
+  border-radius: 12px;
+  color: #ebdbb2;
+  font-size: 24px;
   font-weight: bold;
-  border-radius: 0 0 10px 10px;
-  padding-bottom: 13px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 5px;
 }
 
 #idle_inhibitor {
-  background: #282828;
-  color: #7c6f64;
+  background: #ebdbb2;
+  border-bottom: 7px solid rgba(168,153,132,1.0);
+  border-right: 7px solid rgba(168,153,132,1.0);
+  border-radius: 12px;
+  color: #282828;
   font-size: 26px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }
 #idle_inhibitor.activated {
-  color: #689d6a;
+  background: #fabd2f;
+  border-bottom: 7px solid rgba(215,153,33,1.0);
+  border-right: 7px solid rgba(215,153,33,1.0);
+  border-radius: 12px;
+  color: #ebdbb2;
 }
 
 /** ********** Custom ********** **/
-#custom-calendar-icon {
-  background: #282828;
-  color: #98971a;
-  font-size: 26px;
-  padding: 5px;
-}
-
-#custom-time-icon {
-  background: #282828;
-  color: #d79921;
-  font-size: 26px;
-  padding: 5px;
-}
-
-#custom-wttr.1 {
-  background: #282828;
-  color: #8ec07c;
-  font-size: 10px;
-  padding: 5px;
-}
-#custom-wttr.2 {
-  background: #282828;
-  color: #fbf1c7;
-  font-size: 10px;
-  padding: 5px;
-}
-
 #custom-wall {
-  background: #282828;
-  color: #83a598;
+  background: #8ec07c;
+  border-bottom: 5px solid rgba(104,157,106,1.0);
+  border-right: 7px solid rgba(104,157,106,1.0);
+  border-radius: 12px;
+  color: #ebdbb2;
   font-size: 26px;
-  padding-bottom: 5px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
+  padding: 5px;
 }
 
 #custom-spotify {
-  background: #282828;
-  color: #8ec07c;
+  background: #b8bb26;
+  border-bottom: 3px solid rgba(152,151,26,1.0);
+  border-right: 7px solid rgba(152,151,26,1.0);
+  border-radius: 12px;
+  color: #ebdbb2;
   font-size: 26px;
+  margin-left: 7px;
+  margin-right: 14px;
+  margin-top: 7px;
   padding: 5px;
 }

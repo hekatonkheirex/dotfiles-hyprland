@@ -190,7 +190,7 @@
   },
   "pulseaudio#2": {
     "format": "{volume}%",
-    "format-muted": "Muted",
+    "format-muted": "Mute",
     "format-bluetooth": "{volume}%",
     "format-bluetooth-muted": "Muted",
     "format-source": "{volume}%",

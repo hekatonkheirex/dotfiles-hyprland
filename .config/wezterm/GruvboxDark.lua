@@ -17,7 +17,7 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Share Tech Mono"
+local font_name = "Fira Code"
 
 local colors = {
 	-- special
@@ -66,7 +66,7 @@ return {
 
 	-- Font config
 	font = font_with_fallback(font_name),
-	font_rules = {
+  font_rules = {
 		{
 			italic = true,
 			font = font_with_fallback(font_name, { italic = true }),
@@ -85,8 +85,9 @@ return {
 			font = font_with_fallback(font_name, { weight = "Light" }),
 		},
 	},
-	font_size = 14,
+	font_size = 12,
 	line_height = 1.0,
+  harfbuzz_features = {"zero" , "ss01", "cv05", "cv14", "ss05", "ss04", "cv29", "cv30", "cv24"},
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",

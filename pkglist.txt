@@ -16,6 +16,7 @@ base-devel
 bdf-unifont
 betterdiscord-installer-bin
 bind
+bleachbit
 blueman
 bluez
 bluez-utils
@@ -35,9 +36,6 @@ dunst
 dupeguru
 efibootmgr
 efitools
-eog
-eog-docs
-eog-plugins
 ethtool
 exa
 ffmpegthumbnailer
@@ -57,6 +55,7 @@ gnome-shell-extension-pop-shell-git
 gnome-shell-extensions
 gnome-tweaks
 gnu-netcat
+google-chrome
 grim
 grub
 gruvbox-material-gtk-theme-git
@@ -64,6 +63,8 @@ gruvbox-material-icon-theme-git
 gvfs
 gvfs-mtp
 gvfs-smb
+hardcode-fixer-git
+hardcode-tray-git
 hdparm
 htop
 hwdetect
@@ -91,9 +92,6 @@ mlocate
 most
 mpv
 mtools
-nautilus
-nautilus-image-converter
-nautilus-share
 neofetch
 neovim
 net-tools
@@ -117,6 +115,7 @@ pacman-contrib
 pamixer
 paper-icon-theme-git
 papirus-folders-catppuccin-git
+papirus-icon-theme-git
 paru-bin
 pavucontrol
 pfetch-rs-bin
@@ -148,15 +147,14 @@ rustup
 rxfetch
 sdparm
 seahorse
-seahorse-nautilus
 sg3_utils
+sif-git
 slurp
 smartmontools
 sof-firmware
 spicetify-cli
 spotify
 sshfs
-sushi
 sway-audio-idle-inhibit-git
 swaybg
 swayidle
@@ -165,6 +163,10 @@ swww-git
 tamsyn-font
 terminus-font
 tex-gyre-fonts
+thunar
+thunar-archive-plugin
+thunar-shares-plugin
+thunar-volman
 tldr
 ttf-anonymous-pro
 ttf-bitstream-vera
@@ -198,6 +200,7 @@ upower
 usb_modeswitch
 usbutils
 vdhcoapp-bin
+viewnior
 vifm
 visual-studio-code-bin
 w3m

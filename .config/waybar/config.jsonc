@@ -15,22 +15,22 @@
 {
   "layer": "top", 				// Waybar at top layer
   "position": "left", 			// Waybar position (top|bottom|left|right)
-  "height": "200", 					// Waybar height (to be removed for auto height)
-  "width": "", 					// Waybar width (empty for auto width)
+  "height": "", 					// Waybar height (to be removed for auto height)
+  "width": "69", 					// Waybar width (empty for auto width)
   "spacing": 0, 					// Gaps between modules
   "margin": 0, 					// Space around the bar
   "margin-top": 0, 				// Space above the bar
   "margin-bottom": 0, 			// Space below the bar
-  "margin-left": 10, 				// Space to the left of the bar
+  "margin-left": 0, 				// Space to the left of the bar
   "margin-right": 0, 				// Space to the right of the bar
   "fixed-center": false, 			// Center modules position
   "gtk-layer-shell": true,
   // "ipc": false,
   // "bar_id": "bar-0",
   
-  // "modules-left": ["wlr/workspaces"],
-  "modules-center": ["wlr/workspaces", "custom/spotify", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "idle_inhibitor", "custom/wall", "tray", "custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time", "hyprland/language"],
-  // "modules-right": ["idle_inhibitor", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "hyprland/language", "clock", "clock#2", "custom/wttr#1", "custom/wttr#2", "custom/wall"],
+  "modules-left": ["wlr/workspaces", "idle_inhibitor", "custom/wall", "hyprland/language", "custom/spotify"],
+  "modules-center": ["custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "battery#1", "battery#2"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
