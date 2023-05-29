@@ -12,12 +12,12 @@ vim.g.nord_italic = false
 
 -- Themes color loading
 -- vim.cmd('colorscheme nord')
-vim.cmd('colorscheme gruvbox-material')
+-- vim.cmd('colorscheme gruvbox-material')
 -- vim.cmd('colorscheme tokyonight-night')
 -- require('onedark').load()
 -- vim.cmd('colorscheme everforest')
 -- vim.cmd('colorscheme horizon')
--- vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme hackthebox')
 -- vim.cmd('colorscheme decay')
 -- vim.cmd('colorscheme ayu')

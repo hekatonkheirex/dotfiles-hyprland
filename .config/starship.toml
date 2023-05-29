@@ -1,98 +1,70 @@
-# Don't print a new line at the start of the prompt
-add_newline = false
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$fill\
+$time\
+$line_break\
+$python\
+$lua\
+$c\
+$rust\
+$perl\
+$php\
+$ruby\
+$character"""
 
-# Make prompt a single line instead of two lines
-[line_break]
-disabled = true
+[fill]
+symbol = ' '
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                         # The name of the module we are configuring is "character"
-#success_symbol = "[➜](bold green)"  # The "success_symbol" is set to "➜" with color "bold green"
-#success_symbol = "[](bold green)[](yellow)[](red)[](purple)"
-success_symbol = "[❯](cyan)[❯](blue)[❯](green)"
-error_symbol = "[✗](bold red) "
+[directory]
+style = "#8be9fd"
 
-# Use custom format
-#format = """
-#[┌───────────────────>](bold green)
-#[│](bold green)$directory$rust$package
-#[└─>](bold green) """
-
-[cmd_duration]
-min_time = 10_000  # Show command duration over 10,000 milliseconds (= 10 sec)
-format = 'took [$duration]($style)'
-
-[battery]
-full_symbol = ""
-charging_symbol = " "
-discharging_symbol = " "
-
-# Clear visibility for exit codes
-[status]
-style = "bg:red"
-symbol = "💣 "
-format = '[\[$symbol$status\]]($style) '
-disabled = false
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+[character]
+success_symbol = "[❯](#bd93f9)"
+error_symbol = "[❯](#ff5555)"
+vimcmd_symbol = "[❮](#50fa7b)"
 
 [git_branch]
-symbol = "🌱 "
-truncation_length = 4
-truncation_symbol = ""
-
-[git_commit]
-commit_hash_length = 4
-tag_symbol = "🔖 "
-
-[git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[🍒 PICKING](bold red)"
+format = "[$branch]($style)"
+style = "bright-black"
 
 [git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
 
-#[hostname]
-#ssh_only = false
-#format =  "on [$hostname](bold red) "
-#trim_at = ".companyname.com"
-#disabled = false
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
 
-#[memory_usage]
-#disabled = false
-#threshold = -1
-#symbol = " "
-#style = "bold dimmed green"
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
 
-#[time]
-#disabled = false
-#format = ' 🕙 [\[ $time \]]($style) '
-#time_format = "%T"
+[time]
+disabled = false
+time_format = "%T"
+format = '$time'
 
-#[username]
-#style_user = "white bold"
-#style_root = "red bold"
-#format = "[$user]($style) "
-#disabled = false
-#show_always = true
+[c]
+symbol = '󰙱 '
+
+[lua]
+symbol = "󰢱 "
 
 [nodejs]
-format = "via [$symbol$version]($style) "
 symbol = "⬢ "
-style = "bold green"
-disabled = false
-not_capable_style = "bold red"
 
 [perl]
 symbol = " "
@@ -108,14 +80,3 @@ symbol = " "
 
 [rust]
 symbol = " "
-
-[env_var]
-format = "with [$env_value]($style) "
-
-[directory]
-truncation_length = 5
-format = "[$path]($style)[$lock_symbol]($lock_style) "
-style = "bold #f57800"
-read_only = "🔒"
-read_only_style= "bold white"
-

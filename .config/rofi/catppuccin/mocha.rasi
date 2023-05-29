@@ -18,8 +18,8 @@ element-text, element-icon , mode-switcher {
 
 window {
     padding: 24;
-    width: 36%;
-    height: 36%;
+    width: 50%;
+    height: 50%;
 
     background-color: @bg-col;
 
