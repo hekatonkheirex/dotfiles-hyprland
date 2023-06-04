@@ -18,7 +18,7 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "SF Pro Display Bold 14";
+    font: "Schibsted Grotesk Bold 18";
 }
 
 @theme "./catppuccin/mocha.rasi"

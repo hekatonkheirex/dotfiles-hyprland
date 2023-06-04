@@ -40,7 +40,7 @@ return require('packer').startup({
   use 'hrsh7th/cmp-nvim-lsp'
   use { 'onsails/lspkind-nvim' } 
 
-  --Snippets
+  -- Snippets
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
@@ -137,6 +137,9 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
 		  }
 		end
 	}
+
+  -- Yuck (for eww)
+  use { 'elkowar/yuck.vim' }
   
 end,
 config = {

@@ -1,10 +1,24 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
+/*  */
+/*  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ */
+/* ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ */
+/* ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗ */
+/* ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║ */
+/* ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝ */
+/*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
+
 {
   "layer": "top ",
   "mode": "dock",
   "exclusive": true,
   "passthrough": false,
   "position": "top",
-  "height": 34,
+  "height": 36,
   "width": "",
   "spacing": 0,
   "margin": 0,
@@ -16,9 +30,9 @@
   /* "ipc": true, */
   "bar_id": "bar-0",
 
-  "modules-left": ["custom/logo", "wlr/workspaces"],
+  "modules-left": ["wlr/workspaces"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "custom/wttr", "clock", "custom/power"],
+  "modules-right": ["custom/wall", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/wttr"],
   
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -33,16 +47,13 @@
     },
     "format": "{icon}",
     "format-icons": {
-      "1": "",
+      "1": "",
       "2": "",
-      "3": "",
-      "4": "",
-      "5": ""
-      },
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
     },
-    
-  "sway/window": {
-    "max-length": 50,
     },
 
   "hyprland/language": {
@@ -93,7 +104,7 @@
   "backlight": {
     "device": "amdgpu_bl0",
     "format": "{icon} {percent}%",
-    "format-icons": [""],
+    "format-icons": ["", ""],
     "on-scroll-up": "brightnessctl set +5%",
     "on-scroll-down": "brightnessctl set 5%-",
     },
@@ -106,11 +117,11 @@
       },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
-    "format-full": "100%",
-    "format-icons": ["", "", "", "", ""]
+    "format-full": " 100%",
+    "format-icons": ["", "", "", "", "", ""]
     },
 
   "battery#bat2": {
@@ -127,26 +138,22 @@
     },
 
   "pulseaudio": {
-    "disable-scroll": true,
-    // "format": "{icon} {volume}% {format_source}",
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{volume}% {icon}    {format_source}",
-    "format-bluetooth-muted": "  {icon}    {format_source}",
-    // "format-muted": " {format_source}",
+    "format-bluetooth": " {volume}%",
     "format-muted": " ",
     "format-source": " {volume}% ",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
       "default": ["", "", "", ""]
       },
-    "on-click": "pavucontrol"
-    },
+    "scroll-step": 5.0,
+    "on-click": "amixer set Master toggle",
+    "on-click-right": "pavucontrol",
+    "smooth-scrolling-threshold": 1,
+  },
 
   "custom/spotify": {
     "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
@@ -155,14 +162,7 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
-    },
-
-  "custom/weather": {
-      "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
-      "return-type": "json",
-      "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
-    },
+  },
 
   "custom/wttr": {
     "format": "{}",
@@ -170,14 +170,21 @@
     "interval": 3600,
     "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/wttr.py",
     "return-type": "json"
-    },
+  },
 
   "custom/logo": {
-     "format": "",
-     },
+     "format": "",
+  },
 
   "custom/power": {
       "format": "",
       "on-click": "/home/mura/.config/sway/scripts/wlogout",
-    },
-  }
+  },
+
+  "custom/wall":{
+    "format":"",
+    // "interval": 1,
+    "on-click": "~/.config/hypr/wall",
+    "tooltip": false,
+  },
+}

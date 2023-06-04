@@ -3,6 +3,8 @@ acpi_call
 acpid
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
+adw-gtk-theme
+adw-gtk3
 alsa-utils
 amd-ucode
 apparmor
@@ -43,6 +45,7 @@ figlet
 file-roller
 firefox
 firewalld
+fwupd
 fzf
 gdm
 gentium-plus-font
@@ -56,6 +59,7 @@ gnome-shell-extensions
 gnome-tweaks
 gnu-netcat
 google-chrome
+gradience
 grim
 grub
 gruvbox-material-gtk-theme-git
@@ -74,7 +78,6 @@ inetutils
 inter-font
 iw
 jq
-kitty
 kvantum
 kvantum-theme-catppuccin-git
 libappindicator-gtk2
@@ -181,6 +184,7 @@ ttf-fira-sans
 ttf-hack
 ttf-ibm-plex
 ttf-inconsolata
+ttf-iosevka
 ttf-jetbrains-mono
 ttf-junicode
 ttf-liberation

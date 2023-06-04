@@ -13,178 +13,262 @@
 /*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
 
 {
-  "layer": "top ",
-  "mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "position": "top",
-  "height": 36,
-  "width": "",
-  "spacing": 0,
-  "margin": 0,
-  "margin-top": 0,
-  "margin-bottom": 0,
-  "margin-left": 0,
-  "margin-right": 0,
-  "fixed-center": true,
-  /* "ipc": true, */
-  "bar_id": "bar-0",
-
-  "modules-left": ["wlr/workspaces"],
-  "modules-center": ["custom/spotify"],
-  "modules-right": ["custom/wall", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/wttr"],
+  "layer": "top", 				// Waybar at top layer
+  "position": "left", 			// Waybar position (top|bottom|left|right)
+  "height": "", 					// Waybar height (to be removed for auto height)
+  "width": "", 					// Waybar width (empty for auto width)
+  "spacing": 0, 					// Gaps between modules
+  "margin": 0, 					// Space around the bar
+  "margin-top": 0, 				// Space above the bar
+  "margin-bottom": 0, 			// Space below the bar
+  "margin-left": 0, 				// Space to the left of the bar
+  "margin-right": 0, 				// Space to the right of the bar
+  "fixed-center": false, 			// Center modules position
+  "gtk-layer-shell": true,
+  // "ipc": false,
+  // "bar_id": "bar-0",
   
+  "modules-left": ["wlr/workspaces", "idle_inhibitor", "custom/wall", "hyprland/language", "custom/spotify"],
+  "modules-center": ["custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "battery#1", "battery#2"],
+
   "wlr/workspaces": {
     "disable-scroll": false,
-    "all-outputs": true,
     "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "persistent_workspaces": {
       "1": [],
       "2": [],
       "3": [],
       "4": [],
       "5": [],
+      "6": []
     },
     "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
+      "1": "&#xec23;",
+      "2": "&#xebef;",
+      "3": "&#xeaad;",
+      "4": "&#xf7e4;",
+      "5": "&#xeb21;",
+      "6": "&#xed03;",
     },
-    },
+  },
 
-  "hyprland/language": {
-      "format": "{}",
-      "format-en": "US",
-      "format-es": "ES",
-      "tooltip": "false",
-    },
+  "backlight#1": {
+    "interval": 2,
+    //"device": "amdgpu_bl0",
+    "format": "{icon}",
+    "format-icons": ["&#xeb7d;", "&#xeb7e;"],
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1,
+  },
+  "backlight#2": {
+    "interval": 2,
+    //"device": "amdgpu_bl0",
+    "format": "{percent}%",
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1,
+  },
 
+  "battery#1": {
+		"interval": 60,
+		//"bat": "BAT1",
+		//"adapter": "ACAD",
+		"full-at": 100,
+		"design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "&#xea33;",
+    "format-plugged": "&#xef3b;",
+    "format-full": "&#xf668;",
+    "format-icons": ["&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+  },
+  "battery#2": {
+    "interval": 60,
+		//"bat": "BAT1",
+		//"adapter": "ACAD",
+		"full-at": 100,
+		"design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-full": "Full",
+    "format-alt": "{time}",
+    "format-time": "{H}h",
+    "tooltip": false,
+  },
+  
+  "custom/calendar-icon": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%a}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+
+  "clock#date": {
+    "format": "{:%d}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+
+  "custom/time-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "clock#time": {
+    "format": "{:%H\n%M}"
+  },
+  
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
-      }
-    },
-
-  "tray": {
-    "icon-size": 16,
-    "spacing": 8
-    },
-
-  "clock": {
-    "format": "{:%H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-    },
-
-  "cpu": {
-    "format": "{usage}% 󰻠",
-    "tooltip": false
-    },
-
-  "memory": {
-    "format": "{}% 󰍛"
-    },
-
-  "temperature": {
-    "thermal-zone": 2,
-    "interval": 3,
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["󰔏"]
-    },
-
-  "backlight": {
-    "device": "amdgpu_bl0",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""],
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-",
-    },
-
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-      },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    "format-full": " 100%",
-    "format-icons": ["", "", "", "", "", ""]
-    },
-
-  "battery#bat2": {
-    "bat": "BAT0"
-    },
-
+      "activated": "&#xea9a;",
+      "deactivated": "&#xecf0;"
+    }
+  },
+  
   "network": {
-    "format": " {ifname} ",
-    "format-ethernet": "{ifname}",
-    "format-wifi": " {essid}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": " Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+    "interval": 5,
+    //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-linked": "",
+    "format-disconnected": "",
+    "format-disabled": "",
+    "tooltip-format": "{essid} :  {bandwidthUpBits} |  {bandwidthDownBits}",
+    "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
+  },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": " {volume}%",
-    "format-muted": " ",
-    "format-source": " {volume}% ",
-    "format-source-muted": " ",
+  "pulseaudio#1": {
+    "format": "{icon}",
+    "format-muted": "&#xf1c3;",
+    "format-bluetooth": "&#xea37;",
+    "format-source": "&#xeaf0;",
+    "format-source-muted": "&#xed16;",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "default": ["", "", "", ""]
-      },
+      "headphone": "&#xeabd;",
+      "hands-free": "&#xfa3c;",
+      "headset": "&#xeb90;",
+      "phone": "&#xeb09;",
+      "portable": "&#xf5a9;",
+      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
+    },
+    "scroll-step": 5.0,
+    "on-click": "amixer set Master toggle",
+    "on-click-right": "pavucontrol",
+    "smooth-scrolling-threshold": 1,
+  },
+  "pulseaudio#2": {
+    "format": "{volume}%",
+    "format-muted": "Mute",
+    "format-bluetooth": "{volume}%",
+    "format-bluetooth-muted": "Muted",
+    "format-source": "{volume}%",
     "scroll-step": 5.0,
     "on-click": "amixer set Master toggle",
     "on-click-right": "pavucontrol",
     "smooth-scrolling-threshold": 1,
   },
 
-  "custom/spotify": {
-    "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
-    "format": " {}",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8,
   },
 
-  "custom/wttr": {
+  "hyprland/language": {
     "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
+    "tooltip": "false",
+  },
+  
+  "cpu#1": {
+    "format": "",
+    },
+  "cpu#2": {
+    "interval": 1,
+    "format": "{usage}%",
+    },
+
+  "memory#1": {
+    "format": "",
+    },
+  "memory#2": {
+    "interval": 1,
+    "format": "{percentage}%",
+    },
+
+  "temperature#1": {
+    "format": "",
+    },
+  "temperature#2": {
+    "interval": 1,
+    "format": "{temperatureC}°C",
+    "critical-threshold": 80,
+    },
+
+  "custom/wttr#1": {
     "tooltip": true,
-    "interval": 3600,
-    "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/wttr.py",
-    "return-type": "json"
+    "format": "{}",
+    "interval": 300,
+    "exec": "~/.config/waybar/scripts/wttr1.py",
+    "return-type": "json",
   },
-
-  "custom/logo": {
-     "format": "",
+  "custom/wttr#2": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 300,
+    "exec": "~/.config/waybar/scripts/wttr2.py",
+    "return-type": "json",
   },
-
-  "custom/power": {
-      "format": "",
-      "on-click": "/home/mura/.config/sway/scripts/wlogout",
-  },
-
+  
   "custom/wall":{
-    "format":"",
+    "format":"&#xef56;",
     // "interval": 1,
     "on-click": "~/.config/hypr/wall",
     "tooltip": false,
+  },
+
+  "custom/spotify": {
+    "format": "",
+    "interval": 1,
+    "exec-if": "pgrep spotify",
+    "return-type": "json",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify previous",
+    "on-scroll-down": "playerctl -p spotify next",
+    "tooltip": true,
+    "escape": true,
+    "exec": "/home/mura/.config/waybar/scripts/spotify.sh"
   },
 }
