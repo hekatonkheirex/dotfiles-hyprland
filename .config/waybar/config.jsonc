@@ -19,9 +19,9 @@
   "width": "", 					// Waybar width (empty for auto width)
   "spacing": 0, 					// Gaps between modules
   "margin": 0, 					// Space around the bar
-  "margin-top": 0, 				// Space above the bar
-  "margin-bottom": 0, 			// Space below the bar
-  "margin-left": 0, 				// Space to the left of the bar
+  "margin-top": 15, 				// Space above the bar
+  "margin-bottom": 15, 			// Space below the bar
+  "margin-left": 15, 				// Space to the left of the bar
   "margin-right": 0, 				// Space to the right of the bar
   "fixed-center": false, 			// Center modules position
   "gtk-layer-shell": true,

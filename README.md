@@ -4,13 +4,14 @@ ___
 > ### <div align="center">*-- Disclaimer --*   </div>
 > *I am not a developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
-<img src="https://i.imgur.com/aNzYtcH.jpg">
+<img src="https://i.imgur.com/JhX9fEu.jpg">
 
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
 * **Window Manager** • [Hyprland](https://hyprland.org/) 💧
-* **Colorscheme** • [Gruvbox](https://github.com/sainnhe/gruvbox-material) 🟫
-  * **Backup Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
+* **Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
+  * **Backup Colorscheme** • [Gruvbox](https://github.com/sainnhe/gruvbox-material) 🟫
   * **Backup Colorscheme** • [Rosé Pine](https://rosepinetheme.com/) 🌹
+  * **Backup Colorscheme** • [Tokyo Night]() 
 * **Shell** • [Zsh](https://www.zsh.org) 🐚 with
   * [OhMyZsh](https://ohmyz.sh/) 🧑‍🤝‍🧑 with
     * [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
@@ -18,7 +19,6 @@ ___
     * [zsh-completions](https://github.com/zsh-users/zsh-completions)
   * [Starship](https://github.com/starship/starship) 🚀
 * **Terminal** • [WezTerm](https://github.com/wez/wezterm) 💻
-  * **Backup Terminal** • [Kitty](https://sw.kovidgoyal.net/kitty/) 🐱
 * **Panel** • [Waybar](https://github.com/Alexays/Waybar) 🍫 but the [patched version for Hyprland](https://aur.archlinux.org/packages/waybar-hyprland-git)
 * **Notication Daemon** • [Dunst](https://github.com/dunst-project/dunst) 🔔
 * **Launcher** • [Rofi](https://github.com/davatorium/rofi) ⚓ with [rofimoji](https://github.com/fdw/rofimoji) 😐
@@ -62,14 +62,21 @@ ___
   <details>
   <summary>Installed plugins</summary>
 
+     * [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
      * [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
-     * [Gruvbox Material](https://marketplace.visualstudio.com/items?itemName=sainnhe.gruvbox-material)
      * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+     * [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
+     * [Font Awesome Auto-complete & Preview](https://marketplace.visualstudio.com/items?itemName=Janne252.fontawesome-autocomplete)
+     * [Gruvbox Material](https://marketplace.visualstudio.com/items?itemName=sainnhe.gruvbox-material)
+     * [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+     * [Indenticator](https://marketplace.visualstudio.com/items?itemName=SirTori.indenticator)
      * [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
      * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
      * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
      * [Rasi](https://marketplace.visualstudio.com/items?itemName=dlasagno.rasi)
      * [Rosé Pine](https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine) 
+     * [Spanish - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-spanish)
+     * [Tokyo Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
      * [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
   </summary>
 
