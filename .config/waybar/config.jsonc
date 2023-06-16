@@ -21,7 +21,7 @@
   "margin": 0, 					// Space around the bar
   "margin-top": 15, 				// Space above the bar
   "margin-bottom": 15, 			// Space below the bar
-  "margin-left": 15, 				// Space to the left of the bar
+  "margin-left": 10, 				// Space to the left of the bar
   "margin-right": 0, 				// Space to the right of the bar
   "fixed-center": false, 			// Center modules position
   "gtk-layer-shell": true,
@@ -30,7 +30,7 @@
   
   "modules-left": ["wlr/workspaces", "idle_inhibitor", "custom/wall", "hyprland/language", "custom/spotify"],
   "modules-center": ["custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
-  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "battery#1", "battery#2"],
+  "modules-right": ["custom/weather#1", "custom/weather#2", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "battery#1", "battery#2"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -270,5 +270,20 @@
     "tooltip": true,
     "escape": true,
     "exec": "/home/mura/.config/waybar/scripts/spotify.sh"
+  },
+
+  "custom/weather#1": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    // "format-alt": "{alt}",
+  },
+  "custom/weather#2": {
+    "exec": "python ~/.config/waybar/scripts/weather2.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    // "format-alt": "{alt}",
   },
 }

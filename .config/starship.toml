@@ -22,6 +22,7 @@ $character"""
 symbol = ' '
 
 [directory]
+read_only = " 󰌾"
 style = "#8be9fd"
 
 [character]
@@ -49,7 +50,7 @@ format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
 
 [cmd_duration]
-format = "[$duration]($style) "
+format = " [$duration]($style) "
 style = "yellow"
 
 [time]

@@ -21,8 +21,8 @@ configuration {
     font: "Schibsted Grotesk Bold 18";
 }
 
-@theme "./catppuccin/mocha.rasi"
-/* @theme "nord.rasi" */
+/* @theme "./catppuccin/mocha.rasi" */
+@theme "nord.rasi"
 /* @theme "rosepine.rasi" */
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */

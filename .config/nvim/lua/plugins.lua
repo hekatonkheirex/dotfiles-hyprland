@@ -28,6 +28,7 @@ return require('packer').startup({
   use 'audibleblink/hackthebox.vim'
   use {'decaycs/decay.nvim', as = 'decay'}
   use 'Shatur/neovim-ayu'
+  use 'Mofiqul/dracula.nvim'
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }

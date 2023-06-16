@@ -1,35 +1,21 @@
-/* ██╗    ██╗██╗      ██████╗  ██████╗  ██████╗ ██╗   ██╗████████╗ */
-/* ██║    ██║██║     ██╔═══██╗██╔════╝ ██╔═══██╗██║   ██║╚══██╔══╝ */
-/* ██║ █╗ ██║██║     ██║   ██║██║  ███╗██║   ██║██║   ██║   ██║ */
-/* ██║███╗██║██║     ██║   ██║██║   ██║██║   ██║██║   ██║   ██║ */
-/* ╚███╔███╔╝███████╗╚██████╔╝╚██████╔╝╚██████╔╝╚██████╔╝   ██║ */
-/*  ╚══╝╚══╝ ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝  ╚═════╝    ╚═╝ */
-/*  */
-/*  ██████╗███████╗███████╗ */
-/* ██╔════╝██╔════╝██╔════╝ */
-/* ██║     ███████╗███████╗ */
-/* ██║     ╚════██║╚════██║ */
-/* ╚██████╗███████║███████║ */
-/*  ╚═════╝╚══════╝╚══════╝ */
-
 /** ********** Fonts ********** **/
 * {
-  font-family: "Schibsted Grotesk", "Iosevka Nerd Font", archcraft, sans-serif; 
-  font-size: 18px;
-  font-weight: bold;
+    font-family: "Schibsted Grotesk", "Iosevka Nerd Font", archcraft, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /** ********** Main Window ********** **/
 window {
-  background-color: rgba(25, 23, 36, 1.0);
+    background-color: rgba(46, 52, 64, 1.0);
 }
 
 /** ********** Buttons ********** **/
 button {
-  background-color: rgba(224, 222, 244, 0.020);
-  color: #e0def4;
-	border: 0px solid rgba(31, 29, 46, 1.0);
-	border-radius: 20px;
+    background-color: rgba(236, 239, 244, 0.020);
+    color: #eceff4;
+	border: 0px solid rgba(59, 66, 82, 1.0);
+	border-radius: 50px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 40%;
@@ -37,10 +23,9 @@ button {
 }
 
 button:focus, button:active, button:hover {
-  background-color: rgba(196, 167, 231, 1.0);
-	box-shadow: 0px 0px 25px 0px rgba(196, 167, 231, 0.85);
-	color: #1f1d2e;
-  margin: 10px;
+    background-color: rgba(236, 239, 244, 1.0);
+	box-shadow: 0px 0px 25px 0px rgba(236, 239, 244, 0.85);
+	color: #3b4252;
 	outline-style: none;
 }
 
