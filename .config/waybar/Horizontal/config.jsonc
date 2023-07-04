@@ -13,10 +13,7 @@
 /*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
 
 {
-  "layer": "top ",
-  "mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
+  "layer": "top",
   "position": "top",
   "height": 36,
   "width": "",

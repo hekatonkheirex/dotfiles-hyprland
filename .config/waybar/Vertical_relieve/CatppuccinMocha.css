@@ -8,14 +8,12 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Fira Sans Book", "tabler-icons";
+  font-family: "Unica One", "tabler-icons";
   font-weight: normal;
 }
 
 window#waybar {
-  background-color: #313244;
-  border-radius: 0 55px 55px 0;
-  border-right: 7px solid rgba (30,30,46,0.6);
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -35,19 +33,16 @@ tooltip label {
 
 /* Workspaces */
 #workspaces {
-  background: #585b70;
-  border-bottom: 7px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  background: #313244;
+  border-bottom: 7px solid rgba(30, 30, 46,1.0);
+  border-right: 7px solid rgba(30, 30, 46,1.0);
   border-radius: 8px 24px 8px 24px;
   font-size: 30px;
-  margin-left: 7px;
-  margin-right: 14px;
-  margin-top: 20px;
 }
 
 #workspaces button {
-  /* min-width: 10px; */
-  color: #6c7086;
+  min-width: 35px;
+  color: #45475a;
   padding: 5px;
 }
 
@@ -56,7 +51,7 @@ tooltip label {
   border-bottom: 7px solid rgba(250,179,135,1.0);
   border-right: 7px solid rgba(250,179,135,1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
   margin-bottom: -7px;
   margin-right: -7px;
   padding: 5px;
@@ -64,10 +59,10 @@ tooltip label {
 
 #workspaces button.active {
   background: #f5e0dc;
-  border-bottom: 7px solid rgba(242,205,205,1.0);
-  border-right: 7px solid rgba(242,205,205,1.0);
+  border-bottom: 7px solid rgba(242, 205, 205, 1.0);
+  border-right: 7px solid rgba(242, 205, 205, 1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
   margin-bottom: -7px;
   margin-right: -7px;
   padding: 5px;
@@ -83,106 +78,93 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #585b70;
-  border-top: 3px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  background: #313244;
+  border-top: 3px solid rgba(30, 30, 46, 1.0);
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   border-radius: 24px 8px 0 0;
   color: #89b4fa;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
 #pulseaudio.2 {
-  background: #585b70;
-  border-right: 7px solid rgba(69,71,90,1.0);
+  background: #313244;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   border-radius: 0 0 24px 8px;
   color: #89b4fa;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  margin-left: 7px;
-  margin-right: 14px;
   padding: 2px;
 }
 #pulseaudio.1.muted {
-  color: #6c7086;
+  color: #45475a;
 }
 #pulseaudio.2.muted {
-  color: #6c7086;
+  color: #45475a;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #585b70;
+  background: #313244;
   border-radius: 24px 8px 0 0;
-  border-top: 3px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  border-top: 3px solid rgba(30, 30, 46, 1.0);
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   color: #f9e2af;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #585b70;
+  background: #313244;
   border-radius: 0 0 24px 8px;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  font-size: 14px;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
+  font-size: 16px;
   font-weight: bold;
-  margin-left: 7px;
-  margin-right: 14px;
   padding: 2px;
   color: #f9e2af;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #585b70;
+  background: #313244;
   border-radius: 24px 8px 0 0;
-  border-top: 7px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  border-top: 7px solid rgba(30, 30, 46, 1.0);
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   color: #89dceb;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
 #battery.1.charging {
   background: #a6e3a1;
-  border-top: 7px solid rgba(149,204,144,1.0);
-  border-right: 7px solid rgba(149,204,144,1.0);
-  color: #313244;
+  border-top: 7px solid rgba(149,204,144, 1.0);
+  border-right: 7px solid rgba(149,204,144, 1.0);
+  color: #1e1e2e;
 }
 #battery.1.plugged {
   background: #f38ba8;
-  border-top: 7px solid rgba(218,125,151,1.0);
-  border-right: 7px solid rgba(218,125,151,1.0);
-  color: #313244;
+  border-top: 7px solid rgba(218,125,151, 1.0);
+  border-right: 7px solid rgba(218,125,151, 1.0);
+  color: #1e1e2e;
 }
 #battery.2 {
-  background: #585b70;
+  background: #313244;
   border-radius: 0 0 24px 8px;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  font-size: 14px;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
+  font-size: 16px;
   font-weight: bold;
   color: #89dceb;
-  margin-left: 7px;
-  margin-right: 14px;
-  margin-bottom: 20px;
   padding: 5px;
 }
 #battery.2.charging {
   background: #a6e3a1;
   border-right: 7px solid rgba(149,204,144,1.0);
-  color: #313244;
+  color: #1e1e2e;
 }
 #battery.2.plugged {
   background: #f38ba8;
   border-right: 7px solid rgba(218,125,151,1.0);
-  color: #313244;
+  color: #1e1e2e;
 }
 
 @keyframes blink {
@@ -194,7 +176,7 @@ window#waybar.empty #window {
 }
 
 #battery.1.critical:not(.charging) {
-  color: #313244;
+  color: #1e1e2e;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -203,7 +185,7 @@ window#waybar.empty #window {
 }
 
 #battery.2.critical:not(.charging) {
-  color: #313244;
+  color: #1e1e2e;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -213,68 +195,56 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #custom-calendar-icon {
-  background: #585b70;
+  background: #313244;
   border-radius: 8px 24px 0 0;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  margin-left: 7px;
-  margin-right: 14px;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   margin-top: 7px;
   color: #cdd6f4;
   font-size: 26px;
   padding: 5px;
 }
 #clock {
-  background: #585b70;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  margin-left: 7px;
-  margin-right: 14px;
+  background: #313244;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   color: #cdd6f4;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bolder;
 }
 #clock.date {
-  background: #585b70;
+  background: #313244;
   border-radius: 0 0 8px 24px;
-  border-bottom: 3px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  border-bottom: 3px solid rgba(30, 30, 46, 1.0);
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   color: #cdd6f4;
-  margin-left: 7px;
-  margin-right: 14px;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bolder;
 }
 
 #custom-time-icon {
-  background: #585b70;
+  background: #313244;
   border-radius: 24px 8px 0 0;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  border-top: 3px solid rgba(69,71,90,1.0);
-  margin-left: 7px;
-  margin-right: 14px;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
+  border-top: 3px solid rgba(30, 30, 46, 1.0);
   margin-top: 7px;
   color: #cdd6f4;
   font-size: 26px;
   padding: 5px;
 }
 #clock.time {
-  background: #585b70;
+  background: #313244;
   border-radius: 0 0 24px 8px;
-  border-right: 7px solid rgba(69,71,90,1.0);
-  margin-left: 7px;
-  margin-right: 14px;
+  border-right: 7px solid rgba(30, 30, 46,1.0);
   color: #cdd6f4;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bolder;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background: #7f849c;
+  background: #45475a;
   border-radius: 24px 8px 24px 8px;
-  border-top: 5px solid rgba(108,112,134,1.0);
-  border-right: 7px solid rgba(108,112,134,1.0);
-  margin-left: 7px;
-  margin-right: 14px;
+  border-top: 5px solid rgba(49, 50, 68, 1.0);
+  border-right: 7px solid rgba(49, 50, 68, 1.0);
   margin-top: 7px;
   padding: 5px;
 }
@@ -284,24 +254,20 @@ window#waybar.empty #window {
   border-bottom: 5px solid rgba(225,161,121,1.0);
   border-right: 7px solid rgba(225,161,121,1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
   font-size: 24px;
   font-weight: bold;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
 
 #idle_inhibitor {
-  background: #585b70;
-  border-bottom: 5px solid rgba(69,71,90,1.0);
-  border-right: 7px solid rgba(69,71,90,1.0);
+  background: #313244;
+  border-bottom: 5px solid rgba(30, 30, 46, 1.0);
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #6c7086;
+  color: #45475a;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
@@ -310,7 +276,7 @@ window#waybar.empty #window {
   border-bottom: 5px solid rgba(220,174,207,1.0);
   border-right: 7px solid rgba(220,174,207,1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
 }
 
 /** ********** Custom ********** **/
@@ -319,10 +285,8 @@ window#waybar.empty #window {
   border-bottom: 5px solid rgba(182,149,222,1.0);
   border-right: 7px solid rgba(182,149,222,1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
 }
@@ -332,10 +296,47 @@ window#waybar.empty #window {
   border-bottom: 3px solid rgba(149,204,144,1.0);
   border-right: 7px solid rgba(149,204,144,1.0);
   border-radius: 8px 24px 8px 24px;
-  color: #313244;
+  color: #1e1e2e;
   font-size: 26px;
-  margin-left: 7px;
-  margin-right: 14px;
   margin-top: 7px;
   padding: 5px;
+}
+
+#custom-weather.1 {
+  background: #313244;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
+  border-top: 3px solid rgba(30, 30, 46, 1.0);
+  border-radius: 24px 8px 0 0;
+  color: #cdd6f4;
+  font-size: 26px;
+  padding: 5px;
+}
+#custom-weather.2 {
+  background: #313244;
+  border-right: 7px solid rgba(30, 30, 46, 1.0);
+  border-radius: 0 0 24px 8px;
+  color: #cdd6f4;
+  font-size: 16px;
+  padding: 2px;
+}
+#custom-weather.1.default {
+  color: #a6e3a1;
+}
+#custom-weather.1.severe {
+    color: #f38ba8;
+}
+#custom-weather.1.sunnyDay {
+    color: #f9e2af;
+}
+#custom-weather.1.clearNight {
+    color: #b4befe;
+}
+#custom-weather.1.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+    color: #cdd6f4;
+}
+#custom-weather.1.rainyDay, #custom-weather.rainyNight {
+    color: #cba6f7;
+}
+#custom-weather.1.showyIcyDay, #custom-weather.snowyIcyNight {
+    color: #89dceb;
 }

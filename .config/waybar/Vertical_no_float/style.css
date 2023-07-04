@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Space Grotesk", "Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "Unica One", "Font Awesome 6 Pro", "Font Awesome 6 Brands";
   font-weight: normal;
 }
 
@@ -18,7 +18,7 @@ button {
 }
 
 window#waybar {
-  background-color: #1d2021;
+  background-color: #2e3440;
 }
 
 window#waybar.hidden {
@@ -27,16 +27,16 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(29, 32, 33, 0.7);
-  border: 1px solid rgba(29, 32, 33, 0.7);
+  background: rgba(46, 52, 64, 0.7);
+  border: 1px solid rgba(46, 52, 64, 0.7);
 }
 tooltip label {
-  color: #fbf1c7;
+  color: #eceff4;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #282828;
+  background: #2e3440;
   border-radius: 6px;
   margin-left: 2px;
   margin-right: 2px;
@@ -46,7 +46,7 @@ tooltip label {
 
 #workspaces button {
   min-width: 10px;
-  color: #504945;
+  color: #434c5e;
   padding: 8px;
 }
 
@@ -56,18 +56,14 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: #98971a;
+  background: #88c0d0;
   border-radius: 6px;
-  color: #1d2021;
+  color: #2e3440;
   padding: 8px;
 }
 
 #workspaces button.urgent {
-  color: #cc241d;
-}
-
-#workspaces button.persistent {
-	color: #7c6f64;
+  color: #bf616a;
 }
 
 window#waybar.empty #window {
@@ -76,16 +72,16 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #282828;
+  background: #3b4252;
   border-radius: 6px 6px 0 0;
-  color: #458588;
+  color: #d08770;
   margin-left: 2px;
   margin-right: 2px;
   padding: 5px 0 5px 0;
 }
 #pulseaudio.2 {
-  background: #282828;
-  color: #fbf1c7;
+  background: #3b4252;
+  color: #d08770;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -94,15 +90,15 @@ window#waybar.empty #window {
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #282828;
-  color: #458588;
+  background: #3b4252;
+  color: #ebcb8b;
   margin-left: 2px;
   margin-right: 2px;
   padding: 5px 0 5px 0;
 }
 #backlight.2 {
-  background: #282828;
-  color: #fbf1c7;
+  background: #3b4252;
+  color: #ebcb8b;
   margin-left: 2px;
   margin-right: 2px;
   font-size: 10px;
@@ -111,25 +107,25 @@ window#waybar.empty #window {
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #282828;
-  color: #458588;
+  background: #3b4252;
+  color: #a3be8c;
   margin-left: 2px;
   margin-right: 2px;
   padding: 5px 0 5px 0;
 }
 
 #battery.1.charging {
-  color: #cc241d;
+  color: #bf616a;
 }
 
 #battery.1.plugged {
-  color: #d79921;
+  color: #a3be8c;
 }
 
 #battery.2 {
-  background: #282828;
+  background: #3b4252;
   border-radius: 0 0 6px 6px;
-  color: #fbf1c7;
+  color: #a3be8c;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -138,21 +134,21 @@ window#waybar.empty #window {
 }
 
 #battery.2.charging {
-  color: #cc241d;
+  color: #bf616a;
 }
 
 #battery.2.plugged {
-  color: #d79921;
+  color: #a3be8c;
 }
 
 @keyframes blink {
   to {
-    background-color: #fb4934;
+    background-color: #ebcb8b;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #fe8019;
+  color: #2e3440;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -162,9 +158,9 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #32302f;
+  background: #3b4252;
   border-radius: 6px 6px 0 0;
-  color: #98971a;
+  color: #eceff4;
   font-size: 22px;
   font-weight: bolder;
   margin-left: 2px;
@@ -172,9 +168,9 @@ window#waybar.empty #window {
   padding: 5px 0 0 0;
 }
 #clock.2 {
-  background: #32302f;
+  background: #3b4252;
   border-radius: 0 0 6px 6px;
-  color: #d79921;
+  color: #eceff4;
   font-size: 22px;
   font-weight: bolder;
   margin-left: 2px;
@@ -185,7 +181,7 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #32302f;
+  background-color: #434c5e;
   border-radius: 6px;
   margin-left: 2px;
   margin-right: 2px;
@@ -194,7 +190,7 @@ window#waybar.empty #window {
 }
 
 #language {
-  color: #b16286;
+  color: #793aaf;
   font-size: 16px;
   font-weight: bold;
   margin-left: 2px;
@@ -204,27 +200,27 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-  color: #7c6f64;
+  color: #3b4252;
   margin-left: 2px;
   margin-right: 2px;
   padding: 8px;
   margin-bottom: 5px;
 }
 #idle_inhibitor.activated {
-  color: #689d6a;
+  color: #81a1c1;
 }
 
 #cpu.1 {
-  background: #282828;
-  color: #83a598;
+  background: #3b4252;
+  color: #81a1c1;
   margin-left: 2px;
   margin-right: 2px;
   padding-top: 5px;
   border-radius: 6px 6px 0 0;
 }
 #cpu.2 {
-  background: #282828;
-  color: #fbf1c7;
+  background: #3b4252;
+  color: #81a1c1;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -232,14 +228,14 @@ window#waybar.empty #window {
 }
 
 #memory.1 {
-  background: #282828;
-  color: #83a598;
+  background: #3b4252;
+  color: #81a1c1;
   margin-left: 2px;
   margin-right: 2px;
 }
 #memory.2 {
-  background: #282828;
-  color: #fbf1c7;
+  background: #3b4252;
+  color: #81a1c1;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -247,18 +243,18 @@ window#waybar.empty #window {
 }
 
 #temperature.1 {
-  background: #282828;
-  color: #83a598;
+  background: #3b4252;
+  color: #81a1c1;
   margin-left: 2px;
   margin-right: 2px;
 }
 #temperature.1.critical {
-  color: #cc241d;
+  color: #bf616a;
 }
 #temperature.2 {
-  background: #282828;
+  background: #3b4252;
   border-radius: 0 0 6px 6px;
-  color: #fbf1c7;
+  color: #81a1c1;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -266,24 +262,24 @@ window#waybar.empty #window {
   margin-bottom: 5px;
 }
 #temperature.2.critical {
-  color: #cc241d;
+  color: #bf616a;
 }
 
 /** ********** Custom ********** **/
 
 #custom-wttr.1 {
-  background: #282828;
+  background: #3b4252;
   border-radius: 6px 6px 0 0;
-  color: #8ec07c;
+  color: #eceff4;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
   padding: 5px 0 5px 0;
 }
 #custom-wttr.2 {
-  background: #282828;
+  background: #3b4252;
   border-radius: 0 0 6px 6px;
-  color: #fbf1c7;
+  color: #eceff4;
   font-size: 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -292,7 +288,7 @@ window#waybar.empty #window {
 }
 
 #custom-wall {
-  color: #689d6a;
+  color: #5e81ac;
   padding: 8px;
   margin-left: 2px;
   margin-right: 2px;
