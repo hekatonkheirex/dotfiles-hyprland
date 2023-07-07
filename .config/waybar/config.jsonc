@@ -27,9 +27,9 @@
   /* "ipc": true, */
   "bar_id": "bar-0",
 
-  "modules-left": ["wlr/workspaces"],
-  "modules-center": ["custom/spotify"],
-  "modules-right": ["custom/wall", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/wttr"],
+  "modules-left": ["idle_inhibitor", "hyprland/language", "custom/wall", "custom/wttr", "custom/playerctl", "custom/playerlabel"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
   
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -44,12 +44,16 @@
     },
     "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "5": "",
+      // "6": "",
+      "urgent": "",
+			"active": "",
+			"default": "󰧞",
+    "sort-by-number": true
     },
     },
 
@@ -64,7 +68,7 @@
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": ""
+      "deactivated": ""
       }
     },
 
@@ -74,9 +78,9 @@
     },
 
   "clock": {
-    "format": "{:%H:%M}",
+    "format": " {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": " {:%Y-%m-%d}"
     },
 
   "cpu": {
@@ -159,6 +163,34 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/playerctl": {
+      "format": "{icon}",
+      "return-type": "json",
+      "max-length": 32,
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "on-click-middle": "playerctl play-pause",
+      "on-click": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "format-icons": {
+        "Playing": "<span foreground='#a6e3a1'>  </span>",
+        "Paused": "<span foreground='#94e2d5'>  </span>"
+    },
+  },
+
+  "custom/playerlabel": {
+      "format": "<span>{}</span>",
+      "return-type": "json",
+      "max-length": 24,
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "on-click-middle": "playerctl play-pause",
+      "on-click": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "format-icons": {
+        "Playing": "<span foreground='#a6e3a1'>  </span>",
+        "Paused": "<span foreground='#94e2d5'>  </span>"
+    },
   },
 
   "custom/wttr": {

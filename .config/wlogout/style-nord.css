@@ -1,6 +1,6 @@
 /** ********** Fonts ********** **/
 * {
-    font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+    font-family: "Schibsted Grotesk", "Iosevka Nerd Font", archcraft, sans-serif;
     font-size: 14px;
     font-weight: bold;
 }
@@ -18,7 +18,8 @@ button {
 	border-radius: 50px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 30%;
+	background-size: 40%;
+  margin: 10px;
 }
 
 button:focus, button:active, button:hover {

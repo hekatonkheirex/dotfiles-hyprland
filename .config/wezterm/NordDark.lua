@@ -1,3 +1,10 @@
+-- ██╗    ██╗███████╗███████╗████████╗███████╗██████╗ ███╗   ███╗
+-- ██║    ██║██╔════╝╚══███╔╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
+-- ██║ █╗ ██║█████╗    ███╔╝    ██║   █████╗  ██████╔╝██╔████╔██║
+-- ██║███╗██║██╔══╝   ███╔╝     ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║
+-- ╚███╔███╔╝███████╗███████╗   ██║   ███████╗██║  ██║██║ ╚═╝ ██║
+--  ╚══╝╚══╝ ╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
+
 local wezterm = require("wezterm")
 
 local xcursor_size = nil
@@ -17,15 +24,15 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Cartograph CF"
+local font_name = "Maple Mono"
 
 local colors = {
 	-- special
 	foreground = "#eceff4",
-	darker_background = "#292e39",
+	darker_background = "#242933",
 	background = "#2e3440",
 	lighter_background = "#3b4252",
-	one_background = "#242933",
+	one_background = "#1b1f26",
 
 	-- black
 	color0 = "#3b4252",
@@ -85,14 +92,15 @@ return {
 			font = font_with_fallback(font_name, { weight = "Light" }),
 		},
 	},
-	font_size = 11,
+	font_size = 13,
 	line_height = 1.0,
+  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",
 
 	-- X11
-	enable_wayland = false,
+	enable_wayland = true,
 
 	-- Keybinds
 	disable_default_key_bindings = true,
@@ -191,6 +199,21 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CopyTo = "ClipboardAndPrimarySelection" }),
 		},
+    {
+      key = "-",
+      mods = "CTRL",
+      action = wezterm.action.DecreaseFontSize
+    },
+    {
+      key = "=",
+      mods = "CTRL",
+      action = wezterm.action.IncreaseFontSize
+    },
+    {
+      key = "0",
+      mods = "CTRL",
+      action = wezterm.action.ResetFontSize
+    },
 	},
 
 	bold_brightens_ansi_colors = false,
