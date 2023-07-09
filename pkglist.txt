@@ -109,7 +109,7 @@ pfetch-rs-bin
 pipewire-alsa
 pipewire-pulse
 playerctl
-polkit-gnome
+polkit-kde-agent
 pop-gtk-theme
 pop-icon-theme
 poppler-glib
@@ -132,11 +132,13 @@ rtmpdump
 rustup
 rxfetch
 sdparm
+seahorse
 sg3_utils
 sif-git
 slurp
 smartmontools
 sof-firmware
+solaar
 spicetify-cli
 spotify
 sshfs
