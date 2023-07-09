@@ -131,6 +131,7 @@ alias ls="exa --icons"
 alias la="exa -la --icons"
 alias laa="exa -a --icons"
 alias update="paru"
+alias clean="paru -Rns $(pacman -Qdtq)"
 alias n="nvim"
 alias mirrors="sudo reflector --latest 10 --age 6 --country US,Paraguay --sort rate --save /etc/pacman.d/mirrorlist"
 
