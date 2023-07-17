@@ -17,8 +17,6 @@ blueman
 bluez
 bluez-utils
 brightnessctl
-catppuccin-cursors-mocha
-catppuccin-gtk-theme-mocha
 clipman
 cups
 czkawka-gui-bin
@@ -66,6 +64,7 @@ iw
 jq
 kvantum
 kvantum-theme-catppuccin-git
+laptop-mode-tools
 libappindicator-gtk2
 libgnome-keyring
 libopenraw
@@ -74,6 +73,7 @@ light
 linux
 linux-firmware
 linux-headers
+logiops
 man-db
 man-pages
 memtester
@@ -109,7 +109,7 @@ pfetch-rs-bin
 pipewire-alsa
 pipewire-pulse
 playerctl
-polkit-kde-agent
+polkit-gnome
 pop-gtk-theme
 pop-icon-theme
 poppler-glib
@@ -145,7 +145,7 @@ sshfs
 swaybg
 swayidle
 swaylock-effects-git
-swww-git
+swww
 tamsyn-font
 terminus-font
 tex-gyre-fonts
@@ -154,7 +154,6 @@ thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
 tldr
-tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -192,8 +191,6 @@ vdhcoapp-bin
 viewnior
 vifm
 visual-studio-code-bin
-vivaldi
-vivaldi-ffmpeg-codecs
 w3m
 waybar-hyprland-git
 wev
