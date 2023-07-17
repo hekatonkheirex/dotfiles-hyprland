@@ -32,9 +32,9 @@
   "bar_id": "bar-0",
   
   // Choose the order of the modules
-  "modules-left": ["wlr/workspaces"],
-  "modules-center": [],
-  "modules-right": ["idle_inhibitor", "cpu#1", "cpu#2", "memory#1", "memory#2", "temperature#1", "temperature#2", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "hyprland/language", "clock", "clock#2", "custom/wttr#1", "custom/wttr#2", "custom/wall"],
+  "modules-left": ["idle_inhibitor", "custom/wall", "hyprland/language", "custom/weather#1", "custom/weather#2", "wlr/workspaces"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": ["tray", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "clock", "clock#2"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
@@ -52,12 +52,16 @@
     },
     "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "5": "",
+      // "6": "",
+      "urgent": "",
+			"active": "",
+			"default": "󰧞",
+    "sort-by-number": true
     },
   },
 
@@ -250,11 +254,39 @@
     "exec": "~/.config/waybar/scripts/wttr2.py",
     "return-type": "json",
   },
+
+  "custom/weather#1": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    // "format-alt": "{alt}",
+  },
+  "custom/weather#2": {
+    "exec": "python ~/.config/waybar/scripts/weather2.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    // "format-alt": "{alt}",
+  },
   
   "custom/wall":{
     "format":"",
     // "interval": 1,
     "on-click": "~/.config/hypr/wall",
     "tooltip": false,
+  },
+
+  "custom/spotify": {
+    "format": "",
+    "interval": 1,
+    "exec-if": "pgrep spotify",
+    "return-type": "json",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify previous",
+    "on-scroll-down": "playerctl -p spotify next",
+    "tooltip": true,
+    "escape": true,
+    "exec": "/home/mura/.config/waybar/scripts/spotify.sh"
   },
 }

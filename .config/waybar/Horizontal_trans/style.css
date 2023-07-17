@@ -1,0 +1,198 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "Schibsted Grotesk","Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.7);
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  background: rgba(30, 30, 46, 0.7);
+  border: 1px solid rgba(49, 50, 68, 0.7);
+}
+tooltip label {
+  color: #89b4fa;
+}
+
+/* Workspaces */
+#workspaces {
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  margin: 3px;
+  padding: 0px 5px 0px 5px;
+  font-size: 30px;
+}
+
+#workspaces button {
+  border-radius: 16px;
+  color: #f5e0dc;
+  padding: 0px 5px;
+}
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 0.0);
+  border-radius: 16px;
+}
+#workspaces button.active {
+  border-radius: 16px;
+  color: #89b4fa;
+}
+#workspaces button.urgent {
+  color: #f38ba8;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* Language */
+#language {
+  color: #f5c2e7;
+  padding: 0 12px;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+  background-color: #1e1e2e;
+  border-radius: 0 24px 0 0;
+  color: #7f849c;
+  padding: 0 12px;
+}
+#idle_inhibitor.activated {
+  color: #cba6f7;
+}
+
+/* Backlight */
+#backlight {
+  color: #fab387;
+  padding: 0 12px;
+}
+
+/* Volume */
+#pulseaudio {
+  color: #f9e2af;
+  padding: 0 12px;
+}
+#pulseaudio.muted {
+  color: #7f849c;
+}
+
+/* Battery */
+#battery {
+  color: #f38ba8;
+  padding: 0 12px;
+}
+#battery.charging, #battery.plugged {
+  color: #a6e3a1;
+}
+@keyframes blink {
+  to {
+    background-color: #f9e2af;
+    border-radius: 16px;
+    margin: 3px;
+    padding: 0 12px;
+  }
+}
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Tray */
+#tray {
+  background: #313244;
+  border-radius: 16px;
+  margin: 3px;
+  padding: 0 12px;
+}
+
+/* Clock */
+#clock {
+  background-color: #1e1e2e;
+  border-radius: 0 0 0 24px;
+  color: #94e2d5;
+  padding: 0 12px;
+}
+
+/* Spotify */
+#custom-spotify {
+  color: #a6e3a1;
+}
+
+#custom-playerctl {
+	background: #1e1e2e;
+	padding-left: 15px;
+  padding-right: 14px;
+	border-radius: 16px 0 0 16px;
+  /*border-left: solid 1px #282738;*/
+  /*border-right: solid 1px #282738;*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+#custom-playerlabel {
+    background: #313244;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 0 16px 16px 0;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#custom-media,
+#network,
+#temperature,
+#window,
+#cpu,
+#memory,
+#disk,
+
+/* Weather */
+#custom-wttr {
+  color: #89dceb;
+  padding: 0 12px;
+}
+
+/* Logo */
+#custom-logo {
+  font-size: 18px;
+  color: #cba6f7;
+  margin-left: 16px;
+}
+
+/* Power */
+#custom-power {
+  font-size: 18px;
+  color: #f38ba8;
+  margin-right: 16px;
+}
+
+/* Wall */
+#custom-wall {
+  color: #f2cdcd;
+  padding: 0 12px;
+}

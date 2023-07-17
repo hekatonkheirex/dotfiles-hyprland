@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Unica One", "tabler-icons";
+  font-family: "Space Grotesk", "tabler-icons";
   font-weight: normal;
   padding-left: 3px;
   padding-right: 3px;
@@ -24,16 +24,16 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(30, 30, 46, 0.7);
-  border: 1px solid rgba(49, 50, 68, 0.7);
+  background: rgba(26, 27, 38, 0.7);
+  border: 1px solid rgba(26, 27, 38, 0.7);
 }
 tooltip label {
-  color: #cdd6f4;
+  color: #a9b1d6;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1e1e2e;
+  background: #1a1b26;
   border-radius: 10px 10px 0 0;
   font-size: 30px;
   padding-top: 10px;
@@ -41,7 +41,7 @@ tooltip label {
 }
 
 #workspaces button {
-  color: #45475a;
+  color: #414868;
   padding: 5px;
 }
 
@@ -52,26 +52,26 @@ tooltip label {
 
 #workspaces button.active {
   border-radius: 10px;
-  color: #f5e0dc;
+  color: #7aa2f7;
 }
 
 #workspaces button.focused {
   border-radius: 10px;
-  color: #f5e0dc;
+  color: #7aa2f7;
 }
 
 #workspaces button.visible {
   border-radius: 10px;
-  color: #f5e0dc;
+  color: #7aa2f7;
 }
 
 #workspaces button.urgent {
-  color: #f38ba8;
+  color: #f7768e;
 }
 
 #workspaces button.hidden {
   border-radius: 10px;
-  color: #45475a;
+  color: #7aa2f7;
 }
 
 window#waybar.empty #window {
@@ -80,80 +80,74 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #313244;
-  color: #f2cdcd;
+  background: #24283b;
+  color: #ff9e64;
   font-size: 26px;
   padding: 5px;
 }
 #pulseaudio.1.muted {
-  color: #45475a;
+  color: #414868;
 }
 #pulseaudio.2 {
-  background: #313244;
-  font-size: 20px;
-  font-weight: bold;
-  color: #f2cdcd;
+  background: #24283b;
+  color: #ff9e64;
   padding: 5px;
 }
 #pulseaudio.2.muted {
-  color: #45475a;
+  color: #414868;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #313244;
-  color: #f5c2e7;
+  background: #24283b;
+  color: #e0af68;
   font-size: 26px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #313244;
-  font-size: 20px;
-  font-weight: bold;
+  background: #24283b;
   padding: 5px;
-  color: #f5c2e7;
+  color: #e0af68;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #313244;
-  color: #cba6f7;
-  font-size: 26px;
+  background: #24283b;
+  color: #9ece6a;
+  font-size: 25px;
   padding: 5px;
 }
 
 #battery.1.charging {
-  color: #f38ba8;
+  color: #f7768e;
 }
 
 #battery.1.plugged {
-  color: #fab387;
+  color: #ff9e64;
 }
 
 #battery.2 {
-  background: #313244;
-  font-size: 20px;
-  font-weight: bold;
-  color: #cba6f7;
+  background: #24283b;
+  color: #9ece6a;
   padding: 5px;
 }
 
 #battery.2.charging {
-  color: #f38ba8;
+  color: #f7768e;
 }
 
 #battery.2.plugged {
-  color: #fab387;
+  color: #ff9e64;
 }
 
 @keyframes blink {
   to {
-    background-color: #f38ba8;
+    background-color: #f7768e;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #fab387;
+  color: #e0af68;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -163,78 +157,90 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #313244;
-  color: #94e2d5;
-  font-size: 26px;
+  background: #24283b;
+  color: #73daca;
+  font-size: 22px;
   font-weight: bolder;
-  padding-top: 5px;
+  padding: 5px;
 }
 #clock.date {
-  background: #313244;
-  color: #94e2d5;
-  font-size: 26px;
+  background: #24283b;
+  color: #73daca;
+  font-size: 22px;
   font-weight: bolder;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 #clock.time {
-  background: #313244;
-  color: #89dceb;
-  font-size: 26px;
+  background: #24283b;
+  color: #b4f9f8;
+  font-size: 22px;
   font-weight: bolder;
   padding: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #45475a;
+  background-color: #414868;
   padding: 5px;
 }
 
 #language {
-  background: #313244;
-  color: #74c7ec;
-  font-size: 26px;
+  background: #24283b;
+  color: #2ac3de;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 0 0 10px 10px;
-  padding-top: 5px;
   padding-bottom: 13px;
 }
 
 #idle_inhibitor {
-  background: #313244;
-  color: #45475a;
+  background: #24283b;
+  color: #565f89;
   font-size: 26px;
-  padding: 8px;
+  padding: 5px;
 }
 #idle_inhibitor.activated {
-  color: #eba0ac;
+  color: #9ece6a;
 }
 
 /** ********** Custom ********** **/
 #custom-calendar-icon {
-  background: #313244;
-  color: #94e2d5;
+  background: #24283b;
+  color: #73daca;
   font-size: 26px;
   padding: 5px;
 }
 
 #custom-time-icon {
-  background: #313244;
-  color: #89dceb;
+  background: #24283b;
+  color: #b4f9f8;
   font-size: 26px;
   padding: 5px;
 }
 
+#custom-wttr.1 {
+  background: #282828;
+  color: #8ec07c;
+  font-size: 10px;
+  padding: 5px;
+}
+#custom-wttr.2 {
+  background: #282828;
+  color: #fbf1c7;
+  font-size: 10px;
+  padding: 5px;
+}
+
 #custom-wall {
-  background: #313244;
-  color: #f9e2af;
+  background: #24283b;
+  color: #7dcfff;
   font-size: 26px;
   padding-bottom: 5px;
 }
 
 #custom-spotify {
-  background: #313244;
-  color: #a6e3a1;
+  background: #24283b;
+  color: #9ece6a;
   font-size: 26px;
   padding: 5px;
 }

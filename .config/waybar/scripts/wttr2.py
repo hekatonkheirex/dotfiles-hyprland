@@ -93,8 +93,8 @@ extrachar = ''
 if tempint > 0 and tempint < 10:
     extrachar = '+'
 
-data['text'] = ' <span font="10" rise="2000">'+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
-    "</span>\n" +extrachar+weather['current_condition'][0]['FeelsLikeC']+"°"
+
+data['text'] = f"{weather['current_condition'][0]['temp_C']}°C"
 
 data['tooltip'] = f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°</b>\n"
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"

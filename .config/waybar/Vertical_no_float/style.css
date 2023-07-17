@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Unica One", "Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "Unica One", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "tabler-icons";
   font-weight: normal;
 }
 
@@ -18,7 +18,7 @@ button {
 }
 
 window#waybar {
-  background-color: #2e3440;
+  background: rgba(30, 30, 46, 0.8);
 }
 
 window#waybar.hidden {
@@ -27,43 +27,44 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(46, 52, 64, 0.7);
-  border: 1px solid rgba(46, 52, 64, 0.7);
+  background: rgba(30, 30, 46, 0.9);
+  border: 1px solid rgba(30, 30, 46, 0.9);
 }
 tooltip label {
-  color: #eceff4;
+  color: #b4befe;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #2e3440;
-  border-radius: 6px;
-  margin-left: 2px;
-  margin-right: 2px;
+  background: #1e1e2e;
+  border-radius: 12px;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 5px;
-  padding: 2px;
+  padding: 5px 0 5px 0;
 }
 
 #workspaces button {
-  min-width: 10px;
-  color: #434c5e;
-  padding: 8px;
+  min-width: 24px;
+  color: #45475a;
+  padding: 5px;
 }
 
 #workspaces button:hover {
   background-color: rgba(255, 255, 255, 0.0);
-  padding: 8px;
+  padding: 5px;
 }
 
 #workspaces button.active {
-  background: #88c0d0;
-  border-radius: 6px;
-  color: #2e3440;
-  padding: 8px;
+  background: #1e1e2e;
+  border-radius: 12px;
+  color: #cba6f7;
+  padding: 5px;
 }
 
 #workspaces button.urgent {
-  color: #bf616a;
+  color: #f38ba8;
 }
 
 window#waybar.empty #window {
@@ -72,83 +73,63 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #3b4252;
-  border-radius: 6px 6px 0 0;
-  color: #d08770;
-  margin-left: 2px;
-  margin-right: 2px;
+  color: #fab387;
+  font-size: 18px;
   padding: 5px 0 5px 0;
 }
 #pulseaudio.2 {
-  background: #3b4252;
-  color: #d08770;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
+  color: #fab387;
+  font-size: 16px;
   padding: 5px 0 5px 0;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #3b4252;
-  color: #ebcb8b;
-  margin-left: 2px;
-  margin-right: 2px;
+  color: #f9e2af;
   padding: 5px 0 5px 0;
 }
 #backlight.2 {
-  background: #3b4252;
-  color: #ebcb8b;
-  margin-left: 2px;
-  margin-right: 2px;
-  font-size: 10px;
+  color: #f9e2af;
+  font-size: 18px;
   padding: 5px 0 5px 0;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #3b4252;
-  color: #a3be8c;
-  margin-left: 2px;
-  margin-right: 2px;
+  color: #a6e3a1;
   padding: 5px 0 5px 0;
 }
 
 #battery.1.charging {
-  color: #bf616a;
+  color: #f38ba8;
 }
 
 #battery.1.plugged {
-  color: #a3be8c;
+  color: #a6e3a1;
 }
 
 #battery.2 {
-  background: #3b4252;
-  border-radius: 0 0 6px 6px;
-  color: #a3be8c;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  margin-bottom: 5px;
+  color: #a6e3a1;
+  font-size: 16px;
   padding: 5px 0 5px 0;
 }
 
 #battery.2.charging {
-  color: #bf616a;
+  color: #f38ba8;
 }
 
 #battery.2.plugged {
-  color: #a3be8c;
+  color: #a6e3a1;
 }
 
 @keyframes blink {
   to {
-    background-color: #ebcb8b;
+    background-color: #f9e2af;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #2e3440;
+  color: #1e1e2e;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -158,56 +139,47 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #3b4252;
-  border-radius: 6px 6px 0 0;
-  color: #eceff4;
-  font-size: 22px;
+  background: #1e1e2e;
+  border-radius: 0 12px 0 0;
+  color: #89dceb;
+  font-size: 24px;
   font-weight: bolder;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 0 0;
+  padding: 10px 0 0 0;
 }
 #clock.2 {
-  background: #3b4252;
-  border-radius: 0 0 6px 6px;
-  color: #eceff4;
-  font-size: 22px;
+  background: #1e1e2e;
+  color: #89b4fa;
+  font-size: 24px;
   font-weight: bolder;
-  margin-left: 2px;
-  margin-right: 2px;
   padding: 0 0 5px 0;
-  margin-bottom: 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #434c5e;
-  border-radius: 6px;
-  margin-left: 2px;
-  margin-right: 2px;
+  background-color: #1e1e2e;
+  border-radius: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 5px;
-  padding: 7px 5px 7px 5px;
+  padding: 10px 5px 10px 5px;
 }
 
 #language {
-  color: #793aaf;
-  font-size: 16px;
+  color: #f5c2e7;
+  font-size: 18px;
   font-weight: bold;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px
+  padding: 5px;
 }
 
 #idle_inhibitor {
-  color: #3b4252;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 8px;
-  margin-bottom: 5px;
+  background-color: #1e1e2e;
+  border-radius: 0 0 12px 0;
+  color: #45475a;
+  font-size: 18px;
+  padding: 5px 0 10px 0;
 }
 #idle_inhibitor.activated {
-  color: #81a1c1;
+  color: #f5e0dc;
 }
 
 #cpu.1 {
@@ -268,29 +240,56 @@ window#waybar.empty #window {
 /** ********** Custom ********** **/
 
 #custom-wttr.1 {
-  background: #3b4252;
-  border-radius: 6px 6px 0 0;
-  color: #eceff4;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
+  color: #94e2d5;
+  font-size: 18px;
+  padding: 5px 0 0 0;
 }
 #custom-wttr.2 {
-  background: #3b4252;
-  border-radius: 0 0 6px 6px;
-  color: #eceff4;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px;
+  color: #94e2d5;
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+}
+
+#custom-weather.1 {
+  color: #94e2d5;
+  font-size: 18px;
+  padding: 5px 0 0 0;;
+}
+#custom-weather.2 {
+  color: #94e2d5;
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+}
+#custom-weather.1.default {
+  color: #a6e3a1;
+}
+#custom-weather.1.severe {
+    color: #f38ba8;
+}
+#custom-weather.1.sunnyDay {
+    color: #f9e2af;
+}
+#custom-weather.1.clearNight {
+    color: #b4befe;
+}
+#custom-weather.1.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+    color: #cdd6f4;
+}
+#custom-weather.1.rainyDay, #custom-weather.rainyNight {
+    color: #cba6f7;
+}
+#custom-weather.1.showyIcyDay, #custom-weather.snowyIcyNight {
+    color: #89dceb;
 }
 
 #custom-wall {
-  color: #5e81ac;
-  padding: 8px;
-  margin-left: 2px;
-  margin-right: 2px;
-  margin-bottom: 5px;
+  color: #f2cdcd;
+  font-size: 18px;
+  padding: 5px;
+}
+
+#custom-spotify {
+  color: #a6e3a1;
+  font-size: 18px;
+  padding: 5px;
 }
