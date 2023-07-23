@@ -15,6 +15,7 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
+image/webp=viewnior.desktop
 
 [Added Associations]
 image/png=viewnior;
@@ -33,3 +34,4 @@ application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/pdf=org.gnome.Evince.desktop;
 image/gif=viewnior.desktop;
+image/webp=viewnior.desktop;

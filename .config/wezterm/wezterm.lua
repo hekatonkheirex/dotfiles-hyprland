@@ -28,43 +28,43 @@ local font_name = "Maple Mono"
 
 local colors = {
 	-- special
-	foreground = "#cdd6f4",
-	darker_background = "#181825",
-	background = "#1e1e2e",
-	lighter_background = "#313244",
-	one_background = "#11111b",
+	foreground = "#fbf1c7",
+	darker_background = "#17191a",
+	background = "#1d2021",
+	lighter_background = "#282828",
+	one_background = "#3c3836",
 
 	-- black
-	color0 = "#313244",
-	color8 = "#45475a",
+	color0 = "#3c3836",
+	color8 = "#504945",
 
 	-- red
-	color1 = "#f38ba8",
-	color9 = "#f38ba8",
+	color1 = "#cc241d",
+	color9 = "#fb4934",
 
 	-- green
-	color2 = "#a6e3a1",
-	color10 = "#a6e3a1",
+	color2 = "#98971a",
+	color10 = "#b8bb26",
 
 	-- yellow
-	color3 = "#f9e2af",
-	color11 = "#f9e2af",
+	color3 = "#d79921",
+	color11 = "#fabd2f",
 
 	-- blue
-	color4 = "#89b4fa",
-	color12 = "#89b4fa",
+	color4 = "#458588",
+	color12 = "#83a598",
 
 	-- magenta
-	color5 = "#f5c2e7",
-	color13 = "#f5c2e7",
+	color5 = "#b16286",
+	color13 = "#d3869b",
 
 	-- cyan
-	color6 = "#89dceb",
-	color14 = "#89dceb",
+	color6 = "#689d6a",
+	color14 = "#8ec07c",
 
 	-- white
-	color7 = "#a6adc8",
-	color15 = "#bac2de",
+	color7 = "#a89984",
+	color15 = "#ebdbb2",
 }
 
 return {

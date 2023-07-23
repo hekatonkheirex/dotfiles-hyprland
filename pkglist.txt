@@ -19,7 +19,6 @@ bluez-utils
 brightnessctl
 clipman
 cups
-czkawka-gui-bin
 dhclient
 dialog
 dina-font
@@ -44,10 +43,12 @@ gentium-plus-font
 git
 gnome-keyring
 gnu-netcat
+greetd-gtkgreet
 grim
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
+gtklock
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -145,6 +146,7 @@ sshfs
 swaybg
 swayidle
 swaylock-effects-git
+swaync
 swww
 tamsyn-font
 terminus-font

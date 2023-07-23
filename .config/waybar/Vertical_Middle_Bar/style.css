@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Fira Sans Book", "tabler-icons";
+  font-family: "Unica One", "tabler-icons";
   font-weight: normal;
   padding-left: 3px;
   padding-right: 3px;
@@ -16,6 +16,7 @@
 
 window#waybar {
   background-color: transparent;
+  border: linear-gradient(35deg, #1e1e2e, #ffffff)
 }
 
 window#waybar.hidden {
@@ -24,16 +25,16 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(29, 32, 33, 0.7);
-  border: 1px solid rgba(29, 32, 33, 0.7);
+  background: rgba(30, 30, 46, 0.7);
+  border: 1px solid rgba(49, 50, 68, 0.7);
 }
 tooltip label {
-  color: #fbf1c7;
+  color: #cdd6f4;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1d2021;
+  background: #1e1e2e;
   border-radius: 10px 10px 0 0;
   font-size: 30px;
   padding-top: 10px;
@@ -41,22 +42,37 @@ tooltip label {
 }
 
 #workspaces button {
-  /* min-width: 10px; */
-  color: #504945;
+  color: #45475a;
   padding: 5px;
 }
 
 #workspaces button:hover {
   background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 10px;
 }
 
 #workspaces button.active {
   border-radius: 10px;
-  color: #a89984;
+  color: #f5e0dc;
+}
+
+#workspaces button.focused {
+  border-radius: 10px;
+  color: #f5e0dc;
+}
+
+#workspaces button.visible {
+  border-radius: 10px;
+  color: #f5e0dc;
 }
 
 #workspaces button.urgent {
-  color: #cc241d;
+  color: #f38ba8;
+}
+
+#workspaces button.hidden {
+  border-radius: 10px;
+  color: #45475a;
 }
 
 window#waybar.empty #window {
@@ -65,75 +81,80 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  background: #282828;
-  color: #b16286;
+  background: #313244;
+  color: #f2cdcd;
   font-size: 26px;
   padding: 5px;
 }
+#pulseaudio.1.muted {
+  color: #45475a;
+}
 #pulseaudio.2 {
-  background: #282828;
-  color: #b16286;
+  background: #313244;
   font-size: 20px;
   font-weight: bold;
+  color: #f2cdcd;
   padding: 5px;
 }
-#pulseaudio.1.muted {
-  color: #504945;
-}
 #pulseaudio.2.muted {
-  color: #504945;
+  color: #45475a;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: #282828;
-  color: #458588;
+  background: #313244;
+  color: #f5c2e7;
   font-size: 26px;
   padding: 5px;
 }
 #backlight.2 {
-  background: #282828;
+  background: #313244;
   font-size: 20px;
   font-weight: bold;
   padding: 5px;
-  color: #458588;
+  color: #f5c2e7;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: #282828;
-  color: #d79921;
+  background: #313244;
+  color: #cba6f7;
   font-size: 26px;
   padding: 5px;
 }
+
 #battery.1.charging {
-  color: #98971a;
+  color: #f38ba8;
 }
+
 #battery.1.plugged {
-  color: #cc241d;
+  color: #fab387;
 }
+
 #battery.2 {
-  background: #282828;
+  background: #313244;
   font-size: 20px;
   font-weight: bold;
-  color: #d79921;
+  color: #cba6f7;
   padding: 5px;
 }
+
 #battery.2.charging {
-  color: #98971a;
+  color: #f38ba8;
 }
+
 #battery.2.plugged {
-  color: #cc241d;
+  color: #fab387;
 }
 
 @keyframes blink {
   to {
-    background-color: #fb4934;
+    background-color: #f38ba8;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #b8bb26;
+  color: #fab387;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -143,22 +164,22 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #282828;
-  color: #d3869b;
+  background: #313244;
+  color: #94e2d5;
   font-size: 26px;
   font-weight: bolder;
-  padding: 5px;
+  padding-top: 5px;
 }
 #clock.date {
-  background: #282828;
-  color: #d3869b;
+  background: #313244;
+  color: #94e2d5;
   font-size: 26px;
   font-weight: bolder;
-  padding: 5px;
+  padding-bottom: 5px;
 }
 #clock.time {
-  background: #282828;
-  color: #8ec07c;
+  background: #313244;
+  color: #89dceb;
   font-size: 26px;
   font-weight: bolder;
   padding: 5px;
@@ -166,13 +187,13 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  background-color: #3c3836;
+  background-color: #45475a;
   padding: 5px;
 }
 
 #language {
-  background: #282828;
-  color: #d65d0e;
+  background: #313244;
+  color: #74c7ec;
   font-size: 26px;
   font-weight: bold;
   border-radius: 0 0 10px 10px;
@@ -181,40 +202,40 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-  background: #282828;
-  color: #7c6f64;
+  background: #313244;
+  color: #45475a;
   font-size: 26px;
   padding: 8px;
 }
 #idle_inhibitor.activated {
-  color: #fabd2f;
+  color: #eba0ac;
 }
 
 /** ********** Custom ********** **/
 #custom-calendar-icon {
-  background: #282828;
-  color: #d3869b;
+  background: #313244;
+  color: #94e2d5;
   font-size: 26px;
   padding: 5px;
 }
 
 #custom-time-icon {
-  background: #282828;
-  color: #8ec07c;
+  background: #313244;
+  color: #89dceb;
   font-size: 26px;
   padding: 5px;
 }
 
 #custom-wall {
-  background: #282828;
-  color: #83a598;
+  background: #313244;
+  color: #f9e2af;
   font-size: 26px;
   padding-bottom: 5px;
 }
 
 #custom-spotify {
-  background: #282828;
-  color: #689d6a;
+  background: #313244;
+  color: #a6e3a1;
   font-size: 26px;
   padding: 5px;
 }

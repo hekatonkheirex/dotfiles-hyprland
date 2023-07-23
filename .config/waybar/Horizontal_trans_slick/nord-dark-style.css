@@ -1,0 +1,161 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "SF Pro Display","Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+window#waybar {
+  background-color: #2e3440;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  background: rgba(46, 52, 64, 0.7);
+  border: 1px solid rgba(46, 52, 64, 0.7);
+}
+tooltip label {
+  color: #eceff4;
+}
+
+/* Workspaces */
+#workspaces {
+  font-size: 30px;
+}
+
+#workspaces button {
+  color: #434c5e;
+}
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+#workspaces button.active {
+  color: #88c0d0;
+}
+#workspaces button.urgent {
+  color: #bf616a;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* Language */
+#language {
+  color: #bf616a;
+  padding: 0 12px;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+  color: #434c5e;
+  padding: 0 12px;
+}
+#idle_inhibitor.activated {
+  color: #81a1c1;
+}
+
+/* Backlight */
+#backlight {
+  color: #ebcb8b;
+  padding: 0 12px;
+}
+
+/* Volume */
+#pulseaudio {
+  color: #d08770;
+  padding: 0 12px;
+}
+#pulseaudio.muted {
+  color: #434c5e;
+}
+
+/* Battery */
+#battery {
+  color: #bf616a;
+  padding: 0 12px;
+}
+#battery.charging, #battery.plugged {
+  color: #a3be8c;
+}
+@keyframes blink {
+  to {
+    background-color: #ebcb8b;
+  }
+}
+#battery.critical:not(.charging) {
+  background-color: #bf616a;
+  color: #2e3440;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Tray */
+#tray {
+  background: #434c5e;
+  padding: 0 12px;
+}
+
+/* Clock */
+#clock {
+  color: #eceff4;
+  margin-right: 5px;
+  padding: 0 12px;
+}
+
+/* Spotify */
+#custom-spotify {
+  color: #a3be8c;
+}
+
+#custom-media,
+#network,
+#temperature,
+#window,
+#cpu,
+#memory,
+#disk,
+
+/* Weather */
+#custom-wttr {
+  color: #eceff4;
+  margin-right: 5px;
+  padding: 0 12px;
+}
+
+/* Logo */
+#custom-logo {
+  font-size: 18px;
+  color: #cba6f7;
+  margin-left: 16px;
+}
+
+/* Power */
+#custom-power {
+  font-size: 18px;
+  color: #f38ba8;
+  margin-right: 16px;
+}
+
+/* Wall */
+#custom-wall {
+  color: #5e81ac;
+  padding: 0 12px;
+}
