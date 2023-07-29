@@ -20,10 +20,33 @@
   "spacing": 4,
   "modules-left": ["wlr/workspaces", "hyprland/window", "idle_inhibitor"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["custom/wall", "cpu", "memory", "tray", "pulseaudio", "backlight", "battery", "custom/swaync", "clock", "custom/powermenu"],
+  "modules-right": ["custom/wall", "tray", "pulseaudio", "backlight", "battery", "custom/swaync", "clock", "custom/powermenu"],
   
   "wlr/workspaces": {
     "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+    },
+  },
+
+  "hyprland/window": {
+    "max-length": 30,
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) - Brave": "$1",
+      "(.*) - Thunar": "$1",
+      "(.*) - Discord": "$1",
+      "": "Desktop",
+      "~": "wezterm",
+      "n": "nvim",
+    },
   },
 
   "hyprland/language": {
@@ -47,7 +70,12 @@
 
   "clock": {
     "format": " {:%H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#cc241d'><b><u>{}</u></b></span>",
+      },
+    },
     "format-alt": " {:%Y-%m-%d}"
     },
 
@@ -125,6 +153,7 @@
   "custom/spotify": {
     "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
     "format": " {}",
+    "max-length": 30,
     "return-type": "json",
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",

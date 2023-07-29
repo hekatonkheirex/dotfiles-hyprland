@@ -1,6 +1,7 @@
 acpi
 acpi_call
 acpid
+adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
 alsa-utils
@@ -16,6 +17,7 @@ bleachbit
 blueman
 bluez
 bluez-utils
+brave-bin
 brightnessctl
 clipman
 cups
@@ -25,7 +27,6 @@ dina-font
 discord
 dnsmasq
 dosfstools
-dunst
 dupeguru
 efibootmgr
 efitools
@@ -36,6 +37,8 @@ figlet
 file-roller
 firefox
 firewalld
+foot
+foot-terminfo
 fwupd
 fzf
 galculator
@@ -115,6 +118,7 @@ pop-gtk-theme
 pop-icon-theme
 poppler-glib
 powertop
+protonvpn
 python-pycryptodomex
 python-pyqt5
 python-pyquery
@@ -139,7 +143,6 @@ sif-git
 slurp
 smartmontools
 sof-firmware
-solaar
 spicetify-cli
 spotify
 sshfs

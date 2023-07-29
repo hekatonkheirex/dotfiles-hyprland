@@ -1,5 +1,5 @@
 * {
-  font-family: "JetBrains Mono", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Duotone Solid", sans-serif;
+  font-family: "JetBrains Mono", "ElmerFont", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Duotone Solid", sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
@@ -117,7 +117,7 @@ button.urgent {
   border-radius: 5px;
   margin-bottom: 2px;
   margin-right: 7px;
-  padding: 5px 5px;
+  padding: 5px 10px 5px 10px;
 }
 
 #battery {
@@ -129,13 +129,19 @@ button.urgent {
   border-bottom: 8px solid #458588;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 0 10px 0 10px;
 }
 
 @keyframes blink {
   to {
-      background-color: #ffffff;
-      color: #000000;
+    background-color: #fabd2f;
+    color: #282828;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 8px solid #d79921;
+    border-radius: 5px;
+    margin-bottom: 2px;
   }
 }
 
@@ -148,6 +154,12 @@ button.urgent {
   border-bottom: 8px solid #cc241d;
   border-radius: 5px;
   margin-bottom: 2px;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
 }
 
 label:focus {
@@ -155,6 +167,18 @@ label:focus {
 }
 
 #cpu {
+  background-color: #fabd2f;
+  color: #282828;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 8px solid #d79921;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  padding: 0 10px 0 10px;
+}
+
+#memory {
   background-color: #b8bb26;
   color: #282828;
   font-size: 15px;
@@ -163,19 +187,7 @@ label:focus {
   border-bottom: 8px solid #98971a;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
-}
-
-#memory {
-  background-color: #fe8019;
-  color: #282828;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-bottom: 8px solid #d65d0e;
-  border-radius: 5px;
-  margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 0 10px 0 10px;
 }
 
 #disk {
@@ -191,7 +203,7 @@ label:focus {
   border-bottom: 8px solid #b16286;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 0 10px 0 10px;
 }
 
 #network {
@@ -211,7 +223,7 @@ label:focus {
   border-bottom: 8px solid #689d6a;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 0 10px 0 10px;
 }
 
 /*
@@ -247,7 +259,7 @@ label:focus {
   border-bottom: 8px solid #a89984;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 0 10px 0 10px;
 }
 
 #tray > .passive {
@@ -337,12 +349,12 @@ tooltip label {
 }
 
 #custom-wall {
-  background-color: #fabd2f;
+  background-color: #fe8019;
   color: #282828;
   font-size: 15px;
   font-weight: bold;
   border: none;
-  border-bottom: 8px solid #d79921;
+  border-bottom: 8px solid #d65d0e;
   border-radius: 5px;
   margin-bottom: 2px;
   padding: 5px 5px;
@@ -357,5 +369,5 @@ tooltip label {
   border-bottom: 8px solid #282828;
   border-radius: 5px;
   margin-bottom: 2px;
-  padding: 5px 5px;
+  padding: 5px 10px 5px 10px;
 }
