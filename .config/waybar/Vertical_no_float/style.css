@@ -148,6 +148,7 @@ window#waybar.empty #window {
 }
 #clock.2 {
   background: #1e1e2e;
+  border-radius: 0 0 0 0;
   color: #89b4fa;
   font-size: 24px;
   font-weight: bolder;
@@ -176,6 +177,7 @@ window#waybar.empty #window {
   border-radius: 0 0 12px 0;
   color: #45475a;
   font-size: 18px;
+  margin-bottom: 5px;
   padding: 5px 0 10px 0;
 }
 #idle_inhibitor.activated {

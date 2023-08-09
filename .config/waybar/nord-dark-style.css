@@ -8,13 +8,13 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Schibsted Grotesk","Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "SF Pro Display","Font Awesome 6 Pro", "Font Awesome 6 Brands";
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.7);
+  background-color: #2e3440;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -24,53 +24,30 @@ window#waybar.hidden {
 }
 
 tooltip {
-  background: rgba(30, 30, 46, 0.7);
-  border: 1px solid rgba(49, 50, 68, 0.7);
+  background: rgba(46, 52, 64, 0.7);
+  border: 1px solid rgba(46, 52, 64, 0.7);
 }
 tooltip label {
-  color: #89b4fa;
+  color: #eceff4;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1e1e2e;
-  border-radius: 16px;
-  margin: 3px;
-  padding: 0px 5px 0px 5px;
+  font-size: 30px;
 }
 
 #workspaces button {
-  background: #f9e2af;
-  border-radius: 16px;
-  color: #f9e2af;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #434c5e;
 }
 #workspaces button:hover {
-  background: #f9e2af;
-  border-radius: 16px;
-  color: #f9e2af;
-  min-width: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 #workspaces button.active {
-  background: #a6e3a1;
-  border-radius: 16px;
-  color: #a6e3a1;
-  min-width: 50px;
-  padding: 0px 5px 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #88c0d0;
 }
 #workspaces button.urgent {
-  color: #f38ba8;
-}
-#workspaces button.persistent {
-  background: #cdd6f4;
-  border-radius: 16px;
-  color: #cdd6f4;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #bf616a;
 }
 
 window#waybar.empty #window {
@@ -79,59 +56,50 @@ window#waybar.empty #window {
 
 /* Language */
 #language {
-  color: #f5c2e7;
+  color: #bf616a;
   padding: 0 12px;
 }
 
 /* Idle inhibitor */
 #idle_inhibitor {
-  background: #1e1e2e;
-  border-radius: 0 24px 0 0;
-  color: #7f849c;
+  color: #434c5e;
   padding: 0 12px;
 }
 #idle_inhibitor.activated {
-  background: linear-gradient(45deg, #fab387, #cba6f7);
-  color: #1e1e2e;
+  color: #81a1c1;
 }
 
 /* Backlight */
 #backlight {
-  color: #fab387;
+  color: #ebcb8b;
   padding: 0 12px;
 }
 
 /* Volume */
 #pulseaudio {
-  color: #f9e2af;
+  color: #d08770;
   padding: 0 12px;
 }
 #pulseaudio.muted {
-  color: #7f849c;
+  color: #434c5e;
 }
 
 /* Battery */
 #battery {
-  color: #f38ba8;
+  color: #bf616a;
   padding: 0 12px;
 }
 #battery.charging, #battery.plugged {
-  color: #a6e3a1;
+  color: #a3be8c;
 }
 @keyframes blink {
   to {
-    background-color: #f9e2af;
-    border-radius: 16px;
-    margin: 3px;
-    padding: 0 12px;
+    background-color: #ebcb8b;
   }
 }
 #battery.critical:not(.charging) {
-  background-color: #f38ba8;
-  border-radius: 16px;
-  color: #1e1e2e;
-  margin: 2px;
-  padding: 0 12px;
+  background-color: #bf616a;
+  color: #2e3440;
   animation-name: blink;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -141,44 +109,20 @@ window#waybar.empty #window {
 
 /* Tray */
 #tray {
-  background: #313244;
-  border-radius: 16px;
-  margin: 3px;
+  background: #434c5e;
   padding: 0 12px;
 }
 
 /* Clock */
 #clock {
-  color: #94e2d5;
+  color: #eceff4;
+  margin-right: 5px;
   padding: 0 12px;
 }
 
 /* Spotify */
 #custom-spotify {
-  color: #a6e3a1;
-}
-
-#custom-playerctl {
-	background: #1e1e2e;
-	padding-left: 15px;
-  padding-right: 14px;
-	border-radius: 16px 0 0 16px;
-  /*border-left: solid 1px #282738;*/
-  /*border-right: solid 1px #282738;*/
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-}
-
-#custom-playerlabel {
-    background: #313244;
-    padding-left: 10px;
-    padding-right: 15px;
-    border-radius: 0 16px 16px 0;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin-top: 5px;
-    margin-bottom: 5px;
+  color: #a3be8c;
 }
 
 #custom-media,
@@ -191,7 +135,8 @@ window#waybar.empty #window {
 
 /* Weather */
 #custom-wttr {
-  color: #89dceb;
+  color: #eceff4;
+  margin-right: 5px;
   padding: 0 12px;
 }
 
@@ -211,14 +156,6 @@ window#waybar.empty #window {
 
 /* Wall */
 #custom-wall {
-  color: #f2cdcd;
+  color: #5e81ac;
   padding: 0 12px;
-}
-
-/* Swaync */
-#custom-swaync {
-  background: linear-gradient(45deg, #cba6f7, #fab387);
-  border-radius: 0 0 0 24px;
-  color: #1e1e2e;
-  padding: 0 7px 0 18px;
 }

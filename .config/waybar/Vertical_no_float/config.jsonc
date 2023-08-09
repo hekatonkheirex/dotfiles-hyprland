@@ -32,23 +32,17 @@
   "bar_id": "bar-0",
   
   // Choose the order of the modules
-  "modules-left": ["idle_inhibitor", "custom/wall", "hyprland/language", "custom/weather#1", "custom/weather#2", "wlr/workspaces"],
+  "modules-left": ["idle_inhibitor", "hyprland/workspaces", "custom/wall", "hyprland/language", "custom/weather#1", "custom/weather#2"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["tray", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "clock", "clock#2"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "clock", "clock#2"],
 
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": false,
     "on-click": "activate",
-    "all-outputs": true,
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": []
+      "*": 6,
     },
     "format": "{icon}",
     "format-icons": {

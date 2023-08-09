@@ -8,13 +8,13 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Schibsted Grotesk","Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "Fira Sans Book","Font Awesome 6 Pro", "Font Awesome 6 Brands";
   font-size: 16px;
   font-weight: bold;
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.7);
+  background: rgba(40, 40, 40, 0.7);
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -24,53 +24,46 @@ window#waybar.hidden {
 }
 
 tooltip {
-  background: rgba(30, 30, 46, 0.7);
-  border: 1px solid rgba(49, 50, 68, 0.7);
+  background: rgba(40, 40, 40, 0.7);
+  border: 1px solid rgba(60, 56, 54, 0.7);
 }
 tooltip label {
-  color: #89b4fa;
+  color: #d5c4a1;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #1e1e2e;
+  background: #282828;
   border-radius: 16px;
-  margin: 3px;
   padding: 0px 5px 0px 5px;
 }
 
 #workspaces button {
-  background: #f9e2af;
+  background: #fbf1c7;
   border-radius: 16px;
-  color: #f9e2af;
+  color: #fbf1c7;
   margin: 5px 5px;
   padding: 0px 5px;
   transition: all 0.3s ease-in-out;
 }
 #workspaces button:hover {
-  background: #f9e2af;
+  background: #d79921;
+  background-size: 400px 400px;
   border-radius: 16px;
-  color: #f9e2af;
+  color: #d79921;
   min-width: 50px;
 }
 #workspaces button.active {
-  background: #a6e3a1;
+  background: #689d6a;
+  background-size: 400% 400%;
   border-radius: 16px;
-  color: #a6e3a1;
+  color: #689d6a;
   min-width: 50px;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 10px 0px 10px;
   transition: all 0.3s ease-in-out;
 }
 #workspaces button.urgent {
-  color: #f38ba8;
-}
-#workspaces button.persistent {
-  background: #cdd6f4;
-  border-radius: 16px;
-  color: #cdd6f4;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #cc241d;
 }
 
 window#waybar.empty #window {
@@ -79,57 +72,57 @@ window#waybar.empty #window {
 
 /* Language */
 #language {
-  color: #f5c2e7;
+  color: #fe8019;
   padding: 0 12px;
 }
 
 /* Idle inhibitor */
 #idle_inhibitor {
-  background: #1e1e2e;
+  background: #282828;
   border-radius: 0 24px 0 0;
-  color: #7f849c;
+  color: #3c3836;
   padding: 0 12px;
 }
 #idle_inhibitor.activated {
-  background: linear-gradient(45deg, #fab387, #cba6f7);
-  color: #1e1e2e;
+  background: linear-gradient(45deg, #fe8019, #d3869b);
+  color: #282828;
 }
 
 /* Backlight */
 #backlight {
-  color: #fab387;
+  color: #d79921;
   padding: 0 12px;
 }
 
 /* Volume */
 #pulseaudio {
-  color: #f9e2af;
+  color: #458588;
   padding: 0 12px;
 }
 #pulseaudio.muted {
-  color: #7f849c;
+  color: #3c3836;
 }
 
 /* Battery */
 #battery {
-  color: #f38ba8;
+  color: #cc241d;
   padding: 0 12px;
 }
 #battery.charging, #battery.plugged {
-  color: #a6e3a1;
+  color: #98971a;
 }
 @keyframes blink {
   to {
-    background-color: #f9e2af;
+    background-color: #d79921;
     border-radius: 16px;
     margin: 3px;
     padding: 0 12px;
   }
 }
 #battery.critical:not(.charging) {
-  background-color: #f38ba8;
+  background-color: #cc241d;
   border-radius: 16px;
-  color: #1e1e2e;
+  color: #282828;
   margin: 2px;
   padding: 0 12px;
   animation-name: blink;
@@ -141,7 +134,7 @@ window#waybar.empty #window {
 
 /* Tray */
 #tray {
-  background: #313244;
+  background: #3c3836;
   border-radius: 16px;
   margin: 3px;
   padding: 0 12px;
@@ -149,17 +142,19 @@ window#waybar.empty #window {
 
 /* Clock */
 #clock {
-  color: #94e2d5;
+  background-color: #282828;
+  border-radius: 0 0 0 24px;
+  color: #83a598;
   padding: 0 12px;
 }
 
 /* Spotify */
 #custom-spotify {
-  color: #a6e3a1;
+  color: #b8bb26;
 }
 
 #custom-playerctl {
-	background: #1e1e2e;
+	background: #282828;
 	padding-left: 15px;
   padding-right: 14px;
 	border-radius: 16px 0 0 16px;
@@ -171,7 +166,7 @@ window#waybar.empty #window {
 }
 
 #custom-playerlabel {
-    background: #313244;
+    background: #3c3836;
     padding-left: 10px;
     padding-right: 15px;
     border-radius: 0 16px 16px 0;
@@ -191,34 +186,26 @@ window#waybar.empty #window {
 
 /* Weather */
 #custom-wttr {
-  color: #89dceb;
+  color: #83a598;
   padding: 0 12px;
 }
 
 /* Logo */
 #custom-logo {
   font-size: 18px;
-  color: #cba6f7;
+  color: #8f3f71;
   margin-left: 16px;
 }
 
 /* Power */
 #custom-power {
   font-size: 18px;
-  color: #f38ba8;
+  color: #cc241d;
   margin-right: 16px;
 }
 
 /* Wall */
 #custom-wall {
-  color: #f2cdcd;
+  color: #8ec07c;
   padding: 0 12px;
-}
-
-/* Swaync */
-#custom-swaync {
-  background: linear-gradient(45deg, #cba6f7, #fab387);
-  border-radius: 0 0 0 24px;
-  color: #1e1e2e;
-  padding: 0 7px 0 18px;
 }

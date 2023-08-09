@@ -1,0 +1,172 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
+/*  */
+/*  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ */
+/* ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ */
+/* ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗ */
+/* ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║ */
+/* ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝ */
+/*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "width": "",
+  "spacing": 4,
+  "modules-left": ["hyprland/workspaces", "hyprland/window", "idle_inhibitor"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": ["custom/wall", "tray", "pulseaudio", "backlight", "battery", "custom/swaync", "clock", "custom/powermenu"],
+  
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+    },
+    // "persistent_workspaces": {
+    //   "*": 6,
+    // },
+  },
+
+  "hyprland/window": {
+    "max-length": 30,
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) - Brave": "$1",
+      "(.*) - Thunar": "$1",
+      "(.*) - Discord": "$1",
+      "": "Desktop",
+      "~": "wezterm",
+      "n": "nvim",
+    },
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
+    "tooltip": "false",
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "  ",
+      "deactivated": "  "
+    }
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#cc241d'><b><u>{}</u></b></span>",
+      },
+    },
+    "format-alt": " {:%Y-%m-%d}"
+    },
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": " {}%"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""],
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": "{icon}",
+    "format-muted": " ",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "amixer set Master toggle",
+    "on-right-click": "pavucontrol",
+  },
+
+  "custom/powermenu": {
+    "format": " ",
+	  "on-click": "~/.config/waybar/scripts/power_menu.sh",
+	  "tooltip": false,
+  },
+
+  "custom/swaync": {
+    "format": " ",
+    "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
+    "tooltip": false,
+  },
+
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
+    "format": " {}",
+    "max-length": 30,
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/wall":{
+    "format":"  ",
+    // "interval": 1,
+    "on-click": "~/.config/hypr/wall",
+    "tooltip": false,
+  },
+}

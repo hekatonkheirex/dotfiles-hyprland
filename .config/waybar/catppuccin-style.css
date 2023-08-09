@@ -33,44 +33,35 @@ tooltip label {
 
 /* Workspaces */
 #workspaces {
-  background: #1e1e2e;
+  background-color: #1e1e2e;
   border-radius: 16px;
   margin: 3px;
   padding: 0px 5px 0px 5px;
+  font-size: 30px;
 }
 
 #workspaces button {
-  background: #f9e2af;
   border-radius: 16px;
-  color: #f9e2af;
-  margin: 5px 5px;
+  color: #f5e0dc;
   padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button:hover {
-  background: #f9e2af;
+  background-color: rgba(0, 0, 0, 0.0);
   border-radius: 16px;
-  color: #f9e2af;
-  min-width: 50px;
+  animation: gradient_f 20s ease-in infinite;
+ transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button.active {
-  background: #a6e3a1;
   border-radius: 16px;
-  color: #a6e3a1;
-  min-width: 50px;
-  padding: 0px 5px 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #89b4fa;
+  padding: 0px 10px 0px 10px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button.urgent {
   color: #f38ba8;
-}
-#workspaces button.persistent {
-  background: #cdd6f4;
-  border-radius: 16px;
-  color: #cdd6f4;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
 }
 
 window#waybar.empty #window {
@@ -149,6 +140,8 @@ window#waybar.empty #window {
 
 /* Clock */
 #clock {
+  background-color: #1e1e2e;
+  border-radius: 0 0 0 24px;
   color: #94e2d5;
   padding: 0 12px;
 }
@@ -213,12 +206,4 @@ window#waybar.empty #window {
 #custom-wall {
   color: #f2cdcd;
   padding: 0 12px;
-}
-
-/* Swaync */
-#custom-swaync {
-  background: linear-gradient(45deg, #cba6f7, #fab387);
-  border-radius: 0 0 0 24px;
-  color: #1e1e2e;
-  padding: 0 7px 0 18px;
 }
