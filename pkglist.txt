@@ -8,6 +8,7 @@ alsa-utils
 amd-ucode
 aria2
 atomicparsley
+auto-cpufreq-git
 base
 base-devel
 bdf-unifont
@@ -20,6 +21,7 @@ bluez-utils
 brave-bin
 brightnessctl
 clipman
+cpufreqctl
 cups
 dhclient
 dialog
@@ -68,7 +70,6 @@ iw
 jq
 kvantum
 kvantum-theme-catppuccin-git
-laptop-mode-tools
 libappindicator-gtk2
 libgnome-keyring
 libopenraw
@@ -118,7 +119,6 @@ pop-gtk-theme
 pop-icon-theme
 poppler-glib
 powertop
-protonvpn
 python-pycryptodomex
 python-pyqt5
 python-pyquery
@@ -154,6 +154,7 @@ swww
 tamsyn-font
 terminus-font
 tex-gyre-fonts
+thermald
 thunar
 thunar-archive-plugin
 thunar-shares-plugin
