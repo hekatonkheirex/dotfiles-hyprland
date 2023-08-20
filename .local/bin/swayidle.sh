@@ -1,5 +1,5 @@
 #!/bin/sh
 
 swayidle -w \
-        timeout 300 'gtklock' \
+        timeout 300 'swaylock' \
         timeout 400 'systemctl suspend' \

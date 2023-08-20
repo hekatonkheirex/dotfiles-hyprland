@@ -29,6 +29,7 @@ return require('packer').startup({
   use {'decaycs/decay.nvim', as = 'decay'}
   use 'Shatur/neovim-ayu'
   use 'Mofiqul/dracula.nvim'
+  use {'glyh/oxocarbon.nvim', branch = 'lualine-support'}
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }
@@ -60,6 +61,7 @@ return require('packer').startup({
 
   -- Syntax highlight
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { "luckasRanarison/tree-sitter-hypr" }
 
   -- Explorer
 use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
@@ -90,11 +92,22 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }} 
 
   -- Startup screen
+  -- use {
+  --   'goolord/alpha-nvim',
+  --   config = function ()
+  --       require'alpha'.setup(require'alpha.themes.dashboard'.config)
+  --   end
+  -- }
+
   use {
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
+    'glepnir/dashboard-nvim',
+    -- event = 'VimEnter',
+    -- config = function()
+    --   require('dashboard').setup {
+    --     -- config
+    --   }
+    -- end,
+    requires = {'nvim-tree/nvim-web-devicons'}
   }
 
   -- Git

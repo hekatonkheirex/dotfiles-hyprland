@@ -27,9 +27,9 @@
   "ipc": true,
   "bar_id": "bar-0",
 
-  "modules-left": ["idle_inhibitor", "hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
+  "modules-left": ["idle_inhibitor", "hyprland/workspaces"],
   "modules-center": ["clock", "custom/wttr"],
-  "modules-right": ["hyprland/language", "custom/wall", "tray", "backlight", "pulseaudio", "battery", "custom/swaync"],
+  "modules-right": ["hyprland/language", "custom/wall", "tray", "backlight", "pulseaudio", "custom/swaync"],
   
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -76,7 +76,12 @@
 
   "clock": {
     "format": " {:%H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#ee5396'><b><u>{}</u></b></span>",
+      },
+    },
     "format-alt": " {:%Y-%m-%d}"
     },
 

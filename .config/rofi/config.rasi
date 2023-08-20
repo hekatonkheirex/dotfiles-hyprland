@@ -18,13 +18,14 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "Shibsted Grotesk 18";
+    font: "Schibsted Grotesk 18";
 }
 
-@theme "./catppuccin/mocha.rasi"
+/* @theme "./catppuccin/mocha.rasi" */
 /* @theme "nord.rasi" */
 /* @theme "rosepine.rasi" */
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */
 /* @theme "gruvbox-dark.rasi" */
 /* @theme "tokyonight.rasi" */
+@theme "oxocarbon.rasi"

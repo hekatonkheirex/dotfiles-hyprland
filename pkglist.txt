@@ -21,6 +21,8 @@ bluez-utils
 brave-bin
 brightnessctl
 clipman
+colloid-cursors-git
+colloid-icon-theme-git
 cpufreqctl
 cups
 dhclient
@@ -53,7 +55,6 @@ grim
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
-gtklock
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -65,6 +66,7 @@ hwdetect
 hwinfo
 hyprland
 inetutils
+iniparser
 inter-font
 iw
 jq
@@ -104,6 +106,7 @@ ntfs-3g
 ntp
 nwg-look-bin
 openssl-1.1
+orchis-theme-git
 pacman-contrib
 pamixer
 paper-icon-theme-git
@@ -130,6 +133,7 @@ qt5ct
 qt6ct
 raw-thumbnailer
 reflector
+ripgrep
 rofi
 rofimoji
 rsync
@@ -142,7 +146,9 @@ sg3_utils
 sif-git
 slurp
 smartmontools
+sndio
 sof-firmware
+spdlog-git
 spicetify-cli
 spotify
 sshfs
@@ -203,6 +209,7 @@ wev
 wezterm
 wf-recorder
 wget
+whitesur-icon-theme-git
 wl-clipboard
 wlogout
 wlr-randr
