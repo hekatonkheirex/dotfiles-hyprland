@@ -8,13 +8,13 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Fira Sans Book","Font Awesome 6 Pro", "Font Awesome 6 Brands";
+  font-family: "Schibsted Grotesk","Font Awesome 6 Pro", "Font Awesome 6 Brands";
   font-size: 16px;
   font-weight: bold;
 }
 
 window#waybar {
-  background: rgba(40, 40, 40, 0.7);
+  background: rgba(22, 22, 22, 0.85);
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -24,46 +24,53 @@ window#waybar.hidden {
 }
 
 tooltip {
-  background: rgba(40, 40, 40, 0.7);
-  border: 1px solid rgba(60, 56, 54, 0.7);
+  background: rgba(22, 22, 22, 0.8);
+  border: 1px solid rgba(22, 22, 22, 0.8);
 }
 tooltip label {
-  color: #d5c4a1;
+  color: #82cfff;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #282828;
+  background: #161616;
   border-radius: 16px;
+  margin: 3px;
   padding: 0px 5px 0px 5px;
 }
 
 #workspaces button {
-  background: #fbf1c7;
+  background: #ff7eb6;
   border-radius: 16px;
-  color: #fbf1c7;
+  color: #ff7eb6;
   margin: 5px 5px;
   padding: 0px 5px;
   transition: all 0.3s ease-in-out;
 }
 #workspaces button:hover {
-  background: #d79921;
-  background-size: 400px 400px;
+  background: #ff7eb6;
   border-radius: 16px;
-  color: #d79921;
+  color: #ff7eb6;
   min-width: 50px;
 }
 #workspaces button.active {
-  background: #689d6a;
-  background-size: 400% 400%;
+  background: #be95ff;
   border-radius: 16px;
-  color: #689d6a;
+  color: #be95ff;
   min-width: 50px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 5px 0px 5px;
   transition: all 0.3s ease-in-out;
 }
 #workspaces button.urgent {
-  color: #cc241d;
+  color: #ee5396;
+}
+#workspaces button.persistent {
+  background: #525252;
+  border-radius: 16px;
+  color: #525252;
+  margin: 5px 5px;
+  padding: 0px 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 window#waybar.empty #window {
@@ -72,58 +79,60 @@ window#waybar.empty #window {
 
 /* Language */
 #language {
-  color: #fe8019;
+  color: #ff7eb6;
   padding: 0 12px;
 }
 
 /* Idle inhibitor */
 #idle_inhibitor {
-  background: #282828;
+  background: #161616;
   border-radius: 0 24px 0 0;
-  color: #3c3836;
+  color: #393939;
   padding: 0 12px;
 }
 #idle_inhibitor.activated {
-  background: linear-gradient(45deg, #fe8019, #d3869b);
-  color: #282828;
+  background: linear-gradient(45deg, #3ddbd9, #be95ff);
+  color: #161616;
 }
 
 /* Backlight */
 #backlight {
-  color: #d79921;
+  color: #ff6f00;
   padding: 0 12px;
 }
 
 /* Volume */
 #pulseaudio {
-  color: #458588;
+  color: #ffab91;
   padding: 0 12px;
 }
 #pulseaudio.muted {
-  color: #3c3836;
+  color: #393939;
 }
 
 /* Battery */
 #battery {
-  color: #cc241d;
+  color: #ee5396;
   padding: 0 12px;
 }
 #battery.charging, #battery.plugged {
-  color: #98971a;
+  color: #42be65;
 }
 @keyframes blink {
   to {
-    background-color: #d79921;
+    background-color: #ffab91;
     border-radius: 16px;
     margin: 3px;
+    margin-right: 5px;
     padding: 0 12px;
   }
 }
 #battery.critical:not(.charging) {
-  background-color: #cc241d;
+  background-color: #ee5396;
   border-radius: 16px;
-  color: #282828;
-  margin: 2px;
+  color: #161616;
+  margin: 3px;
+  margin-right: 5px;
   padding: 0 12px;
   animation-name: blink;
   animation-duration: 1s;
@@ -134,27 +143,25 @@ window#waybar.empty #window {
 
 /* Tray */
 #tray {
-  background: #3c3836;
+  background: #525252;
   border-radius: 16px;
-  margin: 3px;
+  margin: 5px;
   padding: 0 12px;
 }
 
 /* Clock */
 #clock {
-  background-color: #282828;
-  border-radius: 0 0 0 24px;
-  color: #83a598;
+  color: #3ddbd9;
   padding: 0 12px;
 }
 
 /* Spotify */
 #custom-spotify {
-  color: #b8bb26;
+  color: #42be65;
 }
 
 #custom-playerctl {
-	background: #282828;
+	background: #161616;
 	padding-left: 15px;
   padding-right: 14px;
 	border-radius: 16px 0 0 16px;
@@ -166,7 +173,7 @@ window#waybar.empty #window {
 }
 
 #custom-playerlabel {
-    background: #3c3836;
+    background: #393939;
     padding-left: 10px;
     padding-right: 15px;
     border-radius: 0 16px 16px 0;
@@ -186,26 +193,34 @@ window#waybar.empty #window {
 
 /* Weather */
 #custom-wttr {
-  color: #83a598;
+  color: #3ddbd9;
   padding: 0 12px;
 }
 
 /* Logo */
 #custom-logo {
   font-size: 18px;
-  color: #8f3f71;
+  color: #be95ff;
   margin-left: 16px;
 }
 
 /* Power */
 #custom-power {
   font-size: 18px;
-  color: #cc241d;
+  color: #ee5396;
   margin-right: 16px;
 }
 
 /* Wall */
 #custom-wall {
-  color: #8ec07c;
+  color: #82cfff;
   padding: 0 12px;
+}
+
+/* Swaync */
+#custom-swaync {
+  background: linear-gradient(45deg, #be95ff, #3ddbd9);
+  border-radius: 0 0 0 24px;
+  color: #161616;
+  padding: 0 7px 0 18px;
 }

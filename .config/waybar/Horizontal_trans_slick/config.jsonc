@@ -24,23 +24,17 @@
   "margin-left": 0,
   "margin-right": 0,
   "fixed-center": true,
-  /* "ipc": true, */
+  "ipc": true,
   "bar_id": "bar-0",
 
-  "modules-left": ["idle_inhibitor", "hyprland/language", "custom/wall", "custom/wttr", "custom/playerctl", "custom/playerlabel"],
-  "modules-center": ["wlr/workspaces"],
-  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
+  "modules-left": ["idle_inhibitor", "hyprland/workspaces"],
+  "modules-center": ["clock", "custom/wttr"],
+  "modules-right": ["hyprland/language", "custom/wall", "tray", "backlight", "pulseaudio", "custom/swaync"],
   
-  "wlr/workspaces": {
-    "disable-scroll": false,
-    "all-outputs": true,
+  "hyprland/workspaces": {
     "on-click": "activate",
     "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
+      "*": 6,
     },
     "format": "{icon}",
     "format-icons": {
@@ -56,7 +50,6 @@
       "urgent": "",
 			"active": "",
 			"default": "",
-
     "sort-by-number": true
     },
   },
@@ -83,7 +76,12 @@
 
   "clock": {
     "format": " {:%H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#ee5396'><b><u>{}</u></b></span>",
+      },
+    },
     "format-alt": " {:%Y-%m-%d}"
     },
 
@@ -218,6 +216,12 @@
     "format":"",
     // "interval": 1,
     "on-click": "~/.config/hypr/wall",
+    "tooltip": false,
+  },
+  
+  "custom/swaync": {
+    "format": " ",
+    "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
     "tooltip": false,
   },
 }

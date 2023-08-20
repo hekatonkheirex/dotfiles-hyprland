@@ -8,219 +8,296 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Schibsted Grotesk","Font Awesome 6 Pro", "Font Awesome 6 Brands";
-  font-size: 16px;
-  font-weight: bold;
+  font-family: "Unica One", "tabler-icons";
+  font-weight: normal;
+}
+
+button {
+  min-height: 18px;
+  min-width: 56px;
 }
 
 window#waybar {
-  background: rgba(22, 22, 22, 0.85);
-  transition-property: background-color;
-  transition-duration: .5s;
+  background: rgba(22, 22, 22, 0.8);
 }
 
 window#waybar.hidden {
   opacity: 0.2;
 }
 
+/* Tooltips */
 tooltip {
-  background: rgba(22, 22, 22, 0.8);
-  border: 1px solid rgba(22, 22, 22, 0.8);
+  background: rgba(22, 22, 22, 0.9);
+  border: 1px solid rgba(22, 22, 22, 0.9);
 }
 tooltip label {
-  color: #82cfff;
+  color: #33b1ff;
 }
 
 /* Workspaces */
 #workspaces {
-  background: #161616;
-  border-radius: 16px;
-  margin: 3px;
-  padding: 0px 5px 0px 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 5px 0 5px 0;
 }
 
 #workspaces button {
-  background: #ff7eb6;
-  border-radius: 16px;
+  min-width: 12px;
   color: #ff7eb6;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  padding: 5px;
 }
+
 #workspaces button:hover {
-  background: #ff7eb6;
-  border-radius: 16px;
-  color: #ff7eb6;
-  min-width: 50px;
-}
-#workspaces button.active {
-  background: #be95ff;
-  border-radius: 16px;
   color: #be95ff;
-  min-width: 50px;
-  padding: 0px 5px 0px 5px;
-  transition: all 0.3s ease-in-out;
+  padding: 5px;
 }
+
+#workspaces button.active {
+  color: #be95ff;
+  padding: 5px;
+}
+
 #workspaces button.urgent {
   color: #ee5396;
 }
+
 #workspaces button.persistent {
-  background: #525252;
-  border-radius: 16px;
-  color: #525252;
-  margin: 5px 5px;
-  padding: 0px 5px;
-  transition: all 0.3s ease-in-out;
+  color: #262626;
+  padding: 5px;
+
 }
 
 window#waybar.empty #window {
-  background-color: transparent;
+	background-color: transparent;
 }
 
-/* Language */
-#language {
-  color: #ff7eb6;
-  padding: 0 12px;
-}
-
-/* Idle inhibitor */
-#idle_inhibitor {
-  background: #161616;
-  border-radius: 0 24px 0 0;
-  color: #393939;
-  padding: 0 12px;
-}
-#idle_inhibitor.activated {
-  background: linear-gradient(45deg, #3ddbd9, #be95ff);
-  color: #161616;
-}
-
-/* Backlight */
-#backlight {
+/** ********** Pulseaudio ********** **/
+#pulseaudio.1 {
   color: #ff6f00;
-  padding: 0 12px;
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+}
+#pulseaudio.2 {
+  color: #ff6f00;
+  font-size: 16px;
+  padding: 5px 0 5px 0;
 }
 
-/* Volume */
-#pulseaudio {
+/** ********** Backlight ********** **/
+#backlight.1 {
   color: #ffab91;
-  padding: 0 12px;
+  padding: 5px 0 5px 0;
 }
-#pulseaudio.muted {
-  color: #393939;
+#backlight.2 {
+  color: #ffab91;
+  font-size: 16px;
+  padding: 5px 0 5px 0;
 }
 
-/* Battery */
-#battery {
-  color: #ee5396;
-  padding: 0 12px;
+/** ********** Battery ********** **/
+#battery.1 {
+  color: #42be65;
+  padding: 5px 0 5px 0;
 }
-#battery.charging, #battery.plugged {
+
+#battery.1.charging {
+  color: #ee5396;
+}
+
+#battery.1.plugged {
   color: #42be65;
 }
+
+#battery.2 {
+  color: #42be65;
+  font-size: 16px;
+  padding: 5px 0 5px 0;
+}
+
+#battery.2.charging {
+  color: #ee5396;
+}
+
+#battery.2.plugged {
+  color: #42be65;
+}
+
 @keyframes blink {
   to {
     background-color: #ffab91;
-    border-radius: 16px;
-    margin: 3px;
-    margin-right: 5px;
-    padding: 0 12px;
   }
 }
-#battery.critical:not(.charging) {
-  background-color: #ee5396;
-  border-radius: 16px;
+
+#battery.2.critical:not(.charging) {
   color: #161616;
-  margin: 3px;
-  margin-right: 5px;
-  padding: 0 12px;
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-/* Tray */
-#tray {
-  background: #525252;
-  border-radius: 16px;
-  margin: 5px;
-  padding: 0 12px;
-}
-
-/* Clock */
+/** ********** Clock ********** **/
 #clock {
+  background: #161616;
+  border-radius: 0 12px 0 0;
   color: #3ddbd9;
-  padding: 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 10px 0 0 0;
+}
+#clock.2 {
+  background: #161616;
+  border-radius: 0 0 0 0;
+  color: #78a9ff;
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 0 0 5px 0;
 }
 
-/* Spotify */
-#custom-spotify {
+/** ********** Tray ********** **/
+#tray {
+  border-radius: 4px;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
+}
+
+#language {
+  color: #ff7eb6;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#idle_inhibitor {
+  color: #393939;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+#idle_inhibitor.activated {
+  background: linear-gradient(45deg, #3ddbd9, #be95ff);
+  border-radius: 4px;
+  color: #161616;
+}
+
+#cpu.1 {
+  background: #3b4252;
+  color: #81a1c1;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 5px;
+  border-radius: 6px 6px 0 0;
+}
+#cpu.2 {
+  background: #3b4252;
+  color: #81a1c1;
+  font-size: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px 0 5px 0;
+}
+
+#memory.1 {
+  background: #3b4252;
+  color: #81a1c1;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#memory.2 {
+  background: #3b4252;
+  color: #81a1c1;
+  font-size: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px 0 5px 0;
+}
+
+#temperature.1 {
+  background: #3b4252;
+  color: #81a1c1;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#temperature.1.critical {
+  color: #bf616a;
+}
+#temperature.2 {
+  background: #3b4252;
+  border-radius: 0 0 6px 6px;
+  color: #81a1c1;
+  font-size: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px 0 5px 0;
+  margin-bottom: 5px;
+}
+#temperature.2.critical {
+  color: #bf616a;
+}
+
+/** ********** Custom ********** **/
+
+#custom-wttr.1 {
+  color: #33b1ff;
+  font-size: 18px;
+  padding: 5px 0 0 0;
+}
+#custom-wttr.2 {
+  color: #33b1ff;
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+}
+
+#custom-weather.1 {
+  color: #33b1ff;
+  font-size: 18px;
+  padding: 5px 0 0 0;;
+}
+#custom-weather.2 {
+  color: #33b1ff;
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+}
+#custom-weather.1.default {
   color: #42be65;
 }
-
-#custom-playerctl {
-	background: #161616;
-	padding-left: 15px;
-  padding-right: 14px;
-	border-radius: 16px 0 0 16px;
-  /*border-left: solid 1px #282738;*/
-  /*border-right: solid 1px #282738;*/
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
+#custom-weather.1.severe {
+    color: #ee5396;
+}
+#custom-weather.1.sunnyDay {
+    color: #ffab91;
+}
+#custom-weather.1.clearNight {
+    color: #f2f4f8;
+}
+#custom-weather.1.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+    color: #dde1e6;
+}
+#custom-weather.1.rainyDay, #custom-weather.rainyNight {
+    color: #be95ff;
+}
+#custom-weather.1.showyIcyDay, #custom-weather.snowyIcyNight {
+    color: #3ddbd9;
 }
 
-#custom-playerlabel {
-    background: #393939;
-    padding-left: 10px;
-    padding-right: 15px;
-    border-radius: 0 16px 16px 0;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#custom-media,
-#network,
-#temperature,
-#window,
-#cpu,
-#memory,
-#disk,
-
-/* Weather */
-#custom-wttr {
-  color: #3ddbd9;
-  padding: 0 12px;
-}
-
-/* Logo */
-#custom-logo {
-  font-size: 18px;
-  color: #be95ff;
-  margin-left: 16px;
-}
-
-/* Power */
-#custom-power {
-  font-size: 18px;
-  color: #ee5396;
-  margin-right: 16px;
-}
-
-/* Wall */
 #custom-wall {
-  color: #82cfff;
-  padding: 0 12px;
+  color: #08bdba;
+  font-size: 18px;
+  padding: 5px;
+}
+
+#custom-spotify {
+  color: #42be65;
+  font-size: 18px;
+  padding: 5px;
 }
 
 /* Swaync */
 #custom-swaync {
   background: linear-gradient(45deg, #be95ff, #3ddbd9);
-  border-radius: 0 0 0 24px;
+  border-radius: 4px;
   color: #161616;
-  padding: 0 7px 0 18px;
+  font-size: 18px;
+  padding: 5px;
 }
