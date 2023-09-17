@@ -128,9 +128,9 @@ source /home/mura/.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls="exa --icons"
-alias la="exa -la --icons"
-alias laa="exa -a --icons"
+alias ls="eza --icons"
+alias la="eza -la --icons"
+alias laa="eza -a --icons"
 alias update="paru"
 alias clean="paru -Rns $(pacman -Qdtq)"
 alias n="nvim"

@@ -34,7 +34,7 @@
   // Choose the order of the modules
   "modules-left": ["idle_inhibitor", "hyprland/workspaces", "custom/wall", "hyprland/language", "custom/weather#1", "custom/weather#2"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "clock", "clock#2"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "clock", "clock#2", "custom/swaync"],
 
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -52,9 +52,9 @@
       // "4": "",
       // "5": "",
       // "6": "",
-      "urgent": "",
-			"active": "",
-			"default": "󰧞",
+      "urgent": "&#xf69b;",
+			"active": "&#xf69b;",
+			"default": "&#xf69b;",
     "sort-by-number": true
     },
   },
@@ -63,7 +63,7 @@
     "interval": 2,
     //"device": "amdgpu_bl0",
     "format": "{icon}",
-    "format-icons": [""],
+    "format-icons": ["&#xeb7f;"],
     "on-scroll-up": "light -A 5%",
     "on-scroll-down": "light -U 5%",
     "smooth-scrolling-threshold": 1,
@@ -117,40 +117,30 @@
   },
 
   "clock": {
-    "interval": 60,
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "format": "{:%H}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode"          : "year",
-      "mode-mon-col"  : 3,
-      "weeks-pos"     : "right",
-      "on-scroll"     : 1,
-      "on-click-right": "mode",
       "format": {
-        "months":     "<span color='#ffead3'><b>{}</b></span>",
-        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "today": "<span color = '#ee5396'><b><u>{}</u></b></span>",
       },
     },
-    "actions":  {
-      "on-click-right": "mode",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    },
   },
+
   "clock#2": {
-		"interval": 60,
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#ee5396'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
+      "activated": "&#xea9a;",
+      "deactivated": "&#xecf0;"
     }
   },
   
@@ -168,17 +158,17 @@
 
   "pulseaudio#1": {
     "format": "{icon}",
-    "format-muted": "",
-    "format-bluetooth": "",
-    "format-source": "",
-    "format-source-muted": "",
+    "format-muted": "&#xf1c3;",
+    "format-bluetooth": "&#xea37;",
+    "format-source": "&#xeaf0;",
+    "format-source-muted": "&#xed16;",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "default": ["", "", ""]
+      "headphone": "&#xeabd;",
+      "hands-free": "&#xf5a9;",
+      "headset": "&#xeb90;",
+      "phone": "&#xeb09;",
+      "portable": "&#xea8a;",
+      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
     },
     "scroll-step": 5.0,
     "on-click": "amixer set Master toggle",
@@ -265,14 +255,14 @@
   },
   
   "custom/wall":{
-    "format":"",
+    "format":"&#xeb00;",
     // "interval": 1,
     "on-click": "~/.config/hypr/wall",
     "tooltip": false,
   },
 
   "custom/spotify": {
-    "format": "",
+    "format": "&#xed03;",
     "interval": 1,
     "exec-if": "pgrep spotify",
     "return-type": "json",
@@ -282,5 +272,11 @@
     "tooltip": true,
     "escape": true,
     "exec": "/home/mura/.config/waybar/scripts/spotify.sh"
+  },
+
+  "custom/swaync": {
+    "format": "&#xea35;",
+    "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
+    "tooltip": false,
   },
 }
