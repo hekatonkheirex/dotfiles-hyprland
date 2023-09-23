@@ -34,7 +34,7 @@
   // Choose the order of the modules
   "modules-left": ["idle_inhibitor", "hyprland/workspaces", "custom/wall", "hyprland/language", "custom/weather#1", "custom/weather#2"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "tray", "clock", "clock#2", "custom/swaync"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1","battery#2", "tray", "clock", "clock#2", "custom/swaync"],
 
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -89,10 +89,10 @@
       "critical": 15
     },
     "format": "{icon}",
-    "format-charging": "",
-    "format-plugged": "",
-    "format-full": "",
-    "format-icons": ["", "", "", "", "", ""],
+    "format-charging": "&#xea33;",
+    "format-plugged": "&#xef3b;",
+    "format-full": "&#xf668;",
+    "format-icons": ["&#xea34;", "&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
     "format-time": "{H}h {M}min",
     "tooltip": true,
   },

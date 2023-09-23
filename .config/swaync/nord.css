@@ -2,27 +2,27 @@
  * vim: ft=less
 */
 
-@define-color cc-bg #262626;
+@define-color cc-bg #3b4252;
 
-@define-color noti-border-color #be95ff;
-@define-color noti-bg #262626;
-@define-color noti-bg-darker #262626;
-@define-color noti-bg-hover #262626;
+@define-color noti-border-color #5e81ac;
+@define-color noti-bg #3b4252;
+@define-color noti-bg-darker #3b4252;
+@define-color noti-bg-hover #3b4252;
 @define-color noti-bg-focus rgba(0, 0, 0, 0);
-@define-color noti-close-bg #393939;
-@define-color noti-close-bg-hover #ee5396;
+@define-color noti-close-bg #434c5e;
+@define-color noti-close-bg-hover #bf616a;
 
-@define-color text-color #ffffff;
-@define-color text-color-disabled #161616;
+@define-color text-color #eceff4;
+@define-color text-color-disabled #2e3440;
 
-@define-color bg-selected #be95ff;
+@define-color bg-selected #5e81ac;
 
-@define-color dnd-bg #393939;
-@define-color dnd-selected #be95ff;
-@define-color dnd-dot #161616;
+@define-color dnd-bg #434c5e;
+@define-color dnd-selected #5e81ac;
+@define-color dnd-dot #2e3440;
 
-@define-color noti-button #161616;
-@define-color noti-button-hover #393939;
+@define-color noti-button #2e3440;
+@define-color noti-button-hover #434c5e;
 
 @define-color sep-color transparent;
 
@@ -62,7 +62,7 @@
 }
 
 .critical {
-  background-color: #ee5396;
+  background-color: #bf616a;
   padding: 4px 4px 4px 4px;
   border: none;
   border-radius: 10px;
@@ -249,11 +249,11 @@
 .widget-title > button {
   font-size: 20px;
   font-weight: bold;
-  color: #161616;
+  color: #2e3440;
   text-shadow: none;
-  background-color: #be95ff;
+  background-color: #5e81ac;
   border: none;
-  border-bottom: 8px solid #be95ff;
+  border-bottom: 8px solid #5e81ac;
   box-shadow: none;
   border-radius: 5px;
   padding-left: 15px;
@@ -262,8 +262,8 @@
   padding-bottom: 5px;
 }
 .widget-title > button:hover {
-  background-color: #be95ff;
-  border-bottom: 8px solid #be95ff;
+  background-color: #5e81ac;
+  border-bottom: 8px solid #5e81ac;
 }
 
 /* DND widget */

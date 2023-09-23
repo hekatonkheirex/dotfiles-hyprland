@@ -19,6 +19,7 @@ button {
 
 window#waybar {
   background: rgba(46, 52, 64, 0.8);
+  border-radius: 0 4px 4px 0;
 }
 
 window#waybar.hidden {

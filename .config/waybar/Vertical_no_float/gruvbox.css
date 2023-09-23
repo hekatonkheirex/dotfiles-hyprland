@@ -18,7 +18,7 @@ button {
 }
 
 window#waybar {
-  background: rgba(22, 22, 22, 0.8);
+  background: rgba(40, 40, 40, 0.8);
 }
 
 window#waybar.hidden {
@@ -27,11 +27,11 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(22, 22, 22, 0.9);
-  border: 1px solid rgba(22, 22, 22, 0.9);
+  background: rgba(40, 40, 40, 0.9);
+  border: 1px solid rgba(40, 40, 40, 0.9);
 }
 tooltip label {
-  color: #33b1ff;
+  color: #8ec07c;
 }
 
 /* Workspaces */
@@ -43,26 +43,26 @@ tooltip label {
 
 #workspaces button {
   min-width: 12px;
-  color: #ff7eb6;
+  color: #d79921;
   padding: 5px;
 }
 
 #workspaces button:hover {
-  color: #be95ff;
+  color: #98971a;
   padding: 5px;
 }
 
 #workspaces button.active {
-  color: #be95ff;
+  color: #98971a;
   padding: 5px;
 }
 
 #workspaces button.urgent {
-  color: #ee5396;
+  color: #cc241d;
 }
 
 #workspaces button.persistent {
-  color: #393939;
+  color: #3c3836;
   padding: 5px;
 
 }
@@ -73,63 +73,63 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio.1 {
-  color: #ff6f00;
+  color: #d65d0e;
   font-size: 18px;
   padding: 5px 0 5px 0;
 }
 #pulseaudio.2 {
-  color: #ff6f00;
+  color: #d65d0e;
   font-size: 16px;
   padding: 5px 0 5px 0;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  color: #ffab91;
+  color: #d79921;
   padding: 5px 0 5px 0;
 }
 #backlight.2 {
-  color: #ffab91;
+  color: #d79921;
   font-size: 16px;
   padding: 5px 0 5px 0;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  color: #42be65;
+  color: #98971a;
   padding: 5px 0 5px 0;
 }
 
 #battery.1.charging {
-  color: #ee5396;
+  color: #cc241d;
 }
 
 #battery.1.plugged {
-  color: #42be65;
+  color: #98971a;
 }
 
 #battery.2 {
-  color: #42be65;
+  color: #98971a;
   font-size: 16px;
   padding: 5px 0 5px 0;
 }
 
 #battery.2.charging {
-  color: #ee5396;
+  color: #cc241d;
 }
 
 #battery.2.plugged {
-  color: #42be65;
+  color: #98971a;
 }
 
 @keyframes blink {
   to {
-    background-color: #ffab91;
+    background-color: #d79921;
   }
 }
 
 #battery.2.critical:not(.charging) {
-  color: #161616;
+  color: #282828;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -139,17 +139,14 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #161616;
-  border-radius: 0 12px 0 0;
-  color: #3ddbd9;
+  color: #8ec07c;
   font-size: 24px;
   font-weight: bolder;
   padding: 10px 0 0 0;
 }
 #clock.2 {
-  background: #161616;
   border-radius: 0 0 0 0;
-  color: #78a9ff;
+  color: #83a598;
   font-size: 24px;
   font-weight: bolder;
   padding: 0 0 5px 0;
@@ -163,22 +160,22 @@ window#waybar.empty #window {
 }
 
 #language {
-  color: #ff7eb6;
+  color: #d79921;
   font-size: 18px;
   font-weight: bold;
   padding: 5px;
 }
 
 #idle_inhibitor {
-  color: #393939;
+  color: #504945;
   font-size: 18px;
   margin-bottom: 5px;
   padding: 5px;
 }
 #idle_inhibitor.activated {
-  background: linear-gradient(45deg, #3ddbd9, #be95ff);
+  background: linear-gradient(45deg, #8ec07c, #b8bb26);
   border-radius: 4px;
-  color: #161616;
+  color: #282828;
 }
 
 #cpu.1 {
@@ -239,65 +236,65 @@ window#waybar.empty #window {
 /** ********** Custom ********** **/
 
 #custom-wttr.1 {
-  color: #33b1ff;
+  color: #88c0d0;
   font-size: 18px;
   padding: 5px 0 0 0;
 }
 #custom-wttr.2 {
-  color: #33b1ff;
+  color: #88c0d0;
   font-size: 16px;
   padding: 5px 0 10px 0;
 }
 
 #custom-weather.1 {
-  color: #33b1ff;
+  color: #ebdbb2;
   font-size: 18px;
   padding: 5px 0 0 0;;
 }
 #custom-weather.2 {
-  color: #33b1ff;
+  color: #ebdbb2;
   font-size: 16px;
   padding: 5px 0 10px 0;
 }
 #custom-weather.1.default {
-  color: #42be65;
+  color: #ebdbb2;
 }
 #custom-weather.1.severe {
-    color: #ee5396;
+    color: #cc241d;
 }
 #custom-weather.1.sunnyDay {
-    color: #ffab91;
+    color: #d79921;
 }
 #custom-weather.1.clearNight {
-    color: #f2f4f8;
+    color: #928374;
 }
 #custom-weather.1.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-    color: #dde1e6;
+    color: #504945;
 }
 #custom-weather.1.rainyDay, #custom-weather.rainyNight {
-    color: #be95ff;
+    color: #458588;
 }
 #custom-weather.1.showyIcyDay, #custom-weather.snowyIcyNight {
-    color: #3ddbd9;
+    color: #8ec07c;
 }
 
 #custom-wall {
-  color: #08bdba;
+  color: #b16286;
   font-size: 18px;
   padding: 5px;
 }
 
 #custom-spotify {
-  color: #42be65;
+  color: #98971a;
   font-size: 18px;
   padding: 5px;
 }
 
 /* Swaync */
 #custom-swaync {
-  background: linear-gradient(45deg, #be95ff, #3ddbd9);
+  background: linear-gradient(45deg, #b8bb26, #8ec07c);
   border-radius: 4px;
-  color: #161616;
+  color: #282828;
   font-size: 18px;
   padding: 5px;
 }
