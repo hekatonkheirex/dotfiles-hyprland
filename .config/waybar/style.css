@@ -8,127 +8,160 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Unica One", "tabler-icons";
-  font-weight: normal;
-}
-
-button {
-  min-height: 18px;
-  min-width: 56px;
+  font-family: "Rubik", "tabler-icons";
+  font-weight: bold;
 }
 
 window#waybar {
-  background: rgba(22, 22, 22, 0.8);
+  border-bottom: 0px solid  #161616;
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+  opacity: 0.0;
 }
 
 /* Tooltips */
 tooltip {
   background: rgba(22, 22, 22, 0.9);
   border: 1px solid rgba(22, 22, 22, 0.9);
+  border-radius: 10px;
+  padding: 20px;
 }
 tooltip label {
-  color: #33b1ff;
+  color: #ffffff;
 }
 
 /* Workspaces */
 #workspaces {
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding: 5px 0 5px 0;
+  background: #262626;
+  border-radius: 16px;
+  margin: 5px 5px 5px 5px;
+  opacity: 0.8;
+  padding: 4px 1px;
 }
 
 #workspaces button {
-  min-width: 12px;
-  color: #ff7eb6;
-  padding: 5px;
+  background: #ff7eb6;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 0px 3px;
+  min-height: 1px;
+  opacity: 0.4;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  color: #be95ff;
-  padding: 5px;
+  background: #be95ff;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-width: 30px;
 }
 
 #workspaces button.active {
-  color: #be95ff;
-  padding: 5px;
+  background: #be95ff;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-width: 40px;
+  opacity: 1.0;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
-  color: #ee5396;
+  background: #ee5396;
 }
 
 #workspaces button.persistent {
-  color: #393939;
-  padding: 5px;
-
+  background: #393939;
+  transition: all 0.3s ease-in-out;
 }
 
 window#waybar.empty #window {
 	background-color: transparent;
 }
 
-/** ********** Pulseaudio ********** **/
-#pulseaudio.1 {
-  color: #ff6f00;
-  font-size: 18px;
-  padding: 5px 0 5px 0;
+/** ********* Taskbar ********** **/
+#taskbar {
+  background: #525252;
+  border: 3px solid #262626;
+  border-radius: 10px;
+  margin: 5px 5px 5px 5px;
+  opacity: 0.8;
+  padding: 0 5px;
 }
-#pulseaudio.2 {
-  color: #ff6f00;
-  font-size: 16px;
-  padding: 5px 0 5px 0;
+#taskbar button {
+  margin: 0;
+  padding: 0px 5px;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/** ********** Window ********** **/
+#window{
+  color: #ffffff;
+  margin: 5px 5px 5px 0;
+  padding: 2px 10px 0 10px;
+}
+window#waybar.empty #window {
+  background-color: transparent;
+  opacity: 0.0;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+  background: linear-gradient(45deg, #be95ff, #82cfff);
+  border: 3px solid #262626;
+  border-radius: 10px;
+  color: #262626;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
 
 /** ********** Backlight ********** **/
-#backlight.1 {
-  color: #ffab91;
-  padding: 5px 0 5px 0;
-}
-#backlight.2 {
-  color: #ffab91;
-  font-size: 16px;
-  padding: 5px 0 5px 0;
+#backlight {
+  background: linear-gradient(45deg, #82cfff, #be95ff);
+  border: 3px solid #262626;
+  border-radius: 10px;
+  color: #262626;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
 
 /** ********** Battery ********** **/
-#battery.1 {
-  color: #42be65;
-  padding: 5px 0 5px 0;
+#battery {
+  background: linear-gradient(45deg, #be95ff, #82cfff);
+  border: 3px solid #262626;
+  border-radius: 10px;
+  color: #262626;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
 
-#battery.1.charging {
-  color: #ee5396;
+#battery.charging {
+  background: linear-gradient(45deg, #ff7eb6, #ee5396);
 }
 
-#battery.1.plugged {
-  color: #42be65;
-}
-
-#battery.2 {
-  color: #42be65;
-  font-size: 16px;
-  padding: 5px 0 5px 0;
-}
-
-#battery.2.charging {
-  color: #ee5396;
-}
-
-#battery.2.plugged {
-  color: #42be65;
+#battery.plugged {
+  background: linear-gradient(45deg, #42be65, #3ddbd9);
 }
 
 @keyframes blink {
   to {
-    background-color: #ffab91;
+    background: linear-gradient(45deg, #ffab91, #ff6f00);
   }
 }
 
-#battery.2.critical:not(.charging) {
+#battery.critical:not(.charging) {
   color: #161616;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -139,165 +172,118 @@ window#waybar.empty #window {
 
 /** ********** Clock ********** **/
 #clock {
-  background: #161616;
-  border-radius: 0 12px 0 0;
-  color: #3ddbd9;
-  font-size: 24px;
-  font-weight: bolder;
-  padding: 10px 0 0 0;
-}
-#clock.2 {
-  background: #161616;
-  border-radius: 0 0 0 0;
-  color: #78a9ff;
-  font-size: 24px;
-  font-weight: bolder;
-  padding: 0 0 5px 0;
+  background: linear-gradient(45deg,#82cfff, #be95ff);
+  border: 3px solid #262626;
+  border-radius: 10px;
+  color: #262626;
+  margin: 5px 5px 5px 0;
+  opacity: 0.8;
+  padding: 1px 10px 0 10px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  border-radius: 4px;
-  margin: 5px;
-  padding: 10px 5px 10px 5px;
+  background: #525252;
+  border: 3px solid #262626;
+  border-radius: 10px;
+  margin: 5px 5px 5px 0;
+  opacity: 0.8;
+  padding: 1px 10px 0 10px;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #ee5396;
 }
 
 #language {
-  color: #ff7eb6;
-  font-size: 18px;
+  color: #ffffff;
   font-weight: bold;
-  padding: 5px;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
 
 #idle_inhibitor {
+  background: #262626;
+  border-radius: 10px;
   color: #393939;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding: 5px;
+  margin: 5px 5px 5px 14px;
+  padding: 1px 10px 0 10px;
 }
 #idle_inhibitor.activated {
-  background: linear-gradient(45deg, #3ddbd9, #be95ff);
-  border-radius: 4px;
+  animation: gradient_f 20s ease-in-out infinite;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  /* background: linear-gradient(45deg, #3ddbd9, #be95ff); */
+  border-radius: 10px;
   color: #161616;
-}
-
-#cpu.1 {
-  background: #3b4252;
-  color: #81a1c1;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-top: 5px;
-  border-radius: 6px 6px 0 0;
-}
-#cpu.2 {
-  background: #3b4252;
-  color: #81a1c1;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
-}
-
-#memory.1 {
-  background: #3b4252;
-  color: #81a1c1;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-#memory.2 {
-  background: #3b4252;
-  color: #81a1c1;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
-}
-
-#temperature.1 {
-  background: #3b4252;
-  color: #81a1c1;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-#temperature.1.critical {
-  color: #bf616a;
-}
-#temperature.2 {
-  background: #3b4252;
-  border-radius: 0 0 6px 6px;
-  color: #81a1c1;
-  font-size: 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px 0 5px 0;
-  margin-bottom: 5px;
-}
-#temperature.2.critical {
-  color: #bf616a;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 /** ********** Custom ********** **/
 
-#custom-wttr.1 {
-  color: #33b1ff;
-  font-size: 18px;
-  padding: 5px 0 0 0;
-}
-#custom-wttr.2 {
-  color: #33b1ff;
-  font-size: 16px;
-  padding: 5px 0 10px 0;
-}
+#custom-weather {
+  background: linear-gradient(45deg, #be95ff, #82cfff);
 
-#custom-weather.1 {
-  color: #33b1ff;
-  font-size: 18px;
-  padding: 5px 0 0 0;;
+  border: 3px solid #262626;
+  border-radius: 10px;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
-#custom-weather.2 {
-  color: #33b1ff;
-  font-size: 16px;
-  padding: 5px 0 10px 0;
-}
-#custom-weather.1.default {
+#custom-weathe#custom-weather.default {
   color: #42be65;
 }
-#custom-weather.1.severe {
-    color: #ee5396;
+#custom-weather.severe {
+  color: #ee5396;
 }
-#custom-weather.1.sunnyDay {
-    color: #ffab91;
+#custom-weather.sunnyDay {
+  color: #ffab91;
 }
-#custom-weather.1.clearNight {
-    color: #f2f4f8;
+#custom-weather.clearNight {
+  color: #262626;
 }
-#custom-weather.1.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-    color: #dde1e6;
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+  color: #262626;
 }
-#custom-weather.1.rainyDay, #custom-weather.rainyNight {
-    color: #be95ff;
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+  color: #be95ff;
 }
-#custom-weather.1.showyIcyDay, #custom-weather.snowyIcyNight {
-    color: #3ddbd9;
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+  color: #3ddbd9;
 }
 
 #custom-wall {
-  color: #08bdba;
-  font-size: 18px;
-  padding: 5px;
-}
-
-#custom-spotify {
   color: #42be65;
-  font-size: 18px;
-  padding: 5px;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
 }
 
 /* Swaync */
 #custom-swaync {
-  background: linear-gradient(45deg, #be95ff, #3ddbd9);
-  border-radius: 4px;
+  animation: gradient_f 20s ease-in-out infinite;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  /* background: linear-gradient(45deg, #be95ff, #3ddbd9); */
+  border-radius: 10px;
   color: #161616;
-  font-size: 18px;
-  padding: 5px;
+  margin: 5px 5px 5px 0;
+  padding: 1px 10px 0 10px;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
 }

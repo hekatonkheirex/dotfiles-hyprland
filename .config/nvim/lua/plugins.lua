@@ -30,6 +30,7 @@ return require('packer').startup({
   use 'Shatur/neovim-ayu'
   use 'Mofiqul/dracula.nvim'
   use {'glyh/oxocarbon.nvim', branch = 'lualine-support'}
+  use { 'Everblush/nvim', as = 'everblush' }
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }

@@ -23,3 +23,4 @@ vim.g.nord_italic = false
 -- vim.cmd('colorscheme ayu')
 -- vim.cmd('colorscheme dracula')
 vim.cmd('colorscheme oxocarbon')
+-- vim.cmd('colorscheme everblush')

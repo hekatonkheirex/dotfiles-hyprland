@@ -12,6 +12,7 @@ require('lualine').setup({
     -- theme = 'ayu',
     -- theme = 'dracula',
     theme = 'oxocarbon',
+    -- theme = 'everblush',
     -- section_separators = '',
     -- component_separators = '',
     -- component_separators = { left = '', right = ''},

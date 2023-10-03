@@ -23,8 +23,6 @@ brave-bin
 brightnessctl
 cava
 clipman
-colloid-cursors-git
-colloid-icon-theme-git
 cpufreqctl
 cups
 dhclient
@@ -52,11 +50,11 @@ gentium-plus-font
 git
 gnome-keyring
 gnu-netcat
-greetd-gtkgreet
 grim
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
+gst-plugin-pipewire
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -98,7 +96,6 @@ netctl
 network-manager-applet
 networkmanager
 nfs-utils
-nitch
 nmap
 noto-fonts
 noto-fonts-cjk
@@ -116,7 +113,6 @@ papirus-folders-catppuccin-git
 papirus-icon-theme
 paru-bin
 pavucontrol
-pfetch-rs-bin
 pipewire-alsa
 pipewire-pulse
 playerctl
@@ -144,6 +140,7 @@ rsync
 rtmpdump
 rustup
 rxfetch
+sassc
 sdparm
 seahorse
 sg3_utils
@@ -162,8 +159,6 @@ swaylock-effects-git
 swaync
 swww
 tamsyn-font
-tela-circle-icon-theme-nord
-tela-circle-icon-theme-ubuntu
 terminus-font
 tex-gyre-fonts
 thermald
@@ -208,7 +203,6 @@ usb_modeswitch
 usbutils
 vdhcoapp-bin
 viewnior
-vifm
 visual-studio-code-bin
 w3m
 waybar-hyprland
@@ -216,10 +210,9 @@ wev
 wezterm
 wf-recorder
 wget
-whitesur-icon-theme-git
 wl-clipboard
-wlogout
-wlr-randr
+wlogout-git
+wlr-randr-git
 wtype
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
