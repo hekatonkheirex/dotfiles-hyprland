@@ -29,11 +29,15 @@
   "hide-on-action": true,
   "script-fail-notify": false,
   "scripts": {
+    "example-script": {
+      "exec": "/home/mura/.local/bin/soundnotify.sh",
+      "urgency": "Normal", 
+    }
   },
   "notification-visibility": {
     "example-name": {
       "state": "muted",
-      "urgency": "Low",
+      "urgency": "low",
       "app-name": "Spotify"
     }
   },
