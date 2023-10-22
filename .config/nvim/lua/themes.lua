@@ -12,7 +12,7 @@ vim.g.nord_italic = false
 
 -- Themes color loading
 -- vim.cmd('colorscheme nord')
--- vim.cmd('colorscheme gruvbox-material')
+vim.cmd('colorscheme gruvbox-material')
 -- vim.cmd('colorscheme tokyonight-night')
 -- require('onedark').load()
 -- vim.cmd('colorscheme everforest')
@@ -22,5 +22,5 @@ vim.g.nord_italic = false
 -- vim.cmd('colorscheme decay')
 -- vim.cmd('colorscheme ayu')
 -- vim.cmd('colorscheme dracula')
-vim.cmd('colorscheme oxocarbon')
+-- vim.cmd('colorscheme oxocarbon')
 -- vim.cmd('colorscheme everblush')

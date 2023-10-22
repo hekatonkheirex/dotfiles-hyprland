@@ -1,3 +1,10 @@
+-- ██╗    ██╗███████╗███████╗████████╗███████╗██████╗ ███╗   ███╗
+-- ██║    ██║██╔════╝╚══███╔╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
+-- ██║ █╗ ██║█████╗    ███╔╝    ██║   █████╗  ██████╔╝██╔████╔██║
+-- ██║███╗██║██╔══╝   ███╔╝     ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║
+-- ╚███╔███╔╝███████╗███████╗   ██║   ███████╗██║  ██║██║ ╚═╝ ██║
+--  ╚══╝╚══╝ ╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
+
 local wezterm = require("wezterm")
 
 local xcursor_size = nil
@@ -21,43 +28,43 @@ local font_name = "Maple Mono"
 
 local colors = {
 	-- special
-	foreground = "#fbf1c7",
-	darker_background = "#17191a",
-	background = "#1d2021",
-	lighter_background = "#282828",
-	one_background = "#3c3836",
+	foreground = "#dadada",
+	darker_background = "#101518",
+	background = "#141b1e",
+	lighter_background = "#232a2d",
+	one_background = "#383f42",
 
 	-- black
-	color0 = "#3c3836",
-	color8 = "#504945",
+	color0 = "#2b3134",
+	color8 = "#42484a",
 
 	-- red
-	color1 = "#cc241d",
-	color9 = "#fb4934",
+	color1 = "#e57474",
+	color9 = "#e57474",
 
 	-- green
-	color2 = "#98971a",
-	color10 = "#b8bb26",
+	color2 = "#8ccf7e",
+	color10 = "#8ccf7e",
 
 	-- yellow
-	color3 = "#d79921",
-	color11 = "#fabd2f",
+	color3 = "#e5c76b",
+	color11 = "#e5c76b",
 
 	-- blue
-	color4 = "#458588",
-	color12 = "#83a598",
+	color4 = "#67b0e8",
+	color12 = "#67b0e8",
 
 	-- magenta
-	color5 = "#b16286",
-	color13 = "#d3869b",
+	color5 = "#c47fd5",
+	color13 = "#c47fd5",
 
 	-- cyan
-	color6 = "#689d6a",
-	color14 = "#8ec07c",
+	color6 = "#6cbfbf",
+	color14 = "#6cbfbf",
 
 	-- white
-	color7 = "#a89984",
-	color15 = "#ebdbb2",
+	color7 = "#b3b9b8",
+	color15 = "#dadada",
 }
 
 return {
@@ -66,7 +73,7 @@ return {
 
 	-- Font config
 	font = font_with_fallback(font_name),
-  font_rules = {
+	font_rules = {
 		{
 			italic = true,
 			font = font_with_fallback(font_name, { italic = true }),
@@ -87,7 +94,7 @@ return {
 	},
 	font_size = 13,
 	line_height = 1.0,
-  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
+  harfbuzz_features = {"zero", "ss01", "cv05", "cv14", "ss05", "ss04", "cv29", "cv30", "cv24" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",
@@ -192,6 +199,21 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CopyTo = "ClipboardAndPrimarySelection" }),
 		},
+    {
+      key = "-",
+      mods = "CTRL",
+      action = wezterm.action.DecreaseFontSize
+    },
+    {
+      key = "=",
+      mods = "CTRL",
+      action = wezterm.action.IncreaseFontSize
+    },
+    {
+      key = "0",
+      mods = "CTRL",
+      action = wezterm.action.ResetFontSize
+    },
 	},
 
 	bold_brightens_ansi_colors = false,

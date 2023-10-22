@@ -1,0 +1,179 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    // "persistent_workspaces": {
+    //   "*": 6,
+    // },
+    "format": "{icon}",
+    "format-icons": {
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "5": "",
+      // "6": "",
+      "urgent": "",
+			"active": "",
+			"default": "",
+    "sort-by-number": true
+    },
+  },
+
+  "hyprland/window": {
+    "max-length": 50,
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) - Brave": "$1",
+      "(.*) - Thunar": "$1",
+      "(.*) - Discord": "$1",
+      // ": "Desktop",
+      "~": "wezterm",
+      "n": "nvim",
+    },
+    "separate-outputs": true
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "wezterm"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "New Tab": "Brave",
+      "Foot Server": "Terminal"
+    }
+  },
+
+  "backlight": {
+    "interval": 2,
+    //"device": "amdgpu_bl0",
+    "format": "{icon} {percent}%",
+    "format-icons": ["&#xeb7f;"],
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": false,
+  },
+
+  "battery": {
+		"interval": 60,
+		//"bat": "BAT1",
+		//"adapter": "ACAD",
+		"full-at": 100,
+		"design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "&#xea33; {capacity}%",
+    "format-plugged": "&#xef3b; {capacity}%",
+    "format-full": "&#xf668; 100%",
+    "format-icons": ["&#xea34;", "&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
+    "format-alt": "{time}",
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+  },
+
+  "clock": {
+    "format": "&#xea70; {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#cc241d'><b><u>{}</u></b></span>",
+      },
+    },
+    "format-alt": "&#xea53; {:%Y-%m-%d}",
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "&#xef0e;",
+      "deactivated": "&#xf106;"
+    }
+  },
+  
+  "network": {
+    "interval": 5,
+    //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-linked": "",
+    "format-disconnected": "",
+    "format-disabled": "",
+    "tooltip-format": "{essid} :  {bandwidthUpBits} |  {bandwidthDownBits}",
+    "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "&#xf1c3; Muted",
+    "format-bluetooth": "&#xea37; {volume}%",
+    "format-source": "&#xeaf0; {volume}%",
+    "format-source-muted": "&#xed16; Muted",
+    "format-icons": {
+      "headphone": "&#xeabd;",
+      "hands-free": "&#xf5a9;",
+      "headset": "&#xeb90;",
+      "phone": "&#xeb09;",
+      "portable": "&#xea8a;",
+      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
+    },
+    "scroll-step": 5.0,
+    "on-click": "amixer set Master toggle",
+    "on-click-right": "pavucontrol",
+    "smooth-scrolling-threshold": 1,
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8,
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
+    "tooltip": "false",
+  },
+  
+  "custom/weather": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    // "format-alt": "{alt}",
+  },
+  
+  "custom/wall":{
+    "format":"&#xeb00;",
+    // "interval": 1,
+    "on-click": "~/.config/hypr/wall",
+    "tooltip": false,
+  },
+
+  "custom/swaync": {
+    "format": "&#xea35;",
+    "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
+    "tooltip": false,
+  },
+
+  "custom/themeswitcher": {
+    "format": "&#xea95;",
+    "on-click": "~/.config/waybar/themeswitcher.sh",
+    "tooltip": false,
+  }
+}

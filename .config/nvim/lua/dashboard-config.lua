@@ -55,6 +55,6 @@ require('dashboard').setup({
         action = 'edit ~/.config/nvim/init.lua',
       },
     },
-    footer = { "hekatonkhereix's neovim config" },
+    footer = { "hekatonkheirex's neovim config" },
   },
 })
