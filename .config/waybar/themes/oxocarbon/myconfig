@@ -35,7 +35,7 @@
   "include": ["~/.config/waybar/modules.jsonc"],
 
   // Choose the order of the modules
-  "modules-left": ["idle_inhibitor", "wlr/taskbar", "hyprland/window"],
+  "modules-left": ["idle_inhibitor", "custom/wall", "custom/themeswitcher", "wlr/taskbar", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/wall", "hyprland/language", "pulseaudio", "backlight", "battery", "tray", "clock", "custom/weather", "custom/swaync"],
+  "modules-right": ["hyprland/language", "pulseaudio", "backlight", "battery", "tray", "clock", "custom/weather", "custom/swaync"],
 }

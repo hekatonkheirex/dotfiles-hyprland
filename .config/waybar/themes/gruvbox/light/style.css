@@ -25,13 +25,13 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(22, 22, 22, 0.9);
-  border: 1px solid rgba(22, 22, 22, 0.9);
+  background: rgba(251, 241, 199, 0.9);
+  border: 1px solid rgba(251, 241, 199, 0.9);
   border-radius: 16px;
   padding: 20px;
 }
 tooltip label {
-  color: #ffffff;
+  color: #3c3836;
 }
 
 /* Workspaces */
@@ -43,7 +43,7 @@ tooltip label {
 }
 
 #workspaces button {
-  background: #ff7eb6;
+  background: #ebdbb2;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
   margin: 0px 3px;
@@ -54,14 +54,14 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  background: #be95ff;
+  background: #79740e;
   background-size: 400% 400%;
   border-radius: 10px;
   min-width: 30px;
 }
 
 #workspaces button.active {
-  background: #be95ff;
+  background: #79740e;
   background-size: 400% 400%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.134) 2 2 5 2px;
@@ -71,11 +71,11 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-  background: #ee5396;
+  background: #9d0006;
 }
 
 #workspaces button.persistent {
-  background: #be95ff;
+  background: #79740e;
   transition: all 0.3s ease-in-out;
 }
 
@@ -85,8 +85,8 @@ window#waybar.empty #window {
 
 /** ********* Taskbar ********** **/
 #taskbar {
-  background: #525252;
-  /* border: 3px solid #262626; */
+  background: #d5c4a1;
+  /* border: 3px solid #3c3836; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
   margin: 5px 6px 3px 0;
@@ -114,7 +114,7 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Window ********** **/
 #window{
-  color: #3ddbd9;
+  color: #427b58;
   font-weight: bold;
   margin: 5px 10px 3px 0;
   padding: 2px 10px 0 10px;
@@ -129,11 +129,11 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio {
-  background: linear-gradient(45deg, #be95ff, #82cfff);
+  background: linear-gradient(45deg, #8f3f71, #427b58);
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-  color: #262626;
+  color: #fbf1c7;
   margin: 5px 10px 3px 0;
   padding: 1px 10px 0 10px;
   opacity: 0.8;
@@ -141,11 +141,11 @@ window#waybar.empty #window {
 
 /** ********** Backlight ********** **/
 #backlight {
-  background: linear-gradient(45deg, #82cfff, #be95ff);
+  background: linear-gradient(45deg, #427b58, #8f3f71);
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.166) 2 2 5 2px;
-  color: #262626;
+  color: #fbf1c7;
   margin: 5px 10px 3px 0;
   padding: 1px 10px 0 10px;
   opacity: 0.8;
@@ -153,27 +153,27 @@ window#waybar.empty #window {
 
 /** ********** Battery ********** **/
 #battery {
-  background: linear-gradient(45deg, #be95ff, #82cfff);
+  background: linear-gradient(45deg, #8f3f71, #427b58);
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.166) 2 2 5 2px;
-  color: #262626;
+  color: #fbf1c7;
   margin: 5px 10px 3px 0;
   padding: 1px 10px 0 10px;
   opacity: 0.8;
 }
 
 #battery.charging {
-  background: linear-gradient(45deg, #ff7eb6, #ee5396);
+  background: linear-gradient(45deg, #cc241d, #9d0006);
 }
 
 #battery.plugged {
-  background: linear-gradient(45deg, #42be65, #3ddbd9);
+  background: linear-gradient(45deg, #98971a, #79740e);
 }
 
 @keyframes blink {
   to {
-    background: linear-gradient(45deg, #ffab91, #ff6f00);
+    background: linear-gradient(45deg, #d65d0e, #af3a03);
   }
 }
 
@@ -183,17 +183,17 @@ window#waybar.empty #window {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  color: #161616;
+  color: #fbf1c7;
   opacity: 1.0;
 }
 
 /** ********** Clock ********** **/
 #clock {
-  background: linear-gradient(45deg,#82cfff, #be95ff);
+  background: linear-gradient(45deg,#427b58, #8f3f71);
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.166) 2 2 5 2px;
-  color: #262626;
+  color: #fbf1c7;
   font-weight: bold;
   margin: 5px 10px 3px 0;
   opacity: 0.8;
@@ -202,7 +202,7 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  background: #525252;
+  background: #d5c4a1;
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.166) 2 2 5 2px;
@@ -216,11 +216,11 @@ window#waybar.empty #window {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #ee5396;
+  background-color: #9d0006;
 }
 
 #language {
-  color: #ffffff;
+  color: #282828;
   /* font-weight: bold; */
   margin: 5px 10px 3px 0;
   padding: 1px 10px 0 10px;
@@ -229,22 +229,22 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-  background: #262626;
+  background: #ebdbb2;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-  color: #393939;
+  color: #d5c4a1;
   margin: 5px 10px 3px 14px;
   opacity: 0.8;
   padding: 1px 10px 0 10px;
 }
 #idle_inhibitor.activated {
   animation: gradient_f 20s ease-in-out infinite;
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  /* background: rgb(203,166,247); */
+  /* background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); */
   background-size: 400% 400%;
-  /* background: linear-gradient(45deg, #3ddbd9, #be95ff); */
+  background: linear-gradient(45deg, #427b58, #8f3f71);
   border-radius: 16px;
-  color: #161616;
+  color: #fbf1c7;
   font-weight: bold;
   opacity: 0.8;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -253,7 +253,7 @@ window#waybar.empty #window {
 /** ********** Custom ********** **/
 
 #custom-weather {
-  background: linear-gradient(45deg, #be95ff, #82cfff);
+  background: #a89984;
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
@@ -262,31 +262,31 @@ window#waybar.empty #window {
   opacity: 0.8;
   padding: 1px 10px 0 10px;
 }
-#custom-weather#custom-weather.default {
-  color: #42be65;
+#custom-weathe#custom-weather.default {
+  color: #79740e;
 }
 #custom-weather.severe {
-  color: #ee5396;
+  color: #9d0006;
 }
 #custom-weather.sunnyDay {
-  color: #ffab91;
+  color: #b57614;
 }
 #custom-weather.clearNight {
-  color: #262626;
+  color: #d5c4a1;
 }
 #custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-  color: #262626;
+  color: #d5c4a1;
 }
 #custom-weather.rainyDay, #custom-weather.rainyNight {
-  color: #be95ff;
+  color: #8f3f71;
 }
 #custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-  color: #3ddbd9;
+  color: #076678;
 }
 
 #custom-wall {
-  color: #42be65;
-  margin: 5px 10px 3px 0;
+  color: #98971a;
+  margin: 5px 0px 3px 0;
   opacity: 0.8;
   padding: 1px 10px 0 10px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
@@ -295,13 +295,13 @@ window#waybar.empty #window {
 /* Swaync */
 #custom-swaync {
   animation: gradient_f 20s ease-in-out infinite;
-  background: rgb(203,166,247);
-  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  /* background: rgb(177,98,247); */
+  /* background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); */
   background-size: 400% 400%;
-  /* background: linear-gradient(45deg, #be95ff, #3ddbd9); */
+  background: linear-gradient(45deg, #8f3f71, #427b58);
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-  color: #161616;
+  color: #fbf1c7;
   font-weight: bold;
   margin: 5px 10px 3px 0;
   opacity: 0.8;
@@ -320,9 +320,10 @@ window#waybar.empty #window {
 		background-position: 400% 200%;
 	}
 }
+
 /* Theme switcher */
 #custom-themeswitcher {
-  color: #ebdbb2;
+  color: #282828;
   margin: 5px 0px 3px 0;
   opacity: 0.8;
   padding: 1px 10px 0 10px;

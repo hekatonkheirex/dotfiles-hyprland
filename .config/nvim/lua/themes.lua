@@ -11,8 +11,8 @@ vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 
 -- Themes color loading
--- vim.cmd('colorscheme nord')
-vim.cmd('colorscheme gruvbox-material')
+vim.cmd('colorscheme nord')
+-- vim.cmd('colorscheme gruvbox-material')
 -- vim.cmd('colorscheme tokyonight-night')
 -- require('onedark').load()
 -- vim.cmd('colorscheme everforest')

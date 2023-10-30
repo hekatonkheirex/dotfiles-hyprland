@@ -28,11 +28,11 @@ local font_name = "Maple Mono"
 
 local colors = {
 	-- special
-	foreground = "#eceff4",
-	darker_background = "#242933",
-	background = "#2e3440",
-	lighter_background = "#3b4252",
-	one_background = "#1b1f26",
+	foreground = "#2E3440",
+	darker_background = "#d4d7db",
+	background = "#ECEFF4",
+	lighter_background = "#eff2f6",
+	one_background = "#3B4252",
 
 	-- black
 	color0 = "#3b4252",

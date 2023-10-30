@@ -2,33 +2,33 @@
  * vim: ft=less
 */
 
-@define-color cc-bg #1d2021;
+@define-color cc-bg #3b4252;
 
-@define-color noti-border-color #689d6a;
-@define-color noti-bg #1d2021;
-@define-color noti-bg-darker #1d2021;
-@define-color noti-bg-hover #1d2021;
+@define-color noti-border-color #5e81ac;
+@define-color noti-bg #3b4252;
+@define-color noti-bg-darker #3b4252;
+@define-color noti-bg-hover #3b4252;
 @define-color noti-bg-focus rgba(0, 0, 0, 0);
-@define-color noti-close-bg #3c3836;
-@define-color noti-close-bg-hover #cc241d;
+@define-color noti-close-bg #434c5e;
+@define-color noti-close-bg-hover #bf616a;
 
-@define-color text-color #ebdbb2;
-@define-color text-color-disabled #282828;
+@define-color text-color #eceff4;
+@define-color text-color-disabled #2e3440;
 
-@define-color bg-selected #689d6a;
+@define-color bg-selected #5e81ac;
 
-@define-color dnd-bg #3c3836;
-@define-color dnd-selected #689d6a;
-@define-color dnd-dot #282828;
+@define-color dnd-bg #434c5e;
+@define-color dnd-selected #5e81ac;
+@define-color dnd-dot #2e3440;
 
-@define-color noti-button #282828;
-@define-color noti-button-hover #3c3836;
+@define-color noti-button #2e3440;
+@define-color noti-button-hover #434c5e;
 
 @define-color sep-color transparent;
 
 * {
   all: unset;
-  font-family: Rubik, monospace;
+  font-family: Schibsted Grotesk;
   font-size: 20px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .critical {
-  background-color: #cc241d;
+  background-color: #bf616a;
   padding: 4px 4px 4px 4px;
   border: none;
   border-radius: 10px;
@@ -249,11 +249,11 @@
 .widget-title > button {
   font-size: 20px;
   font-weight: bold;
-  color: #282828;
+  color: #2e3440;
   text-shadow: none;
-  background-color: #689d6a;
+  background-color: #5e81ac;
   border: none;
-  border-bottom: 8px solid #518554;
+  border-bottom: 8px solid #5e81ac;
   box-shadow: none;
   border-radius: 5px;
   padding-left: 15px;
@@ -262,8 +262,8 @@
   padding-bottom: 5px;
 }
 .widget-title > button:hover {
-  background-color: #8ec07c;
-  border-bottom: 8px solid #76a765;
+  background-color: #5e81ac;
+  border-bottom: 8px solid #5e81ac;
 }
 
 /* DND widget */

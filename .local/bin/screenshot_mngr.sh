@@ -24,7 +24,8 @@ case "$SELECTION" in
 		notify-send "Screenshot Taken" "${IMG}"
 		;;
 	"Screenshot entire screen")
-		grim -c -o eDP-1 "$IMG"
+		sleep 1
+    grim -c -o eDP-1 "$IMG"
 		wl-copy < "$IMG"
 		notify-send "Screenshot Taken" "${IMG}"
 		;;
