@@ -4,7 +4,7 @@ ___
 > ### <div align="center">*-- Disclaimer --*   </div>
 > *I am not a developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
-<img src="https://i.imgur.com/JhX9fEu.jpg">
+<img src="https://i.imgur.com/n36wLuF.png">
 
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
 * **Window Manager** • [Hyprland](https://hyprland.org/) 💧
@@ -20,7 +20,7 @@ ___
   * [Starship](https://github.com/starship/starship) 🚀
 * **Terminal** • [WezTerm](https://github.com/wez/wezterm) 💻
 * **Panel** • [Waybar](https://github.com/Alexays/Waybar) 🍫 but the [patched version for Hyprland](https://aur.archlinux.org/packages/waybar-hyprland-git)
-* **Notication Daemon** • [Dunst](https://github.com/dunst-project/dunst) 🔔
+* **Notication Daemon** • [Swaync](https://github.com/ErikReider/SwayNotificationCenter) 🔔
 * **Launcher** • [Rofi](https://github.com/davatorium/rofi) ⚓ with [rofimoji](https://github.com/fdw/rofimoji) 😐
 * **File Manager** • [Thunar](https://archlinux.org/packages/extra/x86_64/thunar/) 🗄️
 * **Music player** • [Spotify](https://open.spotify.com/) 🪕 with [spicetify-cli](https://spicetify.app/) and [Catppuccin spicetify theme](https://github.com/catppuccin/spicetify)
