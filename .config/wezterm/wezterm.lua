@@ -28,43 +28,43 @@ local font_name = "Maple Mono"
 
 local colors = {
 	-- special
-	foreground = "#eceff4",
-	darker_background = "#242933",
-	background = "#2e3440",
-	lighter_background = "#3b4252",
-	one_background = "#1b1f26",
+	foreground = "#e0def4",
+	darker_background = "#161420",
+	background = "#191724",
+	lighter_background = "#1f1d2e",
+	one_background = "#21202e",
 
 	-- black
-	color0 = "#3b4252",
-	color8 = "#434c5e",
+	color0 = "#21202e",
+	color8 = "#403d52",
 
 	-- red
-	color1 = "#bf616a",
-	color9 = "#bf616a",
+	color1 = "#eb6f92",
+	color9 = "#eb6f92",
 
 	-- green
-	color2 = "#a3be8c",
-	color10 = "#a3be8c",
+	color2 = "#31748f",
+	color10 = "#31748f",
 
 	-- yellow
-	color3 = "#ebcb8b",
-	color11 = "#ebcb8b",
+	color3 = "#f6c177",
+	color11 = "#f6c177",
 
 	-- blue
-	color4 = "#5e81ac",
-	color12 = "#5e81ac",
+	color4 = "#c4a7e7",
+	color12 = "#c4a7e7",
 
 	-- magenta
-	color5 = "#b48ead",
-	color13 = "#b48ead",
+	color5 = "#ebbcba",
+	color13 = "#ebbcba",
 
 	-- cyan
-	color6 = "#88c0d0",
-	color14 = "#88c0d0",
+	color6 = "#9ccfd8",
+	color14 = "#9ccfd8",
 
 	-- white
-	color7 = "#d8dee9",
-	color15 = "#e5e9f0",
+	color7 = "#6e6a86",
+	color15 = "#908caa",
 }
 
 return {
@@ -94,7 +94,7 @@ return {
 	},
 	font_size = 13,
 	line_height = 1.0,
-  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
+  harfbuzz_features = {"zero", "ss01", "cv05", "cv14", "ss05", "ss04", "cv29", "cv30", "cv24" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",

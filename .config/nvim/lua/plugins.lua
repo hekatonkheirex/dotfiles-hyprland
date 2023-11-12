@@ -63,6 +63,7 @@ return require('packer').startup({
   -- Syntax highlight
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { "luckasRanarison/tree-sitter-hypr" }
+  use { 'Fymyte/tree-sitter-rasi' }
 
   -- Explorer
 use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
@@ -93,13 +94,6 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }} 
 
   -- Startup screen
-  -- use {
-  --   'goolord/alpha-nvim',
-  --   config = function ()
-  --       require'alpha'.setup(require'alpha.themes.dashboard'.config)
-  --   end
-  -- }
-
   use {
     'glepnir/dashboard-nvim',
     -- event = 'VimEnter',
@@ -155,6 +149,9 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
 
   -- Yuck (for eww)
   use { 'elkowar/yuck.vim' }
+
+  -- Rasi (for Rofi)
+  use { 'Fymyte/rasi.vim', ft = 'rasi', }
   
 end,
 config = {

@@ -87,6 +87,7 @@ man-db
 man-pages
 mcmojave-cursors
 memtester
+min
 mlocate
 most
 mpv
@@ -153,6 +154,7 @@ spdlog
 spicetify-cli
 spotify
 sshfs
+station-appimage
 swaybg
 swayidle
 swaylock-effects-git
@@ -203,9 +205,8 @@ usbutils
 vdhcoapp-bin
 viewnior
 visual-studio-code-bin
-vivaldi
-vivaldi-ffmpeg-codecs
 w3m
+waterfox-bin
 waybar-hyprland
 wev
 wezterm

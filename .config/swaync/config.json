@@ -31,7 +31,7 @@
   "scripts": {
     "example-script": {
       "exec": "/home/mura/.local/bin/soundnotify.sh",
-      "urgency": "Normal", 
+      "urgency": "Normal" 
     }
   },
   "notification-visibility": {
