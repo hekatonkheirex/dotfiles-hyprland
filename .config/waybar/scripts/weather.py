@@ -22,14 +22,14 @@ weather_icons = {
 # to get your own location_id, go to https://weather.com & search your location.
 # once you choose your location, you can see the location_id in the URL(64 chars long hex string)
 # like this: https://weather.com/en-IN/weather/today/l/c3e96d6cc4965fc54f88296b54449571c4107c73b9638c16aafc83575b4ddf2e
-location_id = "e0e4a807bfd5b80be609a4fbccd9d6d3f11dff93dcb6e2d407bff46bc07fe583"  # TODO
+location_id = "9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"  # TODO
 
 # priv_env_cmd = 'cat $PRIV_ENV_FILE | grep weather_location | cut -d "=" -f 2'
 # location_id = subprocess.run(
 #     priv_env_cmd, shell=True, capture_output=True).stdout.decode('utf8').strip()
 
 # get html page
-url = "https://weather.com/en-IN/weather/today/l/" + location_id
+url = "https://weather.com/es-PY/tiempo/hoy/l/" + location_id
 html_data = PyQuery(url=url)
 
 # current temperature
