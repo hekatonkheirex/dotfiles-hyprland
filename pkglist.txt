@@ -9,7 +9,8 @@ alsa-utils
 amd-ucode
 aria2
 atomicparsley
-auto-cpufreq-git
+auto-cpufreq
+avahi
 base
 base-devel
 bdf-unifont
@@ -20,7 +21,6 @@ bleachbit
 blueman
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 cava
 clipman
@@ -42,8 +42,6 @@ figlet
 file-roller
 firefox
 firewalld
-foot
-foot-terminfo
 fwupd
 fzf
 galculator
@@ -56,6 +54,7 @@ grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gst-plugin-pipewire
+gtk-engine-murrine
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -83,11 +82,11 @@ light
 linux
 linux-firmware
 linux-headers
+lutgen-bin
 man-db
 man-pages
 mcmojave-cursors
 memtester
-min
 mlocate
 most
 mpv
@@ -151,6 +150,7 @@ slurp
 sndio
 sof-firmware
 spdlog
+speech-dispatcher
 spicetify-cli
 spotify
 sshfs
@@ -206,10 +206,9 @@ vdhcoapp-bin
 viewnior
 visual-studio-code-bin
 w3m
-waterfox-bin
 waybar-hyprland
 wev
-wezterm
+wezterm-git
 wf-recorder
 wget
 wl-clipboard
