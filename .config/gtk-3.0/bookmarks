@@ -3,7 +3,5 @@ file:///home/mura/Downloads Downloads
 file:///home/mura/Music Music
 file:///home/mura/Pictures Pictures
 file:///home/mura/Videos Videos
-smb://192.168.100.3/dwnlds/Apps /Apps/ on GL752VW
-smb://192.168.100.3/dwnlds/Imgs /Imgs/ on GL752VW
-smb://192.168.100.3/dwnlds/Vids /Vids/ on GL742VW
+smb://192.168.100.3/dwnlds/ /dwnlds/ on AN515-57
 smb://192.168.100.4/pelis/ /pelis/ on Windows PC

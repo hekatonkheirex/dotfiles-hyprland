@@ -2,33 +2,33 @@
  * vim: ft=less
 */
 
-@define-color cc-bg #1f1d2e;
+@define-color cc-bg #181825;
 
-@define-color noti-border-color #c4a7e7;
-@define-color noti-bg #1f1d2e;
-@define-color noti-bg-darker #1f1d2e;
-@define-color noti-bg-hover #1f1d2e;
+@define-color noti-border-color #cba6f7;
+@define-color noti-bg #181825;
+@define-color noti-bg-darker #181825;
+@define-color noti-bg-hover #181825;
 @define-color noti-bg-focus rgba(0, 0, 0, 0);
-@define-color noti-close-bg #26233a;
-@define-color noti-close-bg-hover #eb6f92;
+@define-color noti-close-bg #313244;
+@define-color noti-close-bg-hover #f38ba8;
 
-@define-color text-color #e0def4;
-@define-color text-color-disabled #191724;
+@define-color text-color #cdd6f4;
+@define-color text-color-disabled #1e1e2e;
 
-@define-color bg-selected #c4a7e7;
+@define-color bg-selected #cba6f7;
 
-@define-color dnd-bg #26233a;
-@define-color dnd-selected #c4a7e7;
-@define-color dnd-dot #191724;
+@define-color dnd-bg #313244;
+@define-color dnd-selected #cba6f7;
+@define-color dnd-dot #1e1e2e;
 
-@define-color noti-button #191724;
-@define-color noti-button-hover #26233a;
+@define-color noti-button #1e1e2e;
+@define-color noti-button-hover #313244;
 
 @define-color sep-color transparent;
 
 * {
   all: unset;
-  font-family: Rubik;
+  font-family: Rubik, monospace;
   font-size: 20px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .critical {
-  background-color: #eb6f92;
+  background-color: #f38ba8;
   padding: 4px 4px 4px 4px;
   border: none;
   border-radius: 10px;
@@ -249,11 +249,11 @@
 .widget-title > button {
   font-size: 20px;
   font-weight: bold;
-  color: #191724;
+  color: #1e1e2e;
   text-shadow: none;
-  background-color: #c4a7e7;
+  background-color: #cba6f7;
   border: none;
-  border-bottom: 8px solid #c4a7e7;
+  border-bottom: 8px solid #cba6f7;
   box-shadow: none;
   border-radius: 5px;
   padding-left: 15px;
@@ -262,8 +262,8 @@
   padding-bottom: 5px;
 }
 .widget-title > button:hover {
-  background-color: #c4a7e7;
-  border-bottom: 8px solid #c4a7e7;
+  background-color: #cba6f7;
+  border-bottom: 8px solid #cba6f7;
 }
 
 /* DND widget */

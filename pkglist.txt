@@ -4,7 +4,6 @@ acpid
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
-alacritty
 alsa-utils
 amd-ucode
 aria2
@@ -13,6 +12,7 @@ auto-cpufreq
 avahi
 base
 base-devel
+bat-asus-battery-bin
 bdf-unifont
 betterdiscord-installer-bin
 bind
@@ -22,6 +22,7 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+catppuccin-gtk-theme-mocha
 cava
 clipman
 cpufreqctl
@@ -108,6 +109,8 @@ ntfs-3g
 ntp
 nwg-look-bin
 openssl-1.1
+opera
+opera-ffmpeg-codecs
 pacman-contrib
 pacutils
 pamixer
@@ -143,7 +146,6 @@ rofimoji
 rsync
 rtmpdump
 rustup
-rxfetch
 sassc
 seahorse
 slurp
@@ -206,7 +208,7 @@ vdhcoapp-bin
 viewnior
 visual-studio-code-bin
 w3m
-waybar-hyprland
+waybar
 wev
 wezterm-git
 wf-recorder
@@ -223,5 +225,7 @@ xf86-video-amdgpu
 yad
 yadm
 yt-dlp
+zorin-desktop-themes
+zorin-icon-themes
 zramd
 zsh
