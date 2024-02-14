@@ -31,6 +31,8 @@ return require('packer').startup({
   use 'Mofiqul/dracula.nvim'
   use {'glyh/oxocarbon.nvim', branch = 'lualine-support'}
   use { 'Everblush/nvim', as = 'everblush' }
+  use 'akai54/2077.nvim'
+  use "rebelot/kanagawa.nvim"
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }

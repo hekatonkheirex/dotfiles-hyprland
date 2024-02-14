@@ -262,7 +262,7 @@ window#waybar.empty #window {
   opacity: 0.8;
   padding: 1px 10px 0 10px;
 }
-#custom-weathe#custom-weather.default {
+#custom-weather#custom-weather.default {
   color: #a6e3a1;
 }
 #custom-weather.severe {

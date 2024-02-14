@@ -253,7 +253,7 @@ window#waybar.empty #window {
 /** ********** Custom ********** **/
 
 #custom-weather {
-  background: linear-gradient(45deg, #be95ff, #82cfff);
+  background: #525252;
   /* border: 3px solid #262626; */
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
@@ -281,7 +281,7 @@ window#waybar.empty #window {
   color: #be95ff;
 }
 #custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-  color: #3ddbd9;
+  color: #33b1ff;
 }
 
 #custom-wall {
