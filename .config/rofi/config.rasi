@@ -29,3 +29,4 @@ configuration {
 /* @theme "gruvbox-dark.rasi" */
 /* @theme "tokyonight.rasi" */
 @theme "oxocarbon.rasi"
+// @theme "everforest-dark.rasi"
