@@ -31,7 +31,7 @@ elif [[ "$1" == '--hibernate' ]]; then
 		exit
     fi
 elif [[ "$1" == '--lock' ]]; then
-  swaylock
+  hyprlock
 elif [[ "$1" == '--suspend' ]]; then
 	cdialog
 	if [[ "$?" == 0 ]]; then
