@@ -31,24 +31,28 @@
   "scripts": {
     "example-script": {
       "exec": "/home/mura/.local/bin/soundnotify.sh",
-      "urgency": "Normal"
+      "urgency": "Normal" 
     }
   },
   "notification-visibility": {
     "example-name": {
       "state": "muted",
-      "urgency": "Low",
+      "urgency": "low",
       "app-name": "Spotify"
     }
   },
   "widgets": [
-    "buttons-grid",
-    "mpris",
+    "inhibitors",
     "title",
     "dnd",
     "notifications"
   ],
   "widget-config": {
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
@@ -58,32 +62,12 @@
       "text": "Do Not Disturb"
     },
     "label": {
-      "max-lines": 1,
-      "text": ""
+      "max-lines": 5,
+      "text": "Label Text"
     },
     "mpris": {
       "image-size": 96,
-      "image-radius": 6
-    },
-    "volume": {
-      "label": "",
-        "show-per-app": true
-    },
-    "buttons-grid": {
-      "actions": [
-        {
-          "label": "",
-          "command": "nm-connection-editor"
-        },
-        {
-          "label": "",
-          "command": "blueman-manager"
-        },
-        {
-          "label": "",
-          "command": "nwg-look"
-        }
-      ]
+      "image-radius": 12
     }
   }
 }

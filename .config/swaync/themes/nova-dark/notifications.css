@@ -1,0 +1,118 @@
+/*
+ * vim: ft=less
+*/
+
+@define-color cc-bg #262626;
+
+@define-color noti-border-color #be95ff;
+@define-color noti-bg #262626;
+@define-color noti-bg-darker #262626;
+@define-color noti-bg-hover #262626;
+@define-color noti-bg-focus rgba(0, 0, 0, 0);
+@define-color noti-close-bg #393939;
+@define-color noti-close-bg-hover #ee5396;
+
+@define-color text-color #ffffff;
+@define-color text-color-disabled #161616;
+
+@define-color bg-selected #be95ff;
+
+@define-color dnd-bg #393939;
+@define-color dnd-selected #be95ff;
+@define-color dnd-dot #161616;
+
+@define-color noti-button #161616;
+@define-color noti-button-hover #393939;
+
+@define-color sep-color transparent;
+
+* {
+  color: @text-color;
+
+  all: unset;
+  font-size: 20px;
+  font-family: "Rubik", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  transition: 200ms;
+
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  background: @noti-bg;
+  box-shadow: 0 2px 8px 0 @noti-bg;
+  border: 1px solid @bg-selected;
+  border-radius: 12px;
+  margin: 16px;
+  padding: 0;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification {
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification.critical {
+  border: 2px solid @noti-close-bg-hover;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification .notification-content {
+  margin: 14px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
+  min-height: 3.4em;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  border-radius: 8px;
+  background-color: @noti-close-bg;
+  margin: 6px;
+  border: 1px solid transparent;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background-color: @noti-bg-hover;
+  border: 1px solid @bg-selected;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: @noti-close-bg-hover;
+  color: @noti-bg;
+}
+
+.image {
+  margin: 10px 20px 10px 0px;
+
+}
+
+.summary {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.body {
+  font-size: 0.8rem;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: @noti-bg-hover;
+  border: 1px solid transparent;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:hover {
+  background-color: @noti-close-bg-hover;
+  border: 1px solid @bg-selected;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:active {
+  background-color: @bg-selected;
+  color: @noti-bg;
+}

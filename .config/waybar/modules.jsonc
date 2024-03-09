@@ -165,10 +165,31 @@
     "tooltip": false,
   },
 
+  // "custom/swaync": {
+  //   "format": "&#xea35;",
+  //   "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
+  //   "tooltip": false,
+  // },
+
   "custom/swaync": {
-    "format": "&#xea35;",
-    "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
-    "tooltip": false,
+    "tooltip":true,     
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "&#xea35;<span foreground='red'><sup>!</sup></span>",
+      "none": "&#xea35;",
+      "dnd-notification": "&#xece9;<span foreground='red'><sup>!</sup></span>",
+      "dnd-none": "&#xece9;",
+      "inhibited-notification": "&#xeff1;<span foreground='red'><sup>!</sup></span>",
+      "inhibited-none": "&#xeff1;",
+      "dnd-inhibited-notification": "&#xf813;<span foreground='red'><sup>!</sup></span>",
+      "dnd-inhibited-none": "&#xf813;"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
   },
 
   "custom/themeswitcher": {
