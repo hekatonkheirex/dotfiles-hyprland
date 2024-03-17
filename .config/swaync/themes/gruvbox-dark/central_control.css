@@ -1,0 +1,299 @@
+/*
+ * vim: ft=less
+*/
+
+@define-color cc-bg #3c3836;
+
+@define-color noti-border-color #98971a;
+@define-color noti-bg #3c3836;
+@define-color noti-bg-darker #3c3836;
+@define-color noti-bg-hover #3c3836;
+@define-color noti-bg-focus rgba(0, 0, 0, 0);
+@define-color noti-close-bg #504945;
+@define-color noti-close-bg-hover #cc241d;
+
+@define-color text-color #ebddb2;
+@define-color text-color-disabled #282828;
+
+@define-color bg-selected #98971a;
+
+@define-color dnd-bg #504945;
+@define-color dnd-selected #98971a;
+@define-color dnd-dot #3c3836;
+
+@define-color noti-button #3c3836;
+@define-color noti-button-hover #504945;
+
+@define-color sep-color transparent;
+
+* {
+  color:            @text-color;
+
+  all: unset;
+  font-size: 20px;
+  font-family: "Fira Sans Book", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  transition: 200ms;
+
+}
+
+/* CONTROL CENTER ------------------------------------------------------------------------ */
+
+.control-center {
+  background: @noti-bg;
+  border-radius: 12px;
+  border: 1px solid @bg-selected;
+  box-shadow: 0 2px 8px 0 @noti-bg;
+  margin: 18px;
+  padding: 14px;
+}
+
+.control-center .widget-title {
+  font-size: 1.3em;
+  margin: 2px;
+}
+
+.control-center .widget-title button {
+  border-radius: 6px;
+  background-color: @noti-close-bg;
+  padding: 8px;
+  border: 1px solid transparent;
+}
+
+.control-center .widget-title button:hover {
+  background-color: @noti-close-bg-hover;
+  border: 1px solid @bg-selected;
+}
+
+.control-center .widget-title button:active {
+  background-color: @bg-selected;
+  color: @noti-bg;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 8px;
+  background-color: @noti-close-bg;
+  color: @bg-selected;
+  margin-top: 14px;
+}
+
+.control-center .notification-row .notification-background .notification {
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.control-center .notification-row .notification-background .notification.critical {
+  border: 2px solid @noti-close-bg-hover;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content {
+  margin: 6px;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * {
+  min-height: 3.4em;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  background-color: @bg-selected;
+  border-radius: 8px;
+  margin: 6px;
+  border: 1px solid transparent;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background-color: @noti-bg-hover;
+  border: 1px solid @bg-selected;
+  color: @noti-bg;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: @bg-selected;
+  color: @noti-bg;
+}
+
+.control-center .notification-row .notification-background .close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: @noti-bg;
+  color: @text-color;
+  border: 1px solid transparent;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  background: @noti-close-bg-hover;
+  border: 1px solid @bg-selected;
+}
+
+.control-center .notification-row .notification-background .close-button:active {
+  background-color: @bg-selected;
+  color: @noti-bg;
+}
+
+progressbar,
+progress,
+trough {
+  border-radius: 12px;
+}
+
+progressbar {
+  background: red;
+}
+
+
+.control-center-dnd {
+  margin-top: 6px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+  /* Notifications expanded-group */
+
+.notification-group {
+  margin: 24px 8px 2px 8px;
+
+}
+.notification-group-headers {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: @text;
+  letter-spacing: 2px;
+}
+
+.notification-group-icon {
+  color: @text;
+}
+
+.notification-group-collapse-button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.notification-group-collapse-button:hover {
+  background: alpha(@text-color, .2);
+  border-radius: 6px;
+  border: 1px solid @text-color;
+}
+
+.notification-group-close-all-button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.notification-group-close-all-button:hover {
+  background: alpha(@text-color, .2);
+  border-radius: 6px;
+  border: 1px solid @text-color;
+}
+
+/* WIDGETS --------------------------------------------------------------------------- */
+
+  /* Do not disturb */
+.widget-dnd {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 8px;
+  background: @noti-close-bg;
+  border: 1px solid @noti-close-bg;
+  box-shadow: none;
+  color: @noti-bg;
+}
+
+.widget-dnd > switch:checked {
+  background: @noti-close-bg;
+  color: @text-color;
+}
+
+.widget-dnd > switch slider {
+  background: @noti-bg;
+  border-radius: 8px;
+  border: 1px solid @noti-bg;
+}
+
+
+  /* Buttons menu */
+.widget-buttons-grid {
+  font-size: x-large;
+  padding: 6px;
+  margin: 6px 0 12px 110px;
+  border-radius: 6px;
+  background: @noti-bg;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  margin: 4px;
+  padding: 6px;
+  background: @noti-close-bg;
+  border-radius: 4px;
+  color: @text-color;
+  border: 1px solid transparent;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: @noti-close-bg-hover;
+  color: @noti-bg;
+  border: 1px solid @bg-selected;
+}
+
+  /* Music player */
+.widget-mpris {
+    background: transparent;
+    border-radius: 16px;
+    color: @text-color;
+    padding: 5px;
+    margin:  20px 5px;
+}
+ 
+.widget-mpris button {
+    border-radius: 5px;
+}
+
+.widget-mpris button:hover {
+  color: @bg-selected;
+}
+
+  /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
+.widget-mpris-player {
+    background: @noti-bg;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 16px;
+  border: 1px solid @text-color;
+}
+ 
+.widget-mpris-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+ 
+.widget-mpris-subtitle {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+
+/* Volume */
+.widget-volume {
+  background: @noti-close-bg;
+  color: @noti-bg;
+  padding: 4px;
+  margin: 6px;
+  border-radius: 6px;
+}
+  
+
+  /* Avoid anoying backgroud */
+.blank-window {  
+  background: transparent;  
+}

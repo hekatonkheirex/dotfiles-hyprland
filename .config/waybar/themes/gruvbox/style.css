@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Rubik", "tabler-icons";
+  font-family: "Fira Sans SemiBold", "tabler-icons";
   font-size: 18px;
   /* font-weight: bold; */
 }
@@ -272,10 +272,10 @@ window#waybar.empty #window {
   color: #d79921;
 }
 #custom-weather.clearNight {
-  color: #504945;
+  color: #a89984;
 }
 #custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-  color: #504945;
+  color: #928374;
 }
 #custom-weather.rainyDay, #custom-weather.rainyNight {
   color: #b16286;
