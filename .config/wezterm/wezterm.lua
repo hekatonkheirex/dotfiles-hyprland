@@ -93,7 +93,7 @@ return {
 	default_cursor_style = "BlinkingUnderline",
 
 	-- X11
-	enable_wayland = true,
+	enable_wayland = false,
 
 	-- Keybinds
 	disable_default_key_bindings = true,

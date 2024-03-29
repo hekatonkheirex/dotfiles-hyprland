@@ -192,6 +192,18 @@
     "escape": true,
   },
 
+  "power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "&#xea38;",
+    "performance": "&#xea38;",
+    "balanced": "&#xebc2;",
+    "power-saver": "&#xed4f;"
+    }
+  },
+
   "custom/themeswitcher": {
     "format": "&#xea95;",
     "on-click": "~/.config/waybar/themeswitcher.sh",

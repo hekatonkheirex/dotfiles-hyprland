@@ -8,6 +8,7 @@ alsa-utils
 amd-ucode
 aria2
 atomicparsley
+auto-cpufreq
 base
 base-devel
 bat
@@ -35,6 +36,7 @@ efitools
 ethtool
 everforest-gtk-theme-git
 eza
+fastfetch
 fcitx5
 fcitx5-anthy
 fcitx5-configtool
@@ -61,10 +63,9 @@ gvfs-smb
 htop
 hwdetect
 hwinfo
-hyprcursor-git
 hypridle
-hyprland-git
-hyprlang-git
+hyprland
+hyprlang
 hyprlock
 hyprpicker
 inetutils
@@ -73,7 +74,6 @@ inter-font
 iw
 jq
 kitty
-kitty-terminfo
 kvantum
 kvantum-theme-catppuccin-git
 libgnome-keyring
@@ -129,6 +129,7 @@ polkit-gnome
 pop-gtk-theme
 pop-icon-theme
 poppler-glib
+power-profiles-daemon
 python-pycryptodomex
 python-pygments
 python-pyqt6
@@ -148,8 +149,6 @@ rustup
 sassc
 seahorse
 sherlock-git
-slimbookamdcontroller
-slimbookbattery
 slurp
 smartmontools
 sof-firmware
@@ -165,7 +164,6 @@ thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
 tldr
-tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code

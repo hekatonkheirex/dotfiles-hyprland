@@ -143,7 +143,8 @@ zstyle ':completion:*' menu select
 # .config/scripts/blks
 # rxfetch
 # nitch
-neofetch
+# neofetch
+fastfetch
 
 export TERM=xterm-256color
 export PAGER="most"
