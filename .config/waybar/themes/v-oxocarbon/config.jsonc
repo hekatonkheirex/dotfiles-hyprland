@@ -1,0 +1,41 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
+/*  */
+/*  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ */
+/* ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ */
+/* ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗ */
+/* ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║ */
+/* ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝ */
+/*  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ */
+
+{
+  "layer": "top", 				// Waybar at top layer
+  /* "mode": "dock", 				// Display mode (dock|hide|invisible|overlay) */
+  "exclusive": true, 				// Request an exclusive zone from the compositor
+  "passthrough": false, 			// Pass any pointer events to the window under the bar
+  "position": "left", 			// Waybar position (top|bottom|left|right)
+  "height": "", 					// Waybar height (to be removed for auto height)
+  "width": "", 					// Waybar width (empty for auto width)
+  "spacing": 0, 					// Gaps between modules
+  "margin": 0, 					// Space around the bar
+  "margin-top": 0, 				// Space above the bar
+  "margin-bottom": 0, 			// Space below the bar
+  "margin-left": 0, 				// Space to the left of the bar
+  "margin-right": 0, 				// Space to the right of the bar
+  "fixed-center": true, 			// Center modules position
+  "gtk-layer-shell": true,
+  /* "ipc": true, 					// Control waybar with `swaymsg bar` commands */
+  "bar_id": "bar-0",
+
+  // Load modules
+  "include": ["~/.config/waybar/modules-v.jsonc"],
+
+  // Choose the order of the modules
+  "modules-left": ["idle_inhibitor","hyprland/workspaces"],
+  "modules-center": ["custom/wall", "custom/themeswitcher"],
+  "modules-right": ["pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "clock#1", "clock#2", "custom/swaync"],
+}

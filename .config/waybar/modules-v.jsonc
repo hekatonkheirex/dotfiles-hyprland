@@ -55,48 +55,77 @@
     }
   },
 
-  "backlight": {
+  "backlight#1": {
     "interval": 2,
-    //"device": "amdgpu_bl0",
-    "format": "{icon} {percent}%",
+    "format": "{icon}",
     "format-icons": ["&#xeb7f;"],
     "on-scroll-up": "light -A 5%",
     "on-scroll-down": "light -U 5%",
     "smooth-scrolling-threshold": 1,
     "tooltip": false,
   },
+  "backlight#2": {
+    "interval": 2,
+    "format": "{percent}%",
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": false,
+  },
 
-  "battery": {
+  "battery#1": {
 		"interval": 60,
-		//"bat": "BAT1",
-		//"adapter": "ACAD",
 		"full-at": 100,
 		"design-capacity": false,
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20
+      "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": "&#xea33; {capacity}%",
-    "format-plugged": "&#xef3b; {capacity}%",
-    "format-full": "&#xf668; 100%",
+    "format": "{icon}",
+    "format-charging": "&#xea33;",
+    "format-plugged": "&#xef3b;",
+    "format-full": "&#xf668;",
     "format-icons": ["&#xea34;", "&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
-    "format-alt": "{time}",
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+  },
+  "battery#2": {
+		"interval": 60,
+		"full-at": 100,
+		"design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-full": "100%",
     "format-time": "{H}h {M}min",
     "tooltip": true,
   },
 
-  "clock": {
-    "format": "&#xea70; {:%H:%M}",
+  "clock#1": {
+    "format": "{:%H}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
         "today": "<span color = '#f38ba8'><b><u>{}</u></b></span>",
       },
     },
-    "format-alt": "&#xea53; {:%Y-%m-%d}",
   },
+  "clock#2": {
+    "format": "{:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#f38ba8'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+
 
   "idle_inhibitor": {
     "format": "{icon}",
@@ -118,12 +147,12 @@
     "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
   },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "&#xf1c3; Muted",
-    "format-bluetooth": "&#xea37; {volume}%",
-    "format-source": "&#xeaf0; {volume}%",
-    "format-source-muted": "&#xed16; Muted",
+  "pulseaudio#1": {
+    "format": "{icon}",
+    "format-muted": "&#xf1c3;",
+    "format-bluetooth": "&#xea37;",
+    "format-source": "&#xeaf0;",
+    "format-source-muted": "&#xed16;",
     "format-icons": {
       "headphone": "&#xeabd;",
       "hands-free": "&#xf5a9;",
@@ -132,6 +161,17 @@
       "portable": "&#xea8a;",
       "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
     },
+    "scroll-step": 5.0,
+    "on-click": "amixer set Master toggle",
+    "on-click-right": "pavucontrol",
+    "smooth-scrolling-threshold": 1,
+  },
+  "pulseaudio#2": {
+    "format": "{volume}%",
+    "format-muted": "Mute",
+    "format-bluetooth": "{volume}%",
+    "format-source": "{volume}%",
+    "format-source-muted": "Mute",
     "scroll-step": 5.0,
     "on-click": "amixer set Master toggle",
     "on-click-right": "pavucontrol",
@@ -150,13 +190,21 @@
     "tooltip": "false",
   },
   
-  "custom/weather": {
+  "custom/weather#1": {
     "exec": "python ~/.config/waybar/scripts/weather.py",
     "restart-interval": 300,
     "return-type": "json",
     "on-click": "xdg-open https://weather.com/es-PY/tiempo/hoy/l/9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"
     // "format-alt": "{alt}",
   },
+  "custom/weather#2": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/es-PY/tiempo/hoy/l/9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"
+    // "format-alt": "{alt}",
+  },
+
   
   "custom/wall":{
     "format":"&#xeb00;",

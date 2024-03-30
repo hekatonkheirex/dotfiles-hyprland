@@ -1,0 +1,336 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "Rubik", "tabler-icons";
+  font-size: 14px;
+}
+
+button {
+  min-height: 18px;
+  min-width: 48px;
+}
+
+window#waybar {
+  background: #161616;
+  border-right: 1px solid #be95ff;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.0;
+}
+
+/* Tooltips */
+tooltip {
+  background: rgba(22, 22, 22, 0.9);
+  border: 1px solid rgba(22, 22, 22, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+}
+tooltip label {
+  color: #ffffff;
+}
+
+/* Workspaces */
+#workspaces {
+  background: transparent;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+#workspaces button {
+  background: #525252;
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 12px;
+  margin-right: 12px;
+  min-width: 12px;
+  min-height: 1px;
+  padding: 8px 0 8px 0;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background: #be95ff;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-height: 30px;
+}
+
+#workspaces button.active {
+  background: #be95ff;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-height: 30px;
+  opacity: 1.0;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.urgent {
+  background: #ee5396;
+}
+
+#workspaces button.persistent {
+  background: #be95ff;
+  transition: all 0.3s ease-in-out;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+}
+
+/** ********* Taskbar ********** **/
+#taskbar {
+  background: #525252;
+  border-radius: 16px;
+  margin: 5px 0 5px 0;
+  opacity: 0.8;
+}
+#taskbar button {
+  margin: 0;
+}
+taskbar#waybar.empty #taskbar {
+  background-color: transparent;
+  margin: 5px 0 5px 0;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/** ********** Window ********** **/
+#window{
+  color: #3ddbd9;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+window#waybar.empty #window {
+  background-color: transparent;
+  margin: 5px 0px 5px 0;
+  opacity: 0.0;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio.1 {
+  border-radius: 16px 16px 0 0;
+  color: #33b1ff;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+#pulseaudio.2 {
+  border-radius: 0 0 16px 16px;
+  color: #33b1ff;
+  margin: 0 0 5px 0;
+  opacity: 0.8;
+}
+
+/** ********** Backlight ********** **/
+#backlight.1 {
+  border-radius: 16px 16px 0 0;
+  color: #ffab91;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+#backlight.2 {
+  border-radius: 0 0 16px 16px;
+  color: #ffab91;
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
+  opacity: 0.8;
+}
+
+/** ********** Battery ********** **/
+#battery.1 {
+  border-radius: 16px 16px 0 0;
+  color: #3ddbd9;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+#battery.2 {
+  border-radius: 0 0 16px 16px;
+  color: #3ddbd9;
+  margin: 0 0 5px 0;
+  opacity: 0.8;
+}
+
+#battery.charging {
+  background: linear-gradient(45deg, #ff7eb6, #ee5396);
+}
+
+#battery.plugged {
+  background: linear-gradient(45deg, #42be65, #3ddbd9);
+}
+
+@keyframes blink {
+  to {
+    background: linear-gradient(45deg, #ffab91, #ff6f00);
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #262626;
+  opacity: 1.0;
+}
+
+/** ********** Clock ********** **/
+#clock.1 {
+  border-radius: 16px 16px 0 0;
+  color: #82cfff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+#clock.2 {
+  border-radius: 0 0 16px 16px;
+  color: #be95ff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  opacity: 0.8;
+}
+
+
+/** ********** Tray ********** **/
+#tray {
+  border-radius: 16px;
+  margin: 5px 0 5px 0;
+  opacity: 0.8;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #ee5396;
+}
+
+#language {
+  color: #ffffff;
+  /* font-weight: bold; */
+  margin: 5px 0 5px 0;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#idle_inhibitor {
+  border-radius: 16px;
+  color: #393939;
+  margin: 5px;
+  padding: 5px;
+  opacity: 0.8;
+}
+#idle_inhibitor.activated {
+  animation: gradient_f 20s ease-in-out infinite;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  border-radius: 8px;
+  color: #262626;
+  font-weight: bold;
+  padding: 5px;
+  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+/** ********** Custom ********** **/
+
+#custom-weather.1 {
+  background: #262626;
+  border-radius: 16px 16px 0 0;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+#custom-weather.2 {
+  background: #262626;
+  border-radius: 0 0 16px 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  opacity: 0.8;
+}
+
+#custom-weathe#custom-weather.default {
+  color: #42be65;
+}
+#custom-weather.severe {
+  color: #ee5396;
+}
+#custom-weather.sunnyDay {
+  color: #ffab91;
+}
+#custom-weather.clearNight {
+  color: #262626;
+}
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+  color: #262626;
+}
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+  color: #be95ff;
+}
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+  color: #33b1ff;
+}
+
+#custom-wall {
+  color: #42be65;
+  margin: 5px 0px 5px 0;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+/* Swaync */
+#custom-swaync {
+  animation: gradient_f 20s ease-in-out infinite;
+  background: rgb(203,166,247);
+  background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);
+  background-size: 400% 400%;
+  border-radius: 8px;
+  color: #262626;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px 0 5px 0;
+  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+
+/* Theme switcher */
+#custom-themeswitcher {
+  color: #ffffff;
+  margin: 5px 0px 5px 0;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}

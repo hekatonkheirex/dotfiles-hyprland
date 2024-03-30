@@ -1,7 +1,7 @@
 require('lualine').setup({
   options = { 
     -- theme = 'rose-pine',
-    theme = 'gruvbox-material',
+    -- theme = 'gruvbox-material',
     -- theme = 'tokyonight',
     -- theme = 'onedark',
     -- theme = 'catppuccin',
@@ -11,7 +11,7 @@ require('lualine').setup({
     -- theme = 'decay',
     -- theme = 'ayu',
     -- theme = 'dracula',
-    -- theme = 'oxocarbon',
+    theme = 'oxocarbon',
     -- theme = 'everblush',
     -- theme = '2077',
     -- theme = 'kanagawa',

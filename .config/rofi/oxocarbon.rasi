@@ -24,8 +24,8 @@ window {
     background-color: @bg-col;
 
     border: 3px;
-    border-color: @border-col;
-    border-radius: 4px;
+    border-color: @blue;
+    border-radius: 16px;
 }
 
 mainbox {
