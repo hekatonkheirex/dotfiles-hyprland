@@ -8,8 +8,8 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Rubik", "tabler-icons";
-  font-size: 14px;
+  font-family: "scientifica", "tabler-icons";
+  font-size: 18px;
 }
 
 button {
@@ -156,29 +156,27 @@ window#waybar.empty #window {
 
 /** ********** Battery ********** **/
 #battery.1 {
-  border-radius: 16px 16px 0 0;
   color: #3ddbd9;
   margin: 5px 0 0 0;
   opacity: 0.8;
 }
 #battery.2 {
-  border-radius: 0 0 16px 16px;
   color: #3ddbd9;
   margin: 0 0 5px 0;
   opacity: 0.8;
 }
 
 #battery.charging {
-  background: linear-gradient(45deg, #ff7eb6, #ee5396);
+  color: #ee5396;
 }
 
 #battery.plugged {
-  background: linear-gradient(45deg, #42be65, #3ddbd9);
+  color: #42be65;
 }
 
 @keyframes blink {
   to {
-    background: linear-gradient(45deg, #ffab91, #ff6f00);
+    color: #ff6f00;
   }
 }
 
@@ -196,7 +194,7 @@ window#waybar.empty #window {
 #clock.1 {
   border-radius: 16px 16px 0 0;
   color: #82cfff;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   margin: 5px 0 0 0;
   opacity: 0.8;
@@ -204,7 +202,7 @@ window#waybar.empty #window {
 #clock.2 {
   border-radius: 0 0 16px 16px;
   color: #be95ff;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0 0 5px 0;
   opacity: 0.8;

@@ -205,7 +205,7 @@
   },
 
   "custom/themeswitcher": {
-    "format": "&#xea95;",
+    "format": "&#xf51d;",
     "on-click": "~/.config/waybar/themeswitcher.sh",
     "tooltip": false,
   }

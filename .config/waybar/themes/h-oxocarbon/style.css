@@ -325,6 +325,6 @@ window#waybar.empty #window {
   color: #ebdbb2;
   margin: 5px 0px 3px 0;
   opacity: 0.8;
-  padding: 1px 10px 0 10px;
+  padding: 1px 10px 0 0;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
