@@ -33,7 +33,7 @@ return require('packer').startup({
   use { 'Everblush/nvim', as = 'everblush' }
   use 'akai54/2077.nvim'
   use "rebelot/kanagawa.nvim"
-  use "maxmx03/solarized.nvim"
+  use "Biscuit-Colorscheme/nvim"
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }

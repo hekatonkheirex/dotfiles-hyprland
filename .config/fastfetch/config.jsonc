@@ -3,7 +3,7 @@
   "logo": {
     "width": 30,
     "height": 13,
-    "type": "sixel",
+    "type": "kitty",
     "source": "${HOME}/Pictures/wallhaven-1po9k3-oxocarbon.jpg",
   },
   "modules": [

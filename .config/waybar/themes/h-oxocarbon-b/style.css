@@ -1,0 +1,238 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "Rubik", "tabler-icons";
+  font-size: 14px;
+  /* font-weight: bold; */
+}
+
+window#waybar {
+  background: #161616;
+  box-shadow: 2 2 2 4px #161616;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.0;
+}
+
+/* Tooltips */
+tooltip {
+  background: rgba(22, 22, 22, 0.9);
+  padding: 20px;
+}
+tooltip label {
+  color: #ffffff;
+}
+
+/* Workspaces */
+#workspaces {
+  margin: 0 5px 0 5px;
+}
+
+#workspaces button {
+  color: #525252;
+}
+
+#workspaces button:hover {
+  color: #08dbda;
+}
+
+#workspaces button.active {
+  color: #08dbda;
+}
+
+#workspaces button.urgent {
+  color: #ee5396;
+}
+
+#workspaces button.persistent {
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+}
+
+/** ********* Taskbar ********** **/
+#taskbar {
+  background: #525252;
+  /* border: 3px solid #262626; */
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+  margin: 5px 6px 3px 0;
+  opacity: 0.8;
+  /* padding: 2px 10px 0 10px; */
+}
+#taskbar button {
+  margin: 0;
+  padding: 0 5px;
+}
+taskbar#waybar.empty #taskbar {
+  background-color: transparent;
+  margin: 5px 10px 3px 0;
+  padding: 2px 10px 0 10px;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/** ********** Window ********** **/
+#window{
+  color: #3ddbd9;
+  font-weight: bold;
+  margin: 0 5px 0 5px;
+}
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+  color: #78a9ff;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Backlight ********** **/
+#backlight {
+  color: #33b1ff;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Battery ********** **/
+#battery {
+  color: #42be65;
+  margin: 0 5px 0 5px;
+}
+
+#battery.charging {
+  color: #ee5396;
+}
+
+#battery.plugged {
+  color: #ff6f00;
+}
+
+@keyframes blink {
+  to {
+    background: linear-gradient(45deg, #ffab91, #ff6f00);
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #161616;
+  opacity: 1.0;
+}
+
+/** ********** Clock ********** **/
+#clock {
+  color: #ff7eb6;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Tray ********** **/
+#tray {
+  background: #525252;
+  margin: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #ee5396;
+}
+
+#language {
+  color: #ffffff;
+  /* font-weight: bold; */
+  margin: 5px 10px 3px 0;
+  padding: 1px 10px 0 10px;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#idle_inhibitor {
+  color: #525252;
+  margin: 0 5px 0 7px;
+}
+#idle_inhibitor.activated {
+  color: #be95ff;
+  font-weight: bold;
+}
+
+/** ********** Custom ********** **/
+
+#custom-weather {
+  margin: 0 5px 0 5px;
+}
+#custom-weather#custom-weather.default {
+  color: #42be65;
+}
+#custom-weather.severe {
+  color: #ee5396;
+}
+#custom-weather.sunnyDay {
+  color: #ffab91;
+}
+#custom-weather.clearNight {
+  color: #525252;
+}
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+  color: #525252;
+}
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+  color: #be95ff;
+}
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+  color: #33b1ff;
+}
+
+#custom-wall {
+  color: #82cfff;
+  margin: 0 5px 0 5px;
+}
+
+/* Swaync */
+#custom-swaync {
+  color: #f2f4f8;
+  font-weight: bold;
+  margin: 0 7px 0 5px;
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+/* Theme switcher */
+#custom-themeswitcher {
+  color: #ffab91;
+  margin: 0 5px 0 5px;
+}

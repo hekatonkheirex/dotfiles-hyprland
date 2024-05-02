@@ -146,7 +146,7 @@ zstyle ':completion:*' menu select
 # neofetch
 fastfetch
 
-export TERM=xterm-256color
+export TERM=kitty
 export PAGER="most"
 
 if [ -f ~/.zshInsulter/zsh.command-not-found ]; then

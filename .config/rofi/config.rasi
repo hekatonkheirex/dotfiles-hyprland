@@ -18,7 +18,7 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "scientifica 20";
+    font: "Rubik 18";
 }
 
 // @theme "./catppuccin/mocha.rasi"
