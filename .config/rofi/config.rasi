@@ -18,15 +18,15 @@ configuration {
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "Rubik 18";
+    font: "Inter 18";
 }
 
-// @theme "./catppuccin/mocha.rasi"
+@theme "./catppuccin/mocha.rasi"
 // @theme "nord.rasi"
 // @theme "rosepine.rasi" 
 /* @theme "rosepine-dawn.rasi" */
 /* @theme "nord-light" */
 // @theme "gruvbox-dark.rasi"
 /* @theme "tokyonight.rasi" */
-@theme "oxocarbon.rasi"
+// @theme "oxocarbon.rasi"
 // @theme "everforest-dark.rasi"

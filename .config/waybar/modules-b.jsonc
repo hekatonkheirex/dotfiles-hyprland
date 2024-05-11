@@ -31,8 +31,8 @@
       "(.*) - Thunar": "$1",
       "(.*) - Discord": "$1",
       // ": "Desktop",
-      "~": "wezterm",
-      "n": "nvim",
+      "~": "kitty",
+      "n ": "neovim",
     },
     "separate-outputs": true
   },
@@ -44,7 +44,7 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
-      "wezterm"
+      "kitty"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"

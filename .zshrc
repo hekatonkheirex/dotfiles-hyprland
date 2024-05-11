@@ -100,7 +100,8 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 # source /home/mura/git/tty/mocha.sh
-source /home/mura/.zsh-oxocarbon
+# source /home/mura/.zsh-oxocarbon
+source /home/mura/.zsh
 
 # User configuration
 

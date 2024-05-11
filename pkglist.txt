@@ -1,4 +1,5 @@
 acpi
+acpi_call
 acpid
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-otc-fonts
@@ -9,6 +10,7 @@ amd-ucode
 aria2
 atomicparsley
 auto-cpufreq
+avahi
 aylurs-gtk-shell
 base
 base-devel
@@ -20,8 +22,9 @@ bluez
 bluez-utils
 brave-bin
 brightnessctl
+btrfs-progs
+capitaine-cursors
 catppuccin-gtk-theme-mocha
-cava
 cliphist
 clipman
 cpio
@@ -67,7 +70,7 @@ htop
 hwdetect
 hwinfo
 hypridle
-hyprland
+hyprland-git
 hyprlang
 hyprlock
 hyprpicker
@@ -83,18 +86,14 @@ laptop-mode-tools
 libgnome-keyring
 libgsf
 libheif
-libpulse
 libsixel
 light
 linux-firmware
 linux-zen
 linux-zen-headers
-lutgen-bin
 man-db
 man-pages
-mcmojave-cursors
 memtester
-microsoft-edge-stable-bin
 mlocate
 most
 mpv
@@ -115,6 +114,7 @@ nss-mdns
 ntfs-3g
 ntp
 nwg-look-bin
+openssh
 openssl-1.1
 pacman-contrib
 pacutils
@@ -169,7 +169,11 @@ thunar
 thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
+timeshift
+timeshift-autosnap
 tldr
+tmux
+tmux-plugin-manager
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code

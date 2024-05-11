@@ -150,8 +150,21 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
 		end
 	}
 
-  -- Yuck (for eww)
-  use { 'elkowar/yuck.vim' }
+  -- tmux navigator
+  use{ 'alexghergh/nvim-tmux-navigation', config = function()
+	  require'nvim-tmux-navigation'.setup {
+		  disable_when_zoomed = true, -- defaults to false
+		  keybindings = {
+			  left = "<C-h>",
+			  down = "<C-j>",
+			  up = "<C-k>",
+			  right = "<C-l>",
+			  last_active = "<C-\\>",
+			  next = "<C-Space>",
+		  }
+	  }
+	  end
+  }
 
   -- Rasi (for Rofi)
   use { 'Fymyte/rasi.vim', ft = 'rasi', }
