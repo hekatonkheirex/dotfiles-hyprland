@@ -236,3 +236,9 @@ window#waybar.empty #window {
   color: #f5e0dc;
   margin: 0 5px 0 5px;
 }
+
+/* Spotify */
+#custom-spotify {
+  color: #a6e3a1;
+  margin: 0 5px 0 5px;
+}

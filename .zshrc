@@ -140,10 +140,7 @@ alias mirrors="sudo reflector --latest 10 --age 6 --country US,Paraguay --sort r
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
-# pfetch
 # .config/scripts/blks
-# rxfetch
-# nitch
 # neofetch
 fastfetch
 

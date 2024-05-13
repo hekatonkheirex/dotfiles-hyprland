@@ -204,6 +204,15 @@
     }
   },
 
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
+    "format": "&#xed03; {}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
   "custom/themeswitcher": {
     "format": "&#xf51d;",
     "on-click": "~/.config/waybar/themeswitcher.sh",

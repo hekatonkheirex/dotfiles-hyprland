@@ -24,47 +24,47 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Maple Mono"
+local font_name = "JetBrains Mono"
 
 local colors = {
 	-- special
-	foreground = "#ffffff",
-	darker_background = "#111111",
-	background = "#161616",
-	lighter_background = "#262626",
-	one_background = "#393939",
+	foreground = "#cdd6f4",
+	darker_background = "#181825",
+	background = "#1e1e2e",
+	lighter_background = "#313244",
+	one_background = "#11111b",
 
 	-- black
-	color0 = "#262626",
-	color8 = "#393939",
+	color0 = "#313244",
+	color8 = "#45475a",
 
 	-- red
-	color1 = "#ee5396",
-	color9 = "#ee5396",
+	color1 = "#f38ba8",
+	color9 = "#f38ba8",
 
 	-- green
-	color2 = "#42be65",
-	color10 = "#42be65",
+	color2 = "#a6e3a1",
+	color10 = "#a6e3a1",
 
 	-- yellow
-	color3 = "#ffab91",
-	color11 = "#ffab91",
+	color3 = "#f9e2af",
+	color11 = "#f9e2af",
 
 	-- blue
-	color4 = "#78a9ff",
-	color12 = "#78a9ff",
+	color4 = "#89b4fa",
+	color12 = "#89b4fa",
 
 	-- magenta
-	color5 = "#ff7eb6",
-	color13 = "#ff7eb6",
+	color5 = "#f5c2e7",
+	color13 = "#f5c2e7",
 
 	-- cyan
-	color6 = "#82cfff",
-	color14 = "#82cfff",
+	color6 = "#89dceb",
+	color14 = "#89dceb",
 
 	-- white
-	color7 = "#dde1e6",
-	color15 = "#f2f4f8",
+	color7 = "#a6adc8",
+	color15 = "#bac2de",
 }
 
 return {
@@ -94,7 +94,7 @@ return {
 	},
 	font_size = 13,
 	line_height = 1.0,
-  harfbuzz_features = {"zero", "ss01", "cv05", "cv14", "ss05", "ss04", "cv29", "cv30", "cv24" },
+  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",
