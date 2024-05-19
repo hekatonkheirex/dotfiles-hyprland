@@ -1,0 +1,106 @@
+configuration {
+    show-icons: true;
+    display-run: ">_";
+}
+
+* {
+    color0: #1e1e2e;
+    color1: #f38ba8;
+    color2: #a6e3a1;
+    color3: #f9e2af;
+    color4: #89b4fa;
+    color5: #f5c2e7;
+    color6: #89dceb;
+    color7: #cdd6f4;
+
+    bg: #1e1e2ef0;
+    bg-alt: #313244;
+    fg: #bac2de;
+
+    color: @fg;
+    background-color: transparent;
+    highlight: underline bold #f38ba8;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+window {
+    width: 800px;
+    height: 600px;
+    children: [ mainbox];
+    location: center;
+    transparency: "real";
+    background-color: @bg;
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ inputbar, message, listview, mode-switcher];
+    border: 1px;
+    border-color: @color0;
+}
+
+inputbar {
+    padding: 3em;
+    background-image: url("~/Pictures/Walls/1356698.jpeg", width);
+    children: [prompt,entry];
+    spacing: -1px;
+}
+
+prompt {
+    background-color: @color1;
+    padding: 15px;
+    text-color: @bg;
+    border-radius: 50% 0 0 50%;
+}
+
+entry {
+    padding: 15px 30px 15px 15px;
+    border: 0px;
+    border-radius: 0 100% 100% 0;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+message {
+    padding: 0 0 1em 0;
+}
+
+textbox {
+    background-color: @color1;
+    padding: 0 1.5em;
+}
+
+listview {
+    margin: 0.5em 0 0 0;
+    lines: 6;
+}
+
+element {
+    padding: 0.5em;
+    color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+}
+
+element-icon {
+    padding: 0 0.5em 0 1em;
+}
+
+mode-switcher {
+    padding: 0 1em;
+}
+
+button {
+    margin: 0.3em 0 0.5em;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+
+button selected {
+    background-color: @color5;
+    text-color: @color0;
+}

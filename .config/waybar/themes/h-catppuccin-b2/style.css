@@ -9,7 +9,7 @@
 * {
   border: none;
   font-family: "Inter", "tabler-icons";
-  font-size: 14px;
+  font-size: 13px;
   /* font-weight: bold; */
 }
 
@@ -41,7 +41,7 @@ tooltip label {
 }
 
 #workspaces button {
-  background: #313244;
+  background: #45475a;
   border-radius: 10px;
   margin: 0px 3px;
   min-height: 1px;

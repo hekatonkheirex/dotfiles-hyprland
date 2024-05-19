@@ -30,6 +30,7 @@ window {
 
 mainbox {
     background-color: @bg-col;
+    children: [ inputbar ]
 }
 
 inputbar {

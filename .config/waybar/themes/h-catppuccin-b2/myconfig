@@ -17,7 +17,7 @@
   /* "mode": "dock", 				// Display mode (dock|hide|invisible|overlay) */
   "exclusive": true, 				// Request an exclusive zone from the compositor
   "passthrough": false, 			// Pass any pointer events to the window under the bar
-  "position": "bottom", 			// Waybar position (top|bottom|left|right)
+  "position": "top", 			// Waybar position (top|bottom|left|right)
   "height": "", 					// Waybar height (to be removed for auto height)
   "width": "", 					// Waybar width (empty for auto width)
   "spacing": 0, 					// Gaps between modules
