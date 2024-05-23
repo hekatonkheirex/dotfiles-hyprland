@@ -13,27 +13,8 @@ return require('packer').startup({
   use 'wbthomason/packer.nvim' -- Packer self-manager
 
 -- Themes
-  use 'shaunsingh/nord.nvim'
-  use 'navarasu/onedark.nvim'
-  use 'sainnhe/everforest'
-  use 'sainnhe/gruvbox-material'
-  use 'LunarVim/horizon.nvim'
   use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v1.*',
-  })
-  use 'folke/tokyonight.nvim'
-  use 'audibleblink/hackthebox.vim'
-  use {'decaycs/decay.nvim', as = 'decay'}
-  use 'Shatur/neovim-ayu'
-  use 'Mofiqul/dracula.nvim'
   use {'glyh/oxocarbon.nvim', branch = 'lualine-support'}
-  use { 'Everblush/nvim', as = 'everblush' }
-  use 'akai54/2077.nvim'
-  use "rebelot/kanagawa.nvim"
-  use "Biscuit-Colorscheme/nvim"
 
   -- Autopairs
   use { 'windwp/nvim-autopairs' }
@@ -65,8 +46,8 @@ return require('packer').startup({
 
   -- Syntax highlight
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { "luckasRanarison/tree-sitter-hypr" }
   use { 'Fymyte/tree-sitter-rasi' }
+  use { 'tree-sitter-grammars/tree-sitter-hyprlang' }
 
   -- Explorer
 use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
@@ -128,7 +109,7 @@ use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' },
   
   -- Autotags
   use { 'windwp/nvim-ts-autotag' }
-  use { 'HiPhish/nvim-ts-rainbow2' }
+  use { 'HiPhish/rainbow-delimiters.nvim' }
 
   -- Lazy nvim
   use { 'folke/which-key.nvim', config = function()

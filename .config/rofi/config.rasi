@@ -1,7 +1,12 @@
 configuration {
+  modi: "drun,emoji:rofimoji --action copy --max-recent 0";
   font: "Inter Semibold 24px";
   icon-theme: "Papirus-Dark";
-  modi: "drun,emoji:rofimoji --action copy --max-recent 0";
+  show-icons: true;
+  display-drun: ">_";
+  display-emoji: "😃";
+  terminal: "kitty";
+  sidebar-mode: true;
 }
 
 @theme "~/.config/rofi/theme/catppuccin.rasi"
