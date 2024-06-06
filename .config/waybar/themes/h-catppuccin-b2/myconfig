@@ -37,5 +37,5 @@
   // Choose the order of the modules
   "modules-left": ["idle_inhibitor", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["pulseaudio", "backlight", "battery", "custom/themeswitcher", "tray", "custom/wall", "clock", "custom/weather", "custom/swaync"],
+  "modules-right": ["custom/themeswitcher", "pulseaudio", "backlight", "battery", "power-profiles-daemon", "tray", "custom/wall", "clock", "custom/weather", "custom/swaync"],
 }

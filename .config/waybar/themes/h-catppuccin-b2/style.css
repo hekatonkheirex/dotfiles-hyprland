@@ -197,6 +197,11 @@ window#waybar.empty #window {
   font-weight: bold;
 }
 
+#power-profiles-daemon {
+  color: #a6e3a1;
+  margin: 0 5px 0 7px;
+}
+
 /** ********** Custom ********** **/
 
 #custom-weather {
