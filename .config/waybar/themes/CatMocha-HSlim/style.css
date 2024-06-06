@@ -1,0 +1,273 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "Inter", "tabler-icons";
+  font-size: 13px;
+  /* font-weight: bold; */
+}
+
+window#waybar {
+  background: #1e1e2e;
+  box-shadow: 2 2 2 4px #1e1e2e;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.0;
+}
+
+/* Tooltips */
+tooltip {
+  background: rgba(30, 30, 46, 0.9);
+  padding: 20px;
+}
+tooltip label {
+  color: #cdd6f4;
+}
+
+/* Workspaces */
+#workspaces {
+  border-radius: 16px;
+  margin: 5px 10px 3px 0;
+  padding: 1px 1px;
+}
+
+#workspaces button {
+  background: #45475a;
+  border-radius: 10px;
+  margin: 0px 3px;
+  min-height: 1px;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background: #a6e3a1;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-width: 30px;
+}
+
+#workspaces button.active {
+  background: #a6e3a1;
+  background-size: 400% 400%;
+  border-radius: 10px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.urgent {
+  background: #f38ba8;
+}
+
+#workspaces button.persistent {
+  background: #a6e3a1;
+  transition: all 0.3s ease-in-out;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+}
+
+/** ********* Taskbar ********** **/
+#taskbar {
+  background: #1e1e2e;
+  /* border: 3px solid #262626; */
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+  margin: 5px 6px 3px 0;
+  opacity: 0.8;
+  /* padding: 2px 10px 0 10px; */
+}
+#taskbar button {
+  margin: 0;
+  padding: 0 5px;
+}
+taskbar#waybar.empty #taskbar {
+  background-color: transparent;
+  margin: 5px 10px 3px 0;
+  padding: 2px 10px 0 10px;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/** ********** Window ********** **/
+#window{
+  color: #b4befe;
+  font-weight: bold;
+  margin: 0 5px 0 5px;
+}
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+  color: #89b4fa;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Backlight ********** **/
+#backlight {
+  color: #94e2d5;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Battery ********** **/
+#battery {
+  color: #a6e3a1;
+  margin: 0 5px 0 5px;
+}
+
+#battery.charging {
+  color: #f38ba8;
+}
+
+#battery.plugged {
+  color: #fab387;
+}
+
+@keyframes blink {
+  to {
+    background: linear-gradient(45deg, #f9e2af, #fab387);
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #161616;
+  opacity: 1.0;
+}
+
+/** ********** Clock ********** **/
+#clock {
+  color: #f5c2e7;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Tray ********** **/
+#tray {
+  background: #1e1e2e;
+  margin: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #f38ba8;
+}
+
+/** ********** Language ********** **/
+#language {
+  color: #cdd6f4;
+  /* font-weight: bold; */
+  margin: 5px 10px 3px 0;
+  padding: 1px 10px 0 10px;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+/** ********** Idle Inhibitor ********** **/
+#idle_inhibitor {
+  color: #6c7086;
+  margin: 0 5px 0 7px;
+}
+#idle_inhibitor.activated {
+  color: #cba6f7;
+  font-weight: bold;
+}
+
+/** ********** Image ********** **/
+#image {
+  margin: 0 7px 0 5px;
+}
+
+/** ********** power-profiles-daemon ********** **/
+#power-profiles-daemon {
+  color: #a6e3a1;
+  margin: 0 5px 0 7px;
+}
+
+/** ********** Custom ********** **/
+#custom-weather {
+  margin: 0 5px 0 5px;
+}
+#custom-weather#custom-weather.default {
+  color: #a6e3a1;
+}
+#custom-weather.severe {
+  color: #f38ba8;
+}
+#custom-weather.sunnyDay {
+  color: #f9e2af;
+}
+#custom-weather.clearNight {
+  color: #7f849c;
+}
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+  color: #a6adc8;
+}
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+  color: #f2cdcd;
+}
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+  color: #74c7ec;
+}
+
+/* Wall */
+#custom-wall {
+  color: #f5e0dc;
+  margin: 0 5px 0 5px;
+}
+
+/* Swaync */
+#custom-swaync {
+  color: #bac2de;
+  font-weight: bold;
+  margin: 0 7px 0 5px;
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+/* Theme switcher */
+#custom-themeswitcher {
+  color: #f5e0dc;
+  margin: 0 5px 0 5px;
+}
+
+/* Spotify */
+#custom-spotify {
+  color: #a6e3a1;
+  margin: 0 5px 0 5px;
+}

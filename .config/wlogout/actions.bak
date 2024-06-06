@@ -43,7 +43,7 @@ elif [[ "$1" == '--suspend' ]]; then
 elif [[ "$1" == '--logout' ]]; then
 	cdialog
 	if [[ "$?" == 0 ]]; then
-    loginctl kill-session $XDG_SESSION_ID
+    loginctl terminate-user $USER
     else
 		exit
     fi
