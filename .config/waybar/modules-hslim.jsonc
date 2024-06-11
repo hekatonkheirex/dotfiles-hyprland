@@ -31,7 +31,7 @@
       "(.*) - Thunar": "$1",
       "(.*) - Discord": "$1",
       // ": "Desktop",
-      "~": "kitty",
+      "~": "wezterm",
       "n ": "neovim",
     },
     "separate-outputs": true

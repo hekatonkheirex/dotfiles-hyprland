@@ -4,14 +4,12 @@ ___
 > ### <div align="center">*-- Disclaimer --*   </div>
 > *I am not a developer/programmer, just a Linux enthusiast. All this configurations are just what I learned along the way by myself. You may encounter some redundant lines of code.*
 ___
-<img src="https://i.imgur.com/n36wLuF.png">
+<img src="https://i.imgur.com/W0XUFhi.png">
 
 * **Distro** • [Arch Linux](https://archlinux.org/) 🐧
 * **Window Manager** • [Hyprland](https://hyprland.org/) 💧
 * **Colorscheme** • [Catppuccin](https://github.com/catppuccin) 🐈
-  * **Backup Colorscheme** • [Gruvbox](https://github.com/sainnhe/gruvbox-material) 🟫
-  * **Backup Colorscheme** • [Rosé Pine](https://rosepinetheme.com/) 🌹
-  * **Backup Colorscheme** • [Tokyo Night]() 
+  * **Backup Colorscheme** • [Oxocarbon](https://github.com/nyoom-engineering/oxocarbon) 💻
 * **Shell** • [Zsh](https://www.zsh.org) 🐚 with
   * [OhMyZsh](https://ohmyz.sh/) 🧑‍🤝‍🧑 with
     * [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
@@ -19,12 +17,12 @@ ___
     * [zsh-completions](https://github.com/zsh-users/zsh-completions)
   * [Starship](https://github.com/starship/starship) 🚀
 * **Terminal** • [WezTerm](https://github.com/wez/wezterm) 💻
-* **Panel** • [Waybar](https://github.com/Alexays/Waybar) 🍫 but the [patched version for Hyprland](https://aur.archlinux.org/packages/waybar-hyprland-git)
+* **Panel** • [Waybar](https://github.com/Alexays/Waybar) 🍫
 * **Notication Daemon** • [Swaync](https://github.com/ErikReider/SwayNotificationCenter) 🔔
 * **Launcher** • [Rofi](https://github.com/davatorium/rofi) ⚓ with [rofimoji](https://github.com/fdw/rofimoji) 😐
-* **File Manager** • [Thunar](https://archlinux.org/packages/extra/x86_64/thunar/) 🗄️
-* **Music player** • [Spotify](https://open.spotify.com/) 🪕 with [spicetify-cli](https://spicetify.app/) and [Catppuccin spicetify theme](https://github.com/catppuccin/spicetify)
-* **Editor** • [Neovim](https://neovim.io/) 📝  
+* **File Manager** • [Nautilus](https://apps.gnome.org/Nautilus/) 🗄️
+* **Music player** • [Spotify](https://open.spotify.com/) 🪕
+* **Editor** • [Neovim](https://neovim.io/) 📝
   <details>
   <summary>Installed plugins</summary>
 
@@ -64,19 +62,17 @@ ___
 
      * [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
      * [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+     * [Oxocarbon](https://marketplace.visualstudio.com/items?itemName=ibmlover.oxocarbon)
      * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
      * [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
      * [Font Awesome Auto-complete & Preview](https://marketplace.visualstudio.com/items?itemName=Janne252.fontawesome-autocomplete)
-     * [Gruvbox Material](https://marketplace.visualstudio.com/items?itemName=sainnhe.gruvbox-material)
      * [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
      * [Indenticator](https://marketplace.visualstudio.com/items?itemName=SirTori.indenticator)
      * [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
      * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
      * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
      * [Rasi](https://marketplace.visualstudio.com/items?itemName=dlasagno.rasi)
-     * [Rosé Pine](https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine) 
      * [Spanish - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-spanish)
-     * [Tokyo Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
      * [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
   </summary>
 

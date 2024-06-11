@@ -132,6 +132,7 @@ source /home/mura/.zsh
 alias ls="eza --icons"
 alias la="eza -la --icons"
 alias laa="eza -a --icons"
+alias li=lsix
 alias update="paru"
 alias clean="paru -Rns $(pacman -Qdtq)"
 alias n="nvim"
