@@ -24,7 +24,7 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Maple Mono"
+local font_name = "JetBrains Mono"
 
 local colors = {
 	-- special
@@ -94,7 +94,7 @@ return {
 	},
 	font_size = 13,
 	line_height = 1.0,
-  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
+  -- harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",

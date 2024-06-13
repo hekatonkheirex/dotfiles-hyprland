@@ -127,6 +127,7 @@ pipewire-pulse
 playerctl
 polkit-gnome
 poppler-glib
+posy-improved-cursors
 powertop
 python-pycryptodomex
 python-pygments
