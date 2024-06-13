@@ -1,0 +1,4 @@
+name = Posy Cursor Theme
+description = Images from the windows theme, meta from hyprcursor-util
+version = 0.1
+cursors_directory = hyprcursors
