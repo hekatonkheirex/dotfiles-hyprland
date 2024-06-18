@@ -11,7 +11,6 @@ application/xhtml+xml=vivaldi-stable.desktop
 application/x-extension-xhtml=vivaldi-stable.desktop
 application/x-extension-xht=vivaldi-stable.desktop
 x-scheme-handler/chrome=vivaldi-stable.desktop
-x-scheme-handler/about=vivaldi-stable.desktop
 x-scheme-handler/unknown=vivaldi-stable.desktop
 
 [Added Associations]

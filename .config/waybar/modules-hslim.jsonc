@@ -138,6 +138,27 @@
     "smooth-scrolling-threshold": 1,
   },
 
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "&#xf1c3; Muted",
+    "format-bluetooth": "&#xea37; {volume}%",
+    "format-source": "&#xeaf0; {volume}%",
+    "format-source-muted": "&#xed16; Muted",
+    "format-icons": {
+      "headphone": "&#xeabd;",
+      "hands-free": "&#xf5a9;",
+      "headset": "&#xeb90;",
+      "phone": "&#xeb09;",
+      "portable": "&#xea8a;",
+      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
+    },
+    "scroll-step": 5.0,
+    "on-click": "amixer set Master toggle",
+    "on-click-right": "pavucontrol",
+    "smooth-scrolling-threshold": 1,
+  },
+
+
   "tray": {
     "icon-size": 16,
     "spacing": 8,
@@ -219,6 +240,32 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/pacman": {
+    "format": "&#xeaff; {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "kitty --hold sh -c 'paru'; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
+  },
+
+  "custom/updates": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "&#xeaff;",
+      "updated": "&#xf16c;"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
+    "on-click": "kitty --hold sh -c 'paru'; pkill -SIGRTMIN+8 waybar"
+  },
+
+  "custom/kernel": {
+    "format": "{}",
+    "exec": "~/.local/bin/kernel"
   },
 
   "custom/themeswitcher": {

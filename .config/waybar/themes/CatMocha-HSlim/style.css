@@ -122,6 +122,12 @@ window#waybar.empty #window {
   margin: 0 5px 0 5px;
 }
 
+/** ********** Wireplumber ********** **/
+#wireplumber {
+  color: #89b4fa;
+  margin: 0 5px 0 5px;
+}
+
 /** ********** Backlight ********** **/
 #backlight {
   color: #94e2d5;
@@ -182,11 +188,7 @@ window#waybar.empty #window {
 /** ********** Language ********** **/
 #language {
   color: #cdd6f4;
-  /* font-weight: bold; */
-  margin: 5px 10px 3px 0;
-  padding: 1px 10px 0 10px;
-  opacity: 0.8;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  margin: 0 5px 0 7px;
 }
 
 /** ********** Idle Inhibitor ********** **/
@@ -269,5 +271,23 @@ window#waybar.empty #window {
 /* Spotify */
 #custom-spotify {
   color: #a6e3a1;
+  margin: 0 5px 0 5px;
+}
+
+/* Pacman */
+#custom-pacman {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
+/* Updates */
+#custom-updates {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
+/* Kernel */
+#custom-kernel {
+  color: #6c7086;
   margin: 0 5px 0 5px;
 }

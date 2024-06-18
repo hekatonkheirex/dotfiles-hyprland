@@ -4,6 +4,7 @@ adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-otc-fonts
 alsa-utils
 amd-ucode
+apple_cursor
 aria2
 atomicparsley
 auto-cpufreq
@@ -19,7 +20,6 @@ bluez-utils
 boo-sddm-git
 brightnessctl
 btrfs-progs
-capitaine-cursors
 catppuccin-gtk-theme-mocha
 cava
 cliphist
@@ -34,14 +34,13 @@ dnsmasq
 dosfstools
 dupeguru
 efibootmgr
+emacs-wayland
 eog
 eog-plugins
 ethtool
 eza
 fastfetch
-fcitx5
-fcitx5-anthy
-fcitx5-configtool
+fd
 ffmpegthumbnailer
 file-roller
 firefox
@@ -94,9 +93,6 @@ mlocate
 most
 mpv
 mtools
-nautilus
-nautilus-image-converter
-nautilus-share
 neofetch
 neovim
 network-manager-applet
@@ -157,12 +153,16 @@ sshfs
 swaync
 swww
 terminus-font
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-shares-plugin
+thunar-volman
 timeshift
 timeshift-autosnap
 tldr
 tmux
 tmux-plugin-manager
-tracker3-miners
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -204,6 +204,7 @@ vivaldi
 vivaldi-ffmpeg-codecs
 w3m
 waybar
+waybar-module-pacman-updates-git
 wev
 wezterm
 wf-recorder
@@ -211,7 +212,6 @@ wget
 wireplumber
 wl-clipboard
 wlogout-git
-wlr-randr-git
 wtype
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
