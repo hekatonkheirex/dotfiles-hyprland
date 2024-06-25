@@ -18,6 +18,7 @@ blueman
 bluez
 bluez-utils
 boo-sddm-git
+brave-bin
 brightnessctl
 btrfs-progs
 catppuccin-gtk-theme-mocha
@@ -50,6 +51,7 @@ fzf
 galculator
 git
 gnome-keyring
+gnome-mahjongg
 gnome-tweaks
 graphite-gtk-theme-black-git
 grim
@@ -152,6 +154,7 @@ spotify
 sshfs
 swaync
 swww
+tailscale
 terminus-font
 thunar
 thunar-archive-plugin
@@ -161,8 +164,6 @@ thunar-volman
 timeshift
 timeshift-autosnap
 tldr
-tmux
-tmux-plugin-manager
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -222,5 +223,6 @@ xorg-xhost
 yad
 yadm
 yt-dlp
+zellij
 zramd
 zsh

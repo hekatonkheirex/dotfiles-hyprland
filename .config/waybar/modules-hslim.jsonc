@@ -27,11 +27,11 @@
     "format": "{}",
     "rewrite": {
       "(.*) — Mozilla Firefox": "$1",
-      "(.*) - Brave": "$1",
+      "(.*) - Vivaldi": "$1",
       "(.*) - Thunar": "$1",
       "(.*) - Discord": "$1",
       // ": "Desktop",
-      "~": "wezterm",
+      "~": "kitty",
       "n ": "neovim",
     },
     "separate-outputs": true
