@@ -6,7 +6,7 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mura/.oh-my-zsh"
 
-export TERMINAL="foot"
+export TERM="kitty"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -144,7 +144,6 @@ zstyle ':completion:*' menu select
 
 fastfetch
 
-export TERM=kitty
 export PAGER="most"
 
 if [ -f ~/.zshInsulter/zsh.command-not-found ]; then
