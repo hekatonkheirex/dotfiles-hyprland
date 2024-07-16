@@ -35,7 +35,6 @@ dnsmasq
 dosfstools
 dupeguru
 efibootmgr
-emacs-wayland
 eog
 eog-plugins
 ethtool
@@ -50,6 +49,7 @@ fwupd
 fzf
 galculator
 git
+git-credential-manager-core-bin
 gnome-keyring
 gnome-mahjongg
 gnome-tweaks
@@ -154,7 +154,6 @@ spotify
 sshfs
 swaync
 swww
-tailscale
 terminus-font
 thunar
 thunar-archive-plugin
@@ -206,6 +205,7 @@ vivaldi-ffmpeg-codecs
 w3m
 waybar
 waybar-module-pacman-updates-git
+waypaper
 wev
 wezterm
 wf-recorder
