@@ -31,7 +31,7 @@
 
   all: unset;
   font-size: 20px;
-  font-family: "Inter", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  font-family: "Fira Sans", "Font Awesome 6 Free", "Font Awesome 6 Pro";
   transition: 200ms;
 
 }
