@@ -126,7 +126,6 @@
     },
   },
 
-
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -205,6 +204,13 @@
     // "format-alt": "{alt}",
   },
 
+  "image": {
+    "path": "/home/mura/.config/waybar/hyprland.png",
+    "size": 24,
+    "interval": 1,
+    "on-click": "killall rofi || rofi -show drun",
+    "tooltip": false,
+  },
   
   "custom/wall":{
     "format":"&#xeb00;",

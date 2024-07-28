@@ -49,7 +49,7 @@ fwupd
 fzf
 galculator
 git
-git-credential-manager-core-bin
+git-credential-manager-bin
 gnome-keyring
 gnome-mahjongg
 gnome-tweaks
@@ -127,6 +127,7 @@ polkit-gnome
 poppler-glib
 posy-improved-cursors
 powertop
+proton-vpn-gtk-app
 python-pycryptodomex
 python-pygments
 python-pyqt6
