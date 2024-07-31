@@ -48,6 +48,7 @@ firewalld
 fwupd
 fzf
 galculator
+gimp
 git
 git-credential-manager-bin
 gnome-keyring
@@ -107,7 +108,7 @@ npm
 nss-mdns
 ntfs-3g
 ntp
-nwg-look-bin
+nwg-look
 openssh
 openssl-1.1
 pacman-contrib

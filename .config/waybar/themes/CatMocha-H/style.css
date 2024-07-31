@@ -8,16 +8,16 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Inter", "tabler-icons";
+  font-family: "Nunito", "tabler-icons";
   font-size: 13px;
   /* font-weight: bold; */
 }
 
 window#waybar {
   background: #1e1e2e;
+  box-shadow: 2 2 2 4px #1e1e2e;
   transition-property: background-color;
   transition-duration: .5s;
-  border-radius: 13px;
 }
 
 window#waybar.hidden {
@@ -35,41 +35,43 @@ tooltip label {
 
 /* Workspaces */
 #workspaces {
-  border-radius: 16px;
   margin: 5px 10px 3px 0;
   padding: 1px 1px;
 }
 
 #workspaces button {
-  background: #45475a;
-  border-radius: 10px;
+  border-radius: 0;
   margin: 0px 3px;
-  min-height: 1px;
   padding: 0 10px;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  background: #a6e3a1;
-  background-size: 400% 400%;
-  border-radius: 10px;
-  min-width: 30px;
+  background: #89b4fa;
+}
+
+#workspaces button.persistent {
+  color: #9399b2;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+  color: #313244;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.visible {
+  box-shadow: inset 0 1px #a6e3a1;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-  background: #a6e3a1;
-  background-size: 400% 400%;
-  border-radius: 10px;
-  min-width: 40px;
+  box-shadow: inset 0 1px #a6e3a1;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
-  background: #f38ba8;
-}
-
-#workspaces button.persistent {
-  background: #a6e3a1;
+  color: #f38ba8;
   transition: all 0.3s ease-in-out;
 }
 
@@ -118,6 +120,12 @@ window#waybar.empty #window {
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio {
+  color: #89b4fa;
+  margin: 0 5px 0 5px;
+}
+
+/** ********** Wireplumber ********** **/
+#wireplumber {
   color: #89b4fa;
   margin: 0 5px 0 5px;
 }
@@ -182,11 +190,7 @@ window#waybar.empty #window {
 /** ********** Language ********** **/
 #language {
   color: #cdd6f4;
-  /* font-weight: bold; */
-  margin: 5px 10px 3px 0;
-  padding: 1px 10px 0 10px;
-  opacity: 0.8;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  margin: 0 5px 0 7px;
 }
 
 /** ********** Idle Inhibitor ********** **/
@@ -201,7 +205,7 @@ window#waybar.empty #window {
 
 /** ********** Image ********** **/
 #image {
-  margin: 0 7px 0 7px;
+  margin: 0 7px 0 5px;
 }
 
 /** ********** power-profiles-daemon ********** **/
@@ -246,7 +250,7 @@ window#waybar.empty #window {
 #custom-swaync {
   color: #bac2de;
   font-weight: bold;
-  margin: 0 13px 0 5px;
+  margin: 0 7px 0 5px;
 }
 
 @keyframes gradient_f {
@@ -269,5 +273,29 @@ window#waybar.empty #window {
 /* Spotify */
 #custom-spotify {
   color: #a6e3a1;
+  margin: 0 5px 0 5px;
+}
+
+/* Pacman */
+#custom-pacman {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
+/* Updates */
+#custom-updates {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
+#custom-updates2 {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
+
+/* Kernel */
+#custom-kernel {
+  color: #6c7086;
   margin: 0 5px 0 5px;
 }

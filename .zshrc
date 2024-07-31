@@ -6,6 +6,7 @@ export PATH=$PATH:/home/mura/.spicetify
 export ZSH="/home/mura/.oh-my-zsh"
 
 export TERM="kitty"
+export SUDO_PROMPT="Say friend and enter: "
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

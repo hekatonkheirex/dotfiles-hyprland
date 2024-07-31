@@ -1,27 +1,2 @@
--- ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
--- ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
--- ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
--- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
--- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
--- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-
-require('plugins')
-require('keybindings')
-require('options')
-require('themes')
-require('treesitter-config')
-require('lualine-config')
-require('bufferline-config')
-require('autopairs-config')
-require('whichkey-config')
-require('telescope-config')
-require('cmp-config')
-require('colorizer-config')
-require('blankline-config')
-require('comment-config')
-require('mason-config')
-require('mason-lspconfig')
-require('dashboard-config')
-require('catppuccin-config')
-require('rainbow-config')
-require('gitsigns-config')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

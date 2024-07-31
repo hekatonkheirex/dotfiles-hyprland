@@ -35,7 +35,7 @@
   "include": ["~/.config/waybar/modules-vertical.jsonc"],
 
   // Choose the order of the modules
-  "modules-left": ["idle_inhibitor","hyprland/workspaces"],
+  "modules-left": ["image","hyprland/workspaces"],
   "modules-center": ["custom/wall", "custom/themeswitcher"],
-  "modules-right": ["hyprland/language", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "tray", "clock#1", "clock#2", "custom/swaync"],
+  "modules-right": ["idle_inhibitor", "hyprland/language", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "clock#1", "clock#2", "tray", "custom/swaync"],
 }

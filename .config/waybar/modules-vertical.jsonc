@@ -1,24 +1,22 @@
 {
   "hyprland/workspaces": {
     "disable-scroll": false,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    // "persistent_workspaces": {
-    //   "*": 6,
-    // },
+    "all-outputs": true,
+    "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      // "1": "",
-      // "2": "",
-      // "3": "",
-      // "4": "",
-      // "5": "",
-      // "6": "",
-      "urgent": "",
-			"active": "",
-			"default": "",
-    "sort-by-number": true
+      "1": "&#xecfd;",
+      "2": "&#xebef;",
+      "3": "&#xeaa4;",
+      "4": "&#xeaec;",
+      "5": "&#xeae3;",
+      "6": "&#xed03;",
+			// "urgent": "&#xf671;",
+			// "active": "&#xf671;",
+			// "default": "&#xf671;",
+    },
+    "persistent-workspaces": {
+      "*": 6,
     },
   },
 
@@ -31,9 +29,10 @@
       "(.*) - Thunar": "$1",
       "(.*) - Discord": "$1",
       // ": "Desktop",
-      "~": "wezterm",
+      "~": "kitty",
       "n": "nvim",
     },
+    "rotate": 90,
     "separate-outputs": true
   },
 
@@ -206,7 +205,7 @@
 
   "image": {
     "path": "/home/mura/.config/waybar/hyprland.png",
-    "size": 24,
+    "size": 28,
     "interval": 1,
     "on-click": "killall rofi || rofi -show drun",
     "tooltip": false,

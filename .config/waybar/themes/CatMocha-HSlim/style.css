@@ -8,7 +8,7 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "Fira Sans", "tabler-icons";
+  font-family: "Nunito", "tabler-icons";
   font-size: 13px;
   /* font-weight: bold; */
 }
@@ -285,6 +285,12 @@ window#waybar.empty #window {
   color: #6c7086;
   margin: 0 5px 0 5px;
 }
+
+#custom-updates2 {
+  color: #6c7086;
+  margin: 0 5px 0 5px;
+}
+
 
 /* Kernel */
 #custom-kernel {
