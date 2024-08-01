@@ -14,7 +14,6 @@ base-devel
 bat
 bind
 bleachbit
-blueman
 bluez
 bluez-utils
 boo-sddm-git
@@ -82,6 +81,7 @@ kvantum
 kvantum-qt5
 kvantum-theme-catppuccin-git
 laptop-mode-tools
+lazygit
 libgnome-keyring
 libgsf
 libheif
@@ -91,6 +91,8 @@ linux
 linux-firmware
 linux-headers
 lsix
+lua51
+luarocks
 lutgen-bin
 mlocate
 most
@@ -226,5 +228,6 @@ yad
 yadm
 yt-dlp
 zellij
+zoxide
 zramd
 zsh

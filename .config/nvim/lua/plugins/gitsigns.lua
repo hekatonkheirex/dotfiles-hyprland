@@ -10,22 +10,25 @@ return {
     },
     {
       "lewis6991/gitsigns.nvim",
-      event = "LazyFile",
       opts = {
+        _on_attach_pre = function(_, callback)
+          require("gitsigns-yadm").yadm_signs(callback)
+        end,
         signs = {
-          add = { text = "▎" },
-          change = { text = "▎" },
-          delete = { text = "" },
-          topdelete = { text = "" },
-          changedelete = { text = "▎" },
-          untracked = { text = "▎" },
+          add = { text = "┃" },
+          change = { text = "┃" },
+          delete = { text = "_" },
+          topdelete = { text = "‾" },
+          changedelete = { text = "~" },
+          untracked = { text = "┆" },
         },
         signs_staged = {
-          add = { text = "▎" },
-          change = { text = "▎" },
-          delete = { text = "" },
-          topdelete = { text = "" },
-          changedelete = { text = "▎" },
+          add = { text = "┃" },
+          change = { text = "┃" },
+          delete = { text = "_" },
+          topdelete = { text = "‾" },
+          changedelete = { text = "~" },
+          untracked = { text = "┆" },
         },
         on_attach = function(buffer)
           local gs = package.loaded.gitsigns
@@ -71,9 +74,6 @@ return {
           map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
         end,
       },
-      _on_attach_pre = function(_, callback)
-        require("gitsigns-yadm").yadm_signs(callback)
-      end,
     },
   },
 }
