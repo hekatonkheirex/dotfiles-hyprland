@@ -16,8 +16,8 @@
        "default": "&#xf671;"
     },
     "persistent-workspaces": {
-        "*": 6,
-    },
+        "*": 6
+    }
   },
 
   "hyprland/window": {
@@ -30,7 +30,7 @@
       "(.*) - Discord": "$1",
       // ": "Desktop",
       "~": "kitty",
-      "n ": "neovim",
+      "n ": "neovim"
     },
     "separate-outputs": true
   },
@@ -61,7 +61,7 @@
     "on-scroll-up": "light -A 5%",
     "on-scroll-down": "light -U 5%",
     "smooth-scrolling-threshold": 1,
-    "tooltip": false,
+    "tooltip": false
   },
 
   "battery": {
@@ -82,7 +82,7 @@
     "format-icons": ["&#xea34;", "&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
     "format-alt": "{time}",
     "format-time": "{H}h {M}min",
-    "tooltip": true,
+    "tooltip": true
   },
 
   "clock": {
