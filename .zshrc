@@ -57,7 +57,7 @@ setopt hist_find_no_dups
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
+zstyle ':completion:*' menu select
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons $realpath'
 
@@ -86,8 +86,11 @@ export FZF_DEFAULT_OPTS=" \
 
 # Sourcing
 source /home/mura/.zsh
+
+# Fetch
 fastfetch
 
+# Zsh Insulter
 if [ -f ~/.zshInsulter/zsh.command-not-found ]; then
     . ~/.zshInsulter/zsh.command-not-found
 fi
