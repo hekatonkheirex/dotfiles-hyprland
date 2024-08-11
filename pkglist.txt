@@ -14,6 +14,7 @@ base-devel
 bat
 bind
 bleachbit
+blueman
 bluez
 bluez-utils
 boo-sddm-git
@@ -90,6 +91,7 @@ light
 linux
 linux-firmware
 linux-headers
+localsend-bin
 lsix
 lua51
 luarocks

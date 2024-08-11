@@ -3,8 +3,8 @@ file:///home/mura/Downloads
 file:///home/mura/Music
 file:///home/mura/Pictures
 file:///home/mura/Videos
-smb://192.168.100.4/pelis/
-smb://192.168.100.3/dwnlds/App
-smb://192.168.100.3/dwnlds/Imgs
-smb://192.168.100.3/dwnlds/Trrnts
-smb://192.168.100.3/dwnlds/Vids
+smb://192.168.100.4/pelis/ /pelis/ on homepc
+smb://192.168.100.3/dwnlds/App /App/ on AN515
+smb://192.168.100.3/dwnlds/Imgs /Imgs/ on AN515
+smb://192.168.100.3/dwnlds/Trrnts /Trrnts/ on AN515
+smb://192.168.100.3/dwnlds/Vids /Vids/ on AN515

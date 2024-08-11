@@ -1,0 +1,308 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
+/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
+/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
+/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
+/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
+/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
+
+/* General configuration */
+* {
+  border: none;
+  font-family: "Rubik", "tabler-icons";
+  font-size: 18px;
+}
+
+button {
+  min-height: 16px;
+  min-width: 16px;
+}
+
+window#waybar {
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.0;
+}
+
+/* Tooltips */
+tooltip {
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(30, 30, 30, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+}
+tooltip label {
+  color: #b4befe;
+}
+
+/* Workspaces */
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  border-radius: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 8px 0 8px 0;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+#workspaces button.persistent {
+  color: #cdd6f4;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+  color: #45475a;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.visible {
+  color: #a6e3a1;
+}
+
+#workspaces button.active {
+  color: #a6e3a1;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  transition: all 0.3s ease-in-out;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+}
+
+/** ********* Taskbar ********** **/
+#taskbar {
+  background: #1e1e2e;
+  margin: 5px 0 5px 0;
+}
+#taskbar button {
+  margin: 0;
+}
+taskbar#waybar.empty #taskbar {
+  background-color: transparent;
+  margin: 5px 0 5px 0;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/** ********** Window ********** **/
+#window{
+  color: #b4befe;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+window#waybar.empty #window {
+  background-color: transparent;
+  margin: 5px 0px 5px 0;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio.1 {
+  color: #1e1e2e;
+  margin: 5px 0 0 0;
+  padding: 2px;
+}
+#pulseaudio.2 {
+  font-size: 11px;
+  color: #1e1e2e;
+  margin: 0 0 5px 0;
+  padding: 2px;
+}
+
+/** ********** Backlight ********** **/
+#backlight.1 {
+  color: #1e1e2e;
+  margin: 5px 0 0 0;
+  padding: 2px;
+}
+#backlight.2 {
+  color: #1e1e2e;
+  font-size: 11px;
+  margin: 0 0 5px 0;
+  padding: 2px;
+}
+
+/** ********** Battery ********** **/
+#battery.1 {
+  color: #1e1e2e;
+  margin: 5px 0 0 0;
+  padding: 2px;
+}
+#battery.2 {
+  color: #1e1e2e;
+  font-size: 11px;
+  margin: 0 0 5px 0;
+  padding: 2px;
+}
+
+#battery.charging {
+  color: #f38ba8;
+}
+
+#battery.plugged {
+  color: #fab387;
+}
+
+@keyframes blink {
+  to {
+    color: #f9e2af;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #161616;
+}
+
+/** ********** Clock ********** **/
+#clock.1 {
+  color: #f5c2e7;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  padding: 2px 5px 0 5px;
+}
+#clock.2 {
+  color: #f5c2e7;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  padding: 0 5px 2px 5px;
+}
+
+
+/** ********** Tray ********** **/
+#tray {
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #f38ba8;
+}
+
+#language {
+  color: #1e1e2e;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+  padding: 2px;
+}
+
+#idle_inhibitor {
+  color: #1e1e2e;
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+}
+#idle_inhibitor.activated {
+  /* animation: gradient_f 20s ease-in-out infinite; */
+  /*background: rgb(203,166,247);*/
+  /*background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);*/
+  /*background-size: 400% 400%;*/
+  color: #cdd6f4;
+  margin: 5px 0 5px 0;
+  padding: 5px 0  5px 0;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+/** ********** Image ********** **/
+#image {
+  margin: 5px 0 5px 0;
+}
+
+/** ********** Custom ********** **/
+
+#custom-weather.1 {
+  background: #1e1e2e;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+#custom-weather.2 {
+  background: #1e1e2e;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+#custom-weathe#custom-weather.default {
+  color: #a6e3a1;
+}
+#custom-weather.severe {
+  color: #f38ba8;
+}
+#custom-weather.sunnyDay {
+  color: #f9e2af;
+}
+#custom-weather.clearNight {
+  color: #7f849c;
+}
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+  color: #a6adc8;
+}
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+  color: #f2cdcd;
+}
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+  color: #74c7ec;
+}
+
+#custom-wall {
+  color: #1e1e2e;
+  margin: 5px 0px 5px 0;
+  padding: 2px;
+}
+
+/* Swaync */
+#custom-swaync {
+  /* animation: gradient_f 20s ease-in-out infinite; */
+  /*background: rgb(203,166,247);*/
+  /*background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%);*/
+  /*background-size: 400% 400%;*/
+  color: #1e1e2e;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+
+/* Theme switcher */
+#custom-themeswitcher {
+  color: #1e1e2e;
+  margin: 5px 0px 5px 0;
+  padding: 2px;
+}

@@ -10,14 +10,16 @@ local wezterm = require("wezterm")
 local xcursor_size = nil
 local xcursor_theme = nil
 
-local success, stdout, stderr = wezterm.run_child_process({"gsettings", "get", "org.gnome.desktop.interface", "cursor-theme"})
+local success, stdout, stderr =
+	wezterm.run_child_process({ "gsettings", "get", "org.gnome.desktop.interface", "cursor-theme" })
 if success then
-  xcursor_theme = stdout:gsub("'(.+)'\n", "%1")
+	xcursor_theme = stdout:gsub("'(.+)'\n", "%1")
 end
 
-local success, stdout, stderr = wezterm.run_child_process({"gsettings", "get", "org.gnome.desktop.interface", "cursor-size"})
+local success, stdout, stderr =
+	wezterm.run_child_process({ "gsettings", "get", "org.gnome.desktop.interface", "cursor-size" })
 if success then
-  xcursor_size = tonumber(stdout)
+	xcursor_size = tonumber(stdout)
 end
 local function font_with_fallback(name, params)
 	local names = { name, "Apple Color Emoji", "azuki_font" }
@@ -94,7 +96,7 @@ return {
 	},
 	font_size = 13,
 	line_height = 1.0,
-  harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
+	harfbuzz_features = { "cv01", "cv02", "cv03", "cv04", "ss01", "ss02", "ss03", "ss04", "ss05" },
 
 	-- Cursor style
 	default_cursor_style = "BlinkingUnderline",
@@ -199,21 +201,21 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CopyTo = "ClipboardAndPrimarySelection" }),
 		},
-    {
-      key = "-",
-      mods = "CTRL",
-      action = wezterm.action.DecreaseFontSize
-    },
-    {
-      key = "=",
-      mods = "CTRL",
-      action = wezterm.action.IncreaseFontSize
-    },
-    {
-      key = "0",
-      mods = "CTRL",
-      action = wezterm.action.ResetFontSize
-    },
+		{
+			key = "-",
+			mods = "CTRL",
+			action = wezterm.action.DecreaseFontSize,
+		},
+		{
+			key = "=",
+			mods = "CTRL",
+			action = wezterm.action.IncreaseFontSize,
+		},
+		{
+			key = "0",
+			mods = "CTRL",
+			action = wezterm.action.ResetFontSize,
+		},
 	},
 
 	bold_brightens_ansi_colors = false,
@@ -282,19 +284,19 @@ return {
 	tab_bar_at_bottom = true,
 
 	-- General
-  animation_fps = 1,
-  cursor_blink_rate = 1000,
-  cursor_blink_ease_in = "Constant",
-  cursor_blink_ease_out = "Constant",
-  enable_kitty_graphics = true,
+	animation_fps = 1,
+	cursor_blink_rate = 1000,
+	cursor_blink_ease_in = "Constant",
+	cursor_blink_ease_out = "Constant",
+	enable_kitty_graphics = true,
 	automatically_reload_config = true,
 	inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 	window_frame = { active_titlebar_bg = colors.darker_background },
 	exit_behavior = "CloseOnCleanExit",
 	window_decorations = "RESIZE",
 	selection_word_boundary = " \t\n{}[]()\"'`,;:",
-  warn_about_missing_glyphs = false,
-  xcursor_theme = xcursor_theme,
-  xcursor_size = xcursor_size,
-  check_for_updates = false,
+	warn_about_missing_glyphs = false,
+	xcursor_theme = xcursor_theme,
+	xcursor_size = xcursor_size,
+	check_for_updates = false,
 }
