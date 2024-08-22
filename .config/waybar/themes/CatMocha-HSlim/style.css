@@ -14,7 +14,7 @@
 }
 
 window#waybar {
-  background: #1e1e2e;
+  background: rgba(30, 30, 46, 0.8);
   box-shadow: 2 2 2 4px #1e1e2e;
   transition-property: background-color;
   transition-duration: .5s;
@@ -172,7 +172,6 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  background: #1e1e2e;
   margin: 0 5px 0 5px;
   padding: 0 5px 0 5px;
 }
